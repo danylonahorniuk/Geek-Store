@@ -1,0 +1,294 @@
+/* === Hero Section === */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6, #ec4899);
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1759663175485-e0ed8084a928?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920') center/cover no-repeat;
+  opacity: 0.1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(67,56,202,0.5), rgba(139,92,246,0.5));
+}
+
+.hero .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  color: white;
+  max-width: 600px;
+}
+
+.hero-text .badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  color: #4f46e5;
+  border-radius: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #f3f4f6;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.5s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === Brand Story Section === */
+.brand-story {
+  padding: 5rem 0;
+}
+
+.brand-story .section-header {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand-story .badge {
+  display: inline-block;
+  background: linear-gradient(to right, #ede9fe, #ddd6fe);
+  color: #4f46e5;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.brand-story h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.brand-story p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* === Stats Section === */
+.stats {
+  padding: 4rem 0;
+  background: linear-gradient(to right, #4f46e5, #8b5cf6);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: rgba(255,255,255,0.7);
+}
+
+/* === Universes Section === */
+.universes {
+  padding: 6rem 0;
+}
+
+.universes .section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.universe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.universe-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: block;
+  color: white;
+}
+
+.universe-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.universe-card:hover img {
+  transform: scale(1.1);
+}
+
+.universe-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.5), transparent);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.universe-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.universe-overlay p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.universe-count {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* === Features Section === */
+.features {
+  padding: 6rem 0;
+}
+
+.features .section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: linear-gradient(to bottom right, #f9fafb, #fff);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
