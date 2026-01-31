@@ -292,3 +292,146 @@
   color: #4b5563;
   line-height: 1.6;
 }
+
+/* === Featured Collections Section === */
+.featured-collections {
+  padding: 6rem 0;
+  background: #f9fafb;
+}
+
+.featured-collections .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.featured-collections .fc-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: white;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.featured-collections h2 {
+  font-size: 2.75rem;
+  margin: 1rem 0;
+  color: #111827;
+}
+
+.featured-collections .fc-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* grid of categories */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.category-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+.category-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.category-count {
+  font-size: 1rem;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* CTA below grid */
+.fc-cta {
+  text-align: center;
+}
+
+.fc-cta .btn-primary {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+  border-radius: 1rem;
+  font-weight: 500;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.fc-cta .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(99,102,241,0.4);
+}
+
+
+/* === Geek Family CTA (Home only) === */
+.geek-family {
+  padding: 6rem 1rem;
+  background: #111827; /* dark gray */
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.geek-family-inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.geek-family-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.geek-family h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.geek-family p {
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.geek-family-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
