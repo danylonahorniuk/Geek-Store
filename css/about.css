@@ -1,0 +1,134 @@
+
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #555;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 14px;
+}
+
+.badge.purple {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+/* STORY */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.story img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+.gray {
+  background: #f9fafb;
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.icon.red { color: #ef4444; }
+.icon.blue { color: #3b82f6; }
+.icon.green { color: #10b981; }
+.icon.pink { color: #ec4899; }
+
+/* GRIDS */
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+
+/* TIMELINE */
+.timeline {
+  max-width: 600px;
+  margin: auto;
+}
+
+.timeline-item {
+  padding: 24px;
+  border-left: 4px solid #6366f1;
+  margin-bottom: 24px;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #6366f1;
+}
+
+/* TEAM */
+.emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+/* QUOTE */
+.quote {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+  text-align: center;
+}
+
+.quote blockquote {
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .story, .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
