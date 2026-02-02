@@ -1,0 +1,151 @@
+/* HERO */
+.stores-hero {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.stores-hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.stores-hero p {
+  font-size: 20px;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* STORES */
+.stores-section {
+  padding: 120px 20px;
+}
+
+.stores-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.store-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card--wide {
+  grid-column: span 2;
+  flex-direction: row;
+}
+
+.store-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-card--wide .store-image {
+  width: 50%;
+}
+
+.store-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.store-content h2 {
+  font-size: 32px;
+}
+
+.store-desc {
+  color: #555;
+  line-height: 1.6;
+}
+
+.store-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.store-btn {
+  margin-top: auto;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.store-btn:hover {
+  background: #000;
+}
+
+/* FEATURES */
+.stores-features {
+  background: #f9fafb;
+  padding: 100px 20px;
+}
+
+.features-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.feature {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.feature span {
+  font-size: 42px;
+}
+
+.feature h3 {
+  margin: 16px 0;
+}
+
+/* CTA */
+.stores-cta {
+  background: #111827; /* dark gray */
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.stores-cta h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.stores-cta p {
+  font-size: 20px;
+  color: #ccc;
+  margin-bottom: 32px;
+}
+
+.cta-btn {
+  background: #fff;
+  color: #111;
+  padding: 16px 40px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}

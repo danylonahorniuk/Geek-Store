@@ -1,0 +1,195 @@
+
+
+/* HERO */
+.contact-hero {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 20px;
+  color: #555;
+}
+
+/* GRID */
+.contact-section {
+  padding: 120px 20px;
+}
+
+.contact-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+}
+
+/* INFO */
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.info-item span {
+  font-weight: 500;
+}
+
+.info-item a,
+.info-item p {
+  color: #555;
+  text-decoration: none;
+}
+
+/* CHAT */
+.chat-box {
+  margin-top: 40px;
+  background: #f9fafb;
+  padding: 28px;
+  border-radius: 20px;
+}
+
+.chat-box h3 {
+  margin-bottom: 12px;
+}
+
+.chat-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.chat-box button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* FORM */
+.contact-form {
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 48px;
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.field {
+  margin-bottom: 28px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(17,17,17,0.15);
+}
+
+textarea {
+  resize: none;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* FAQ */
+.contact-faq {
+  padding: 120px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.contact-faq h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.faq-sub {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+details {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details p {
+  margin-top: 16px;
+  color: #555;
+}
