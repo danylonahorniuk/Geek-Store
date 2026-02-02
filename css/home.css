@@ -73,6 +73,7 @@
   border-radius: 1rem;
   font-weight: 500;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -88,6 +89,7 @@
   backdrop-filter: blur(6px);
   font-weight: 500;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .btn-secondary:hover {

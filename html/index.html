@@ -13,14 +13,14 @@
 <!-- Header -->
 <nav class="header">
   <div class="container header-container">
-    <a href="/" class="logo">
+    <a href="#" class="logo">
       <div class="logo-icon">⚡</div>
       <div class="logo-text">GEEK STORE</div>
       <div class="logo-badge">Ukraine</div>
     </a>
 
     <div class="nav-links">
-      <a href="/" class="nav-link active">Головна</a>
+      <a href="#" class="nav-link active">Головна</a>
       <a href="shop.html" class="nav-link">Каталог</a>
       <a href="about.html" class="nav-link">Про нас</a>
       <a href="stores.html" class="nav-link">Магазини</a>
@@ -28,6 +28,13 @@
     </div>
 
     <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Перемикач теми">🌙</button>
+
+      <!-- Account -->
+      <a href="/account" class="account" aria-label="Особистий кабінет">👤</a>
+
+      <!-- Cart -->
       <a href="/cart" class="cart">
         🛒
         <span class="cart-count">3</span>
@@ -35,6 +42,7 @@
     </div>
   </div>
 </nav>
+
 
 
   <!-- Hero Section -->
@@ -49,8 +57,8 @@
         <h1>Твій світ гік-культури в Україні</h1>
         <p>Відкрий для себе найбільшу колекцію товарів з улюблених всесвітів: Marvel, Star Wars, DC та багато іншого.</p>
         <div class="hero-buttons">
-          <a href="/shop" class="btn-primary">Переглянути каталог →</a>
-          <a href="/stores" class="btn-secondary">Наші магазини</a>
+          <a href="shop.html" class="btn-primary">Переглянути каталог</a>
+          <a href="stores.html" class="btn-secondary">Наші магазини</a>
         </div>
       </div>
       <div class="hero-image">
@@ -287,6 +295,8 @@
     </div>
   </div>
 </footer>
+
+<script src="../js/theme-toggle.js"></script>
 
 
 </body>

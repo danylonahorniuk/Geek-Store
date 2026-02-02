@@ -13,7 +13,7 @@
 <!-- Header -->
 <nav class="header">
   <div class="container header-container">
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
       <div class="logo-icon">⚡</div>
       <div class="logo-text">GEEK STORE</div>
       <div class="logo-badge">Ukraine</div>
@@ -22,12 +22,19 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link">Головна</a>
       <a href="shop.html" class="nav-link">Каталог</a>
-      <a href="/" class="nav-link active">Про нас</a>
+      <a href="#" class="nav-link active">Про нас</a>
       <a href="stores.html" class="nav-link">Магазини</a>
       <a href="contact.html" class="nav-link">Контакти</a>
     </div>
 
     <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Перемикач теми">🌙</button>
+
+      <!-- Account -->
+      <a href="/account" class="account" aria-label="Особистий кабінет">👤</a>
+
+      <!-- Cart -->
       <a href="/cart" class="cart">
         🛒
         <span class="cart-count">3</span>
@@ -292,6 +299,9 @@
     </div>
   </div>
 </footer>
+
+<script src="../js/theme-toggle.js"></script>
+
 
 </body>
 </html>

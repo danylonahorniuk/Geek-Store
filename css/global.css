@@ -94,13 +94,16 @@
   display: inline-block;
   padding: 0.75rem;
   border-radius: 9999px;
-  transition: background 0.3s;
   text-decoration: none;
-  color: #374151;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background 0.3s;
 }
 
 .cart:hover {
-  background: #eef2ff;
+  background: #e0e7ff;
 }
 
 .cart-count {
@@ -118,6 +121,70 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+  padding: 0.75rem;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+  background: #e0e7ff;
+}
+
+/* Account Icon */
+.account {
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  background: #f3f4f6;
+  color: #374151;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.account:hover {
+  background: #e0e7ff;
+}
+
+/* Dark theme styles */
+body.dark {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark .header {
+  background: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+body.dark .nav-link {
+  color: #d1d5db;
+}
+
+body.dark .nav-link.active {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+body.dark .cart,
+body.dark .theme-toggle,
+body.dark .account {
+  background: #374151;
+  color: #f9fafb;
+}
+
+body.dark .cart:hover,
+body.dark .theme-toggle:hover,
+body.dark .account:hover {
+  background: #4b5563;
+}
+
 
 
 /* === Footer === */
