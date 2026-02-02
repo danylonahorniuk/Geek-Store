@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geek Store</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/account.css">
+</head>
+<body>
+
+<!-- Header -->
+<nav class="header">
+  <div class="container header-container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-text">GEEK STORE</div>
+      <div class="logo-badge">Ukraine</div>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="shop.html" class="nav-link">Каталог</a>
+      <a href="about.html" class="nav-link">Про нас</a>
+      <a href="stores.html" class="nav-link">Магазини</a>
+      <a href="contact.html" class="nav-link">Контакти</a>
+    </div>
+
+    <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Перемикач теми">🌙</button>
+
+      <!-- Account -->
+      <a href="#" class="account" aria-label="Особистий кабінет">👤</a>
+
+      <!-- Cart -->
+      <a href="cart.html" class="cart">
+        🛒
+        <span class="cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="avatar">🦸‍♂️</div>
+      <h3>Олександр Коваленко</h3>
+      <p>oleksandr.kovalenko@example.com</p>
+      <span class="badge">VIP Member</span>
+    </div>
+
+    <nav class="menu">
+      <button class="menu-item active" data-section="overview">👤 Огляд</button>
+      <button class="menu-item" data-section="orders">📦 Замовлення</button>
+      <button class="menu-item" data-section="wishlist">❤️ Бажане</button>
+      <button class="menu-item" data-section="addresses">📍 Адреси</button>
+      <button class="menu-item" data-section="settings">⚙️ Налаштування</button>
+    </nav>
+
+    <button class="logout">🚪 Вийти</button>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-card">
+        <strong>24</strong>
+        <span>Всього замовлень</span>
+      </div>
+      <div class="stat-card">
+        <strong>42 899 ₴</strong>
+        <span>Витрачено</span>
+      </div>
+      <div class="stat-card">
+        <strong>VIP</strong>
+        <span>Рівень</span>
+      </div>
+    </div>
+
+    <!-- BONUS -->
+    <section class="bonus">
+      <h2>⭐ Бонусна програма</h2>
+      <p>Член спільноти з 15 березня 2021</p>
+
+      <div class="points">
+        <strong>2450</strong>
+        <span>бонусних балів</span>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" style="width:65%"></div>
+      </div>
+
+      <button class="bonus-btn">Використати бали</button>
+    </section>
+
+    <!-- ORDERS -->
+    <section class="orders">
+      <div class="orders-header">
+        <h2>Останні замовлення</h2>
+        <a href="#">Переглянути всі →</a>
+      </div>
+
+      <div class="order">
+        <div>
+          <strong>#ORD-2024-1234</strong>
+          <span class="status success">Доставлено</span>
+          <p>28 січня 2026</p>
+        </div>
+        <div class="price">
+          <strong>14 097 ₴</strong>
+          <span>3 товари</span>
+        </div>
+      </div>
+
+      <div class="order">
+        <div>
+          <strong>#ORD-2024-1198</strong>
+          <span class="status pending">В обробці</span>
+          <p>12 січня 2026</p>
+        </div>
+        <div class="price">
+          <strong>1 248 ₴</strong>
+          <span>2 товари</span>
+        </div>
+      </div>
+
+      <div class="order">
+        <div>
+          <strong>#ORD-2023-0987</strong>
+          <span class="status success">Доставлено</span>
+          <p>20 грудня 2025</p>
+        </div>
+        <div class="price">
+          <strong>2 399 ₴</strong>
+          <span>1 товар</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK -->
+    <section class="quick">
+      <h2>Швидкі дії</h2>
+      <div class="quick-grid">
+        <div class="quick-item">🔔 Сповіщення</div>
+        <div class="quick-item">💳 Способи оплати</div>
+        <div class="quick-item">🛡️ Безпека</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-company">
+        <div class="footer-logo">GEEK STORE</div>
+        <p class="footer-text">
+          Найбільший магазин гік-культури в Україні. Marvel, Star Wars, DC та багато іншого.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">F</a>
+          <a href="#" class="social-icon">I</a>
+          <a href="#" class="social-icon">T</a>
+          <a href="#" class="social-icon">Y</a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Навігація</h3>
+        <ul>
+          <li><a href="/">Головна</a></li>
+          <li><a href="/shop">Каталог</a></li>
+          <li><a href="/about">Про нас</a></li>
+          <li><a href="/stores">Магазини</a></li>
+          <li><a href="/contact">Контакти</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-section">
+        <h3>Категорії</h3>
+        <ul>
+          <li><a href="#">LEGO</a></li>
+          <li><a href="#">Funko Pop</a></li>
+          <li><a href="#">Постери</a></li>
+          <li><a href="#">Комікси</a></li>
+          <li><a href="#">Ексклюзиви</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="footer-section">
+        <h3>Підтримка</h3>
+        <ul>
+          <li><a href="#">Доставка та оплата</a></li>
+          <li><a href="#">Повернення товару</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Часті питання</a></li>
+          <li><a href="#">Політика конфіденційності</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 GEEK STORE. Всі права захищені.</p>
+      <p>Зроблено з ❤️ для українських гіків</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/theme-toggle.js"></script>
+<script src="../js/account.js"></script>
+</body>
+</html>
