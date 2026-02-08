@@ -243,6 +243,175 @@ p {
   font-weight: 500;
 }
 
+/* === NEW ARRIVALS === */
+.new-arrivals {
+  padding: 5rem 0;
+}
+
+.na-header {
+  max-width: 1400px;
+  margin: 0 auto 2rem;
+  padding: 0 2rem;
+}
+
+.na-header h2 {
+  font-size: 2.5rem;
+}
+
+.na-wrapper {
+  position: relative;
+}
+
+.na-slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 5rem;
+}
+
+.na-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.na-card {
+  flex: 0 0 340px; /* 🔥 ШИРОКІ */
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.na-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.na-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.na-card:hover img {
+  transform: scale(1.08);
+}
+
+.na-quick {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1rem;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transform: translateY(100%);
+  transition: transform .3s;
+}
+
+.na-card:hover .na-quick {
+  transform: translateY(0);
+}
+
+.na-info {
+  padding: 1.2rem;
+}
+
+.na-info h3 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.na-info strong {
+  font-size: 1.25rem;
+}
+
+.na-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  z-index: 5;
+}
+
+.na-arrow.left { left: 10px; }
+.na-arrow.right { right: 10px; }
+
+/* === MODAL === */
+.qb-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.qb-modal.active {
+  display: flex;
+}
+
+.qb-content {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 1000px;
+  width: 90%;
+  padding: 2rem;
+  position: relative;
+}
+
+.qb-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.qb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.qb-grid img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.qb-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+.qb-add {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+
 /* === Features Section === */
 .features {
   padding: 6rem 1rem;
