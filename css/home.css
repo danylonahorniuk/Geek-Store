@@ -155,6 +155,12 @@ p {
 /* === Universes Section === */
 .universes {
   padding: 6rem 1rem;
+  background: #f9fafb;
+}
+
+.universes h2{
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
 }
 
 .universes .section-header {
@@ -239,7 +245,18 @@ p {
 
 /* === Features Section === */
 .features {
-  padding: 6rem 0;
+  padding: 6rem 1rem;
+}
+.features h2{
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-header p{
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 .features .section-header {
@@ -250,14 +267,21 @@ p {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* 🔥 2 в ряд */
   gap: 2rem;
 }
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .feature-card {
   background: linear-gradient(to bottom right, #f9fafb, #fff);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2.3rem;
   border: 1px solid #e5e7eb;
   transition: all 0.3s;
 }
@@ -382,6 +406,7 @@ p {
   color: white;
   border-radius: 1rem;
   font-weight: 500;
+  text-decoration: none;
   transition: box-shadow 0.3s, transform 0.2s;
 }
 
