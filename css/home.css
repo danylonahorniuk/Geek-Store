@@ -116,15 +116,15 @@ p {
 }
 
 .brand-story h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
 }
 
 .brand-story p {
   font-size: 1.125rem;
-  color: #4b5563;
-  margin-bottom: 1rem;
-  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 /* === Stats Section === */
@@ -436,9 +436,11 @@ p {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 🔥 2 в ряд */
+  grid-template-columns: repeat(2, minmax(420px, 600px));
+  justify-content: center; /* 🔥 важливо */
   gap: 2rem;
 }
+
 
 @media (max-width: 768px) {
   .features-grid {
