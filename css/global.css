@@ -91,66 +91,181 @@
 
 .cart {
   position: relative;
-  display: inline-block;
-  padding: 0.75rem;
+  width: 44px;
+  height: 44px;
   border-radius: 9999px;
-  text-decoration: none;
   background: #f3f4f6;
-  border: none;
-  cursor: pointer;
-  font-size: 1.25rem;
-  transition: background 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.3s, transform 0.2s;
 }
 
 .cart:hover {
   background: #e0e7ff;
+  transform: translateY(-2px);
 }
 
+.cart-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* default — black */
+.cart-icon--black {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cart-icon--white {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+/* dark theme */
+body.dark .cart-icon--black {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+body.dark .cart-icon--white {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Badge */
 .cart-count {
   position: absolute;
-  top: 0.25rem;
-  right: 0.25rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  top: -4px;
+  right: -4px;
+
+  width: 18px;
+  height: 18px;
+
   background: linear-gradient(90deg, #ec4899, #f43f5e);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 500;
+  color: #fff;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
   border-radius: 9999px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(236,72,153,0.45);
 }
 
-/* Theme Toggle Button */
+
 .theme-toggle {
-  padding: 0.75rem;
-  border-radius: 9999px;
-  background: #f3f4f6;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
   border: none;
+  border-radius: 9999px;
+
+  background: #f3f4f6;
   cursor: pointer;
-  font-size: 1.25rem;
-  transition: background 0.3s;
+
+  transition: background 0.3s, transform 0.2s;
 }
 
 .theme-toggle:hover {
   background: #e0e7ff;
+  transform: translateY(-2px);
 }
+
+.theme-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  opacity: 0;
+  transform: scale(0.7) rotate(-20deg);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* За замовчуванням — місяць */
+.theme-icon--moon {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* Темна тема */
+body.dark .theme-icon--moon {
+  opacity: 0;
+  transform: scale(0.7) rotate(20deg);
+}
+
+body.dark .theme-icon--sun {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
 
 /* Account Icon */
 .account {
-  display: inline-block;
-  padding: 0.75rem;
+  position: relative;
+  width: 44px;
+  height: 44px;
   border-radius: 9999px;
   background: #f3f4f6;
-  color: #374151;
-  text-decoration: none;
-  transition: background 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.3s, transform 0.2s;
 }
 
 .account:hover {
   background: #e0e7ff;
+  transform: translateY(-2px);
 }
+
+.account-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* за замовчуванням — чорна */
+.account-icon--black {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.account-icon--white {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+/* dark theme */
+body.dark .account-icon--black {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+body.dark .account-icon--white {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
 
 /* Dark theme styles */
 body.dark {
