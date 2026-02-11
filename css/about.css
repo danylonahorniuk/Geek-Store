@@ -4,7 +4,6 @@ section {
 }
 
 .container {
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -60,29 +59,89 @@ section {
 }
 
 /* CARDS */
-.card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.05);
-}
-
 .gray {
   background: #f9fafb;
+  padding: 5rem 0;
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* картки мінімум 20rem, максимум 1fr */
+  gap: 2rem;
+  max-width: 1200px; /* грід не буде розтягуватись на всю ширину */
+  margin: 0 auto; /* центруємо грід */
+  padding: 0 1rem; /* відступ від країв */
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 3rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,.08);
+  /* width прибираємо, вона вже тягнеться на всю колонку */
+}
+
 
 .icon {
-  font-size: 32px;
-  margin-bottom: 16px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.625rem;
+  color: #fff;
+  margin-bottom: 1.25rem;
 }
 
-.icon.red { color: #ef4444; }
-.icon.blue { color: #3b82f6; }
-.icon.green { color: #10b981; }
-.icon.pink { color: #ec4899; }
+.icon.purple {
+  background: linear-gradient(135deg, #6d5dfc, #8b7bff);
+}
+
+.icon.pink {
+  background: linear-gradient(135deg, #ec4899, #f43f5e);
+}
+
+.card h3 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+
+
 
 /* GRIDS */
-.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
 

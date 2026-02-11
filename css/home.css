@@ -371,15 +371,39 @@ p {
   height: 52px;
   border-radius: 50%;
   border: none;
-  font-size: 32px;
-  cursor: pointer;
+
   background: #fff;
+  color: #000;
+  font-size: 30px;
+  cursor: pointer;
+
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
   z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .na-arrow.left { left: 10px; }
 .na-arrow.right { right: 10px; }
+
+.na-arrow:hover {
+  background: #f2f2f2;               /* легкий сірий */
+  transform: translateY(-55%);       /* підскок */
+  box-shadow: 0 14px 36px rgba(0,0,0,.18);
+}
+
+.na-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
 
 /* === MODAL === */
 .qb-modal {
@@ -443,6 +467,36 @@ p {
   cursor: pointer;
 }
 
+.qb-quantity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.5rem;
+}
+
+.qty-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.qty-btn:hover {
+  background: #e0e7ff;
+  transform: translateY(-1px);
+}
+
+.qty-value {
+  min-width: 32px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 
 
 

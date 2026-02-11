@@ -32,3 +32,35 @@
   modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
   });
+// === Quantity logic in Quick Buy modal ===
+const qtyValue = document.querySelector('.qty-value');
+const minusBtn = document.querySelector('.qty-btn.minus');
+const plusBtn = document.querySelector('.qty-btn.plus');
+const addToCartBtn = document.querySelector('.qb-add');
+
+let quantity = 1;
+
+// reset quantity when modal opens
+document.querySelectorAll('.na-quick').forEach(btn => {
+  btn.addEventListener('click', () => {
+    quantity = 1;
+    qtyValue.textContent = quantity;
+  });
+});
+
+plusBtn.addEventListener('click', () => {
+  quantity++;
+  qtyValue.textContent = quantity;
+});
+
+minusBtn.addEventListener('click', () => {
+  if (quantity > 1) {
+    quantity--;
+    qtyValue.textContent = quantity;
+  }
+});
+
+addToCartBtn.addEventListener('click', () => {
+  console.log('Додано в кошик:', quantity, 'шт');
+  closeModal();
+});
