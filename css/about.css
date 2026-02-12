@@ -138,11 +138,6 @@ section {
 }
 
 
-
-
-/* GRIDS */
-.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
-
 /* TIMELINE */
 .timeline-section {
   padding: 80px 20px;
@@ -386,11 +381,206 @@ section {
 }
 
 
-/* TEAM */
-.emoji {
-  font-size: 48px;
-  margin-bottom: 12px;
+/* SECTION */
+.ach-section {
+  padding: 5.5rem 1.5rem;
 }
+
+/* CONTAINER */
+.ach-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.ach-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ach-header h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.ach-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* GRID */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.ach-card {
+  background: #f5f3ff; /* м’який фіолетовий фон */
+  border-radius: 1.5rem;
+  padding: 2rem 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+/* HOVER — більш об’ємна, без руху */
+.ach-card:hover {
+  box-shadow:
+    0 2rem 4rem rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(109, 40, 217, 0.10);
+}
+
+/* ICON */
+.ach-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #6d5dfc, #8b5cf6);
+  box-shadow:
+    0 0.75rem 1.5rem rgba(109, 40, 217, 0.25);
+  flex: 0 0 auto;
+}
+
+.ach-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* TEXT */
+.ach-text h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: #111827;
+}
+
+.ach-text p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ach-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+/* TEAM */
+.team-section {
+  padding: 5rem 1.5rem;
+  background: #f9fafb;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.team-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.team-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem; /* менший відступ між картками */
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.9rem 1.5rem; /* було більше */
+  text-align: center;
+
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.35s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.10);
+}
+
+/* emoji трохи менше */
+.team-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* імʼя компактніше */
+.team-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  color: #111827;
+  transition: color 0.35s ease;
+}
+
+.team-card:hover h3 {
+  color: #4f46e5;
+}
+
+/* роль */
+.team-role {
+  font-size: 0.95rem;
+  margin-bottom: 0.9rem;
+  color: #4f46e5;
+}
+
+/* опис */
+.team-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 
 /* QUOTE */
 .quote {
