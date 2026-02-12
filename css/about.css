@@ -11,90 +11,123 @@ section {
   text-align: center;
 }
 
-/* HERO */
+/* ================= HERO ABOUT (FULL) ================= */
+
 .hero {
   position: relative;
   padding: 7rem 1.5rem 7rem;
-  background: #f8fafc;
   text-align: center;
   overflow: hidden;
+  background: #f8fafc;
 }
 
-/* мʼяка світлова форма */
-.hero::before {
+/* Градієнтні світлові форми */
+.hero-about {
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(99,102,241,0.20), transparent 60%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.18), transparent 55%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.15), transparent 55%),
+    #f8fafc;
+}
+
+/* верхній blob */
+.hero-about::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
-  top: -200px;
-  right: -200px;
+  width: 42rem;
+  height: 42rem;
+  top: -14rem;
+  right: -14rem;
   z-index: 0;
+  background: radial-gradient(circle, rgba(124,58,237,0.22), transparent 65%);
+  filter: blur(2px);
+}
+
+/* нижній blob */
+.hero-about::after {
+  content: "";
+  position: absolute;
+  width: 44rem;
+  height: 44rem;
+  bottom: -18rem;
+  left: -18rem;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(79,70,229,0.18), transparent 65%);
+  filter: blur(2px);
+}
+
+/* легкий grain */
+.hero-grain {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.12;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(17,24,39,0.12) 1px, transparent 0);
+  background-size: 14px 14px;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 850px;
+  max-width: 53rem;
   margin: 0 auto;
 }
 
-/* badge */
+/* BADGE */
 .hero-badge {
   display: inline-block;
-  padding: 0.45rem 1.1rem;
-  border-radius: 999px;
-  background: #f3e8ff;
-  color: #7c3aed;
-  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999rem;
+  background: rgba(79,70,229,0.08);
+  border: 1px solid rgba(79,70,229,0.15);
+  color: #4f46e5;
+  font-weight: 700;
   font-size: 0.9rem;
 }
 
-/* заголовок */
-.hero h1 {
-  font-size: 3.75rem;
-  font-weight: 800;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
-  color: #111827;
+/* H1 */
+.hero-about h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin: 1.5rem 0 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #0f172a;
 }
 
-/* підзаголовок */
-.hero p {
-  font-size: 1.25rem;
-  color: #6b7280;
-  line-height: 1.7;
+/* Градієнтний акцент */
+.hero-about .accent {
+  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 45%, #9333ea 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* адаптив */
+/* TEXT */
+.hero-about p {
+  max-width: 46rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
   .hero {
     padding: 6rem 1.5rem;
   }
 
-  .hero h1 {
+  .hero-about h1 {
     font-size: 2.6rem;
   }
 
-  .hero p {
+  .hero-about p {
     font-size: 1.1rem;
   }
-}
-
-
-/* BADGE */
-.badge {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
-  color: #fff;
-  font-size: 14px;
-}
-
-.badge.purple {
-  background: #ede9fe;
-  color: #6d28d9;
 }
 
 /* STORY */
@@ -129,7 +162,7 @@ section {
 
 /* TITLE */
 .story-content h2 {
-  font-size: 2.8rem;
+  font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -286,11 +319,12 @@ section {
 }
 
 .timeline-header h2 {
-  font-size: 2.5rem; /* 40px */
+  font-size: 2.75rem; /* 40px */
   margin-bottom: 0.75rem; /* 12px */
 }
 
 .timeline-header p {
+  font-size: 1.125rem;
   color: #6b7280;
   max-width: 37.5rem; /* 600px */
   margin: auto;
@@ -543,13 +577,13 @@ section {
 }
 
 .values-header h2 {
-  font-size: 2.2rem; /* трохи менше */
+  font-size: 2.75rem; /* трохи менше */
   margin-bottom: 0.75rem;
 }
 
 .values-header p {
+  font-size: 1.125rem;
   color: #6b7280;
-  font-size: 1rem;
 }
 
 /* GRID */
@@ -750,8 +784,8 @@ section {
 }
 
 .team-header h2 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.75rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   letter-spacing: -0.02em;
 }
