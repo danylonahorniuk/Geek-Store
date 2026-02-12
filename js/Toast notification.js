@@ -7,11 +7,11 @@ form.addEventListener("submit", function(e) {
   const email = emailInput.value.trim();
 
   if (!validateEmail(email)) {
-    showToast("Введи коректний email 🙃", "error");
+    showToast("Введіть коректний email 🙃", "error");
     return;
   }
 
-  showToast("Ти успішно підписався 🎉", "success");
+  showToast("Вітаю 🎉 Тепер ти частина великої родини", "success");
   emailInput.value = "";
 });
 
