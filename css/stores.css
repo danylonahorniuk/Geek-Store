@@ -1,42 +1,53 @@
-/* HERO */
+/* ================= HERO ================= */
+
 .stores-hero {
   background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-  padding: 120px 20px;
+  padding: 7.5rem 1.25rem; /* 120px 20px */
   text-align: center;
 }
 
 .stores-hero h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
+  font-size: 3.25rem; /* 52px */
+  margin-bottom: 1.25rem; /* 20px */
 }
 
 .stores-hero p {
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   color: #555;
-  max-width: 720px;
+  max-width: 45rem; /* 720px */
   margin: 0 auto;
 }
 
-/* STORES */
+/* ================= STORES ================= */
+
 .stores-section {
-  padding: 120px 20px;
+  padding: 7.5rem 1.25rem; /* 120px 20px */
 }
 
 .stores-grid {
-  max-width: 1200px;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 3rem; /* 48px */
 }
 
 .store-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 1.25rem; /* 20px */
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
+  box-shadow:
+    0 0.75rem 1.5rem rgba(0,0,0,0.06),
+    0 0.25rem 0.5rem rgba(0,0,0,0.04);
+  transition: box-shadow 0.35s ease;
+}
+
+.store-card:hover {
+  box-shadow:
+    0 3rem 6rem rgba(0,0,0,0.22),
+    0 1.5rem 3rem rgba(0,0,0,0.12);
 }
 
 .store-card--wide {
@@ -55,14 +66,14 @@
 }
 
 .store-content {
-  padding: 40px;
+  padding: 2.5rem; /* 40px */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
 }
 
 .store-content h2 {
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
 }
 
 .store-desc {
@@ -74,78 +85,174 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 15px;
+  gap: 0.75rem;
+  font-size: 0.95rem;
 }
+
+.store-info li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #475569;
+}
+
+.store-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.7rem;
+  background: rgba(124,58,237,0.08);
+  color: #7c3aed;
+  flex-shrink: 0;
+}
+
+.store-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
 
 .store-btn {
   margin-top: auto;
-  padding: 14px;
+  padding: 0.875rem;
   background: #111;
   color: #fff;
-  border: none;
-  border-radius: 12px;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .store-btn:hover {
-  background: #000;
+  background: #0b0b0b;
+  border-color: rgba(124,58,237,0.35);
+  box-shadow:
+    0 1.25rem 2.5rem rgba(0,0,0,0.18),
+    0 0 0 0.0625rem rgba(124,58,237,0.22);
 }
 
-/* FEATURES */
-.stores-features {
-  background: #f9fafb;
-  padding: 100px 20px;
+.store-btn:active {
+  box-shadow: none;
 }
 
-.features-grid {
-  max-width: 1100px;
+.store-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 0.25rem rgba(124,58,237,0.25),
+    0 1.25rem 2.5rem rgba(0,0,0,0.16);
+}
+
+
+/* ================= WHY EXPERIENCE ================= */
+
+.why-experience {
+  padding: 7rem 1.25rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.why-experience-inner {
+  max-width: 75rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.feature {
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
+.why-left h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  line-height: 1.15;
 }
 
-.feature span {
-  font-size: 42px;
+.why-left p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.8;
+  max-width: 32rem;
 }
 
-.feature h3 {
-  margin: 16px 0;
+/* Права частина */
+
+.why-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-/* CTA */
+.why-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.why-item span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(124,58,237,0.15);
+  min-width: 3rem;
+}
+
+.why-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Адаптив */
+
+@media (max-width: 1024px) {
+  .why-experience-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .why-left {
+    text-align: center;
+  }
+
+  .why-left p {
+    margin: 0 auto;
+  }
+}
+
+
+/* ================= CTA ================= */
+
 .stores-cta {
-  background: #111827; /* dark gray */
+  background: #111827;
   color: #fff;
-  padding: 120px 20px;
+  padding: 7.5rem 1.25rem; /* 120px 20px */
   text-align: center;
 }
 
 .stores-cta h2 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 2.625rem; /* 42px */
+  margin-bottom: 1rem; /* 16px */
 }
 
 .stores-cta p {
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px */
   color: #ccc;
-  margin-bottom: 32px;
+  margin-bottom: 2rem; /* 32px */
 }
 
 .cta-btn {
   background: #fff;
   color: #111;
-  padding: 16px 40px;
-  border-radius: 14px;
+  padding: 1rem 2.5rem; /* 16px 40px */
+  border-radius: 0.875rem; /* 14px */
   text-decoration: none;
   font-weight: 600;
 }
