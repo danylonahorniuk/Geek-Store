@@ -770,3 +770,48 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(99,102,241,0.4);
 }
+
+
+#toast-container {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.toast {
+  background: #f8f7ff;
+  color: #111827;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  min-width: 280px;
+
+  box-shadow:
+    0 1.5rem 3rem rgba(0,0,0,0.15),
+    0 0 0 1px rgba(0,0,0,0.05);
+
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 0.35s ease;
+  font-size: 0.95rem;
+}
+
+/* плавна поява */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SUCCESS */
+.toast.success {
+  border-left: 4px solid #7c3aed;
+}
+
+/* ERROR */
+.toast.error {
+  border-left: 4px solid #ef4444;
+}
+
