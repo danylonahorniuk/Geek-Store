@@ -1,22 +1,130 @@
 /* ================= HERO ================= */
 
-.stores-hero {
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-  padding: 7.5rem 1.25rem; /* 120px 20px */
+/* ================= STORES HERO (SAME STYLE) ================= */
+
+.stores-hero-v2{
+  position: relative;
+  padding: 7rem 1.5rem 7rem;
   text-align: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(75rem 28rem at 50% -10%, rgba(99,102,241,0.18), transparent 60%),
+    radial-gradient(56rem 32rem at 10% 35%, rgba(139,92,246,0.16), transparent 55%),
+    radial-gradient(56rem 32rem at 90% 40%, rgba(147,51,234,0.14), transparent 55%),
+    #f6f7fb;
 }
 
-.stores-hero h1 {
-  font-size: 3.25rem; /* 52px */
-  margin-bottom: 1.25rem; /* 20px */
+/* мʼяка світлова форма справа (як на скріні) */
+.stores-hero-v2::before{
+  content:"";
+  position:absolute;
+  width: 45rem;
+  height: 45rem;
+  top: -16rem;
+  right: -18rem;
+  z-index: 0;
+
+  background: radial-gradient(circle, rgba(124,58,237,0.22), transparent 65%);
+  filter: blur(2px);
+  opacity: 0.95;
 }
 
-.stores-hero p {
-  font-size: 1.25rem; /* 20px */
-  color: #555;
-  max-width: 45rem; /* 720px */
+/* друга форма зліва знизу */
+.stores-hero-v2::after{
+  content:"";
+  position:absolute;
+  width: 46rem;
+  height: 46rem;
+  bottom: -20rem;
+  left: -20rem;
+  z-index: 0;
+
+  background: radial-gradient(circle, rgba(79,70,229,0.18), transparent 65%);
+  filter: blur(2px);
+  opacity: 0.9;
+}
+
+/* легкий grain (як в твоєму hero) */
+.stores-hero-v2 .hero-grain{
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:0.12;
+
+  background-image: radial-gradient(circle at 1px 1px, rgba(17,24,39,0.12) 1px, transparent 0);
+  background-size: 0.875rem 0.875rem; /* 14px */
+}
+
+.stores-hero-content{
+  position: relative;
+  z-index: 1;
+  max-width: 58rem;
   margin: 0 auto;
 }
+
+/* бейдж як на скріні */
+.stores-hero-v2 .hero-badge{
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999rem;
+  background: rgba(79,70,229,0.08);
+  border: 1px solid rgba(79,70,229,0.15);
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* заголовок */
+.stores-hero-v2 h1{
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin: 1.5rem 0 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #0f172a;
+}
+
+/* фіолетовий акцент як у скріні */
+.stores-hero-v2 .accent{
+  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 45%, #9333ea 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* опис */
+.stores-hero-v2 p{
+  max-width: 46rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 auto;
+}
+
+
+/* responsive */
+@media (max-width: 48rem){ /* 768px */
+  .stores-hero-v2{
+    padding: 6rem 1.25rem;
+  }
+
+  .stores-hero-v2 h1{
+    font-size: 2.8rem;
+  }
+
+  .stores-hero-v2 p{
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .cta-btn{ transition: none; }
+  .cta-btn--dark:hover,
+  .cta-btn--ghost:hover{ transform: none; }
+}
+
 
 /* ================= STORES ================= */
 
@@ -151,7 +259,7 @@
 
 .why-experience {
   padding: 7rem 1.25rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: #f9fafb;
 }
 
 .why-experience-inner {
@@ -192,11 +300,16 @@
 }
 
 .why-item span {
-  font-size: 2rem;
-  font-weight: 700;
-  color: rgba(124,58,237,0.15);
+  font-size: 2.2rem;
+  font-weight: 800;
   min-width: 3rem;
+
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
+
 
 .why-item h3 {
   font-size: 1.25rem;
@@ -227,6 +340,41 @@
   }
 }
 
+/* ====== REVEAL ON SCROLL (subtle) ====== */
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  filter: blur(4px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    filter 0.6s ease;
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* маленькі затримки для “каскаду” */
+.reveal.delay-1 { transition-delay: 0.06s; }
+.reveal.delay-2 { transition-delay: 0.12s; }
+.reveal.delay-3 { transition-delay: 0.18s; }
+.reveal.delay-4 { transition-delay: 0.24s; }
+.reveal.delay-5 { transition-delay: 0.30s; }
+
+/* повага до користувачів без анімацій */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
+
 
 /* ================= CTA ================= */
 
@@ -251,8 +399,40 @@
 .cta-btn {
   background: #fff;
   color: #111;
-  padding: 1rem 2.5rem; /* 16px 40px */
-  border-radius: 0.875rem; /* 14px */
+  padding: 1rem 2.5rem;
+  border-radius: 0.875rem;
   text-decoration: none;
   font-weight: 600;
+  border: 1px solid transparent;
+
+  display: inline-block;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.3s ease,
+    background 0.25s ease;
 }
+
+.cta-btn:hover {
+  transform: translateY(-4px);
+
+  background: #f9fafb;
+
+  box-shadow:
+    0 1.75rem 3.5rem rgba(0,0,0,0.35),
+    0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.cta-btn:active {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0.75rem 1.5rem rgba(0,0,0,0.25);
+}
+
+.cta-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 0.25rem rgba(255,255,255,0.25),
+    0 1.75rem 3.5rem rgba(0,0,0,0.3);
+}
+
