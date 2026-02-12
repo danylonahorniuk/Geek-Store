@@ -13,19 +13,74 @@ section {
 
 /* HERO */
 .hero {
+  position: relative;
+  padding: 7rem 1.5rem 7rem;
+  background: #f8fafc;
   text-align: center;
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  overflow: hidden;
 }
 
+/* мʼяка світлова форма */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* badge */
+.hero-badge {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: #f3e8ff;
+  color: #7c3aed;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* заголовок */
 .hero h1 {
-  font-size: 48px;
-  margin: 20px 0;
+  font-size: 3.75rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #111827;
 }
 
+/* підзаголовок */
 .hero p {
-  font-size: 20px;
-  color: #555;
+  font-size: 1.25rem;
+  color: #6b7280;
+  line-height: 1.7;
 }
+
+/* адаптив */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* BADGE */
 .badge {
@@ -43,20 +98,88 @@ section {
 }
 
 /* STORY */
-.story {
+.story-section {
+  padding: 6rem 1.5rem;
+  background: #ffffff;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.story img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.highlight {
+/* BADGE */
+.story-badge {
+  display: inline-block;
+  background: #f3e8ff;
+  color: #7c3aed;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
   font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
+
+/* TITLE */
+.story-content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #111827;
+}
+
+/* TEXT */
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.story-highlight {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* IMAGE */
+.story-image-wrapper {
+  text-align: center;
+}
+
+.story-image {
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 2rem 4rem rgba(0,0,0,0.1);
+}
+
+/* CAPTION */
+.story-caption {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #9ca3af; /* сірий */
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .story-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
 
 /* CARDS */
 .gray {
