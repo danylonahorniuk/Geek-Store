@@ -1,5 +1,5 @@
 /* =========================
-   ACCOUNT PAGE (FULL CSS)
+   ACCOUNT PAGE 
    ========================= */
 
 
@@ -16,6 +16,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 17rem 1fr;
   gap: 1.5rem;
+  align-items: start;
 }
 
 /* ================= SIDEBAR ================= */
@@ -28,6 +29,9 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-self: start;
+  position: sticky;
+  top: 1.5rem;
 }
 
 .profile{
