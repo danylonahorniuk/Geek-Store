@@ -86,95 +86,199 @@
   <!-- CONTENT -->
   <main class="content">
 
-    <!-- STATS -->
-    <div class="stats">
-      <div class="stat-card">
-        <strong>24</strong>
-        <span>Всього замовлень</span>
+    <!-- ===== OVERVIEW TAB ===== -->
+    <div class="tab-section is-active" data-section="overview">
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-icon">📦</div>
+          <div class="stat-meta">
+            <strong>24</strong>
+            <span>Всього замовлень</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">📈</div>
+          <div class="stat-meta">
+            <strong>42 899 ₴</strong>
+            <span>Витрачено</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🎖️</div>
+          <div class="stat-meta">
+            <strong>VIP</strong>
+            <span>Рівень</span>
+          </div>
+        </div>
       </div>
-      <div class="stat-card">
-        <strong>42 899 ₴</strong>
-        <span>Витрачено</span>
-      </div>
-      <div class="stat-card">
-        <strong>VIP</strong>
-        <span>Рівень</span>
-      </div>
+
+      <!-- BONUS -->
+      <section class="bonus">
+        <div class="bonus-top">
+          <div>
+            <h2>⭐ Бонусна програма</h2>
+            <p>Член спільноти з 15 березня 2021</p>
+          </div>
+          <div class="bonus-badge">🏅</div>
+        </div>
+
+        <div class="points">
+          <strong>2450</strong>
+          <span>бонусних балів</span>
+        </div>
+
+        <div class="bonus-progress-wrap">
+          <div class="bonus-progress-head">
+            <span>До Premium статусу:</span>
+            <strong>550 балів</strong>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar" style="width:65%"></div>
+          </div>
+        </div>
+
+        <button class="bonus-btn">Використати бали</button>
+      </section>
+
+      <!-- ORDERS PREVIEW -->
+      <section class="orders">
+        <div class="orders-header">
+          <h2>Останні замовлення</h2>
+          <a href="#" class="link">Переглянути всі →</a>
+        </div>
+
+        <div class="order">
+          <div>
+            <strong>#ORD-2024-1234</strong>
+            <span class="status success">Доставлено</span>
+            <p>28 січня 2026</p>
+          </div>
+          <div class="price">
+            <strong>14 097 ₴</strong>
+            <span>3 товари</span>
+          </div>
+        </div>
+
+        <div class="order">
+          <div>
+            <strong>#ORD-2024-1198</strong>
+            <span class="status pending">В обробці</span>
+            <p>12 січня 2026</p>
+          </div>
+          <div class="price">
+            <strong>1 248 ₴</strong>
+            <span>2 товари</span>
+          </div>
+        </div>
+
+        <div class="order">
+          <div>
+            <strong>#ORD-2023-0987</strong>
+            <span class="status success">Доставлено</span>
+            <p>20 грудня 2025</p>
+          </div>
+          <div class="price">
+            <strong>2 399 ₴</strong>
+            <span>1 товар</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUICK -->
+      <section class="quick">
+        <h2>Швидкі дії</h2>
+        <div class="quick-grid">
+          <div class="quick-item">🔔 Сповіщення</div>
+          <div class="quick-item">💳 Способи оплати</div>
+          <div class="quick-item">🛡️ Безпека</div>
+        </div>
+      </section>
     </div>
 
-    <!-- BONUS -->
-    <section class="bonus">
-      <h2>⭐ Бонусна програма</h2>
-      <p>Член спільноти з 15 березня 2021</p>
-
-      <div class="points">
-        <strong>2450</strong>
-        <span>бонусних балів</span>
-      </div>
-
-      <div class="progress">
-        <div class="progress-bar" style="width:65%"></div>
-      </div>
-
-      <button class="bonus-btn">Використати бали</button>
-    </section>
-
-    <!-- ORDERS -->
-    <section class="orders">
-      <div class="orders-header">
-        <h2>Останні замовлення</h2>
-        <a href="#">Переглянути всі →</a>
-      </div>
-
-      <div class="order">
-        <div>
-          <strong>#ORD-2024-1234</strong>
-          <span class="status success">Доставлено</span>
-          <p>28 січня 2026</p>
+    <!-- ===== ORDERS TAB ===== -->
+    <div class="tab-section" data-section="orders">
+      <section class="orders">
+        <div class="orders-header">
+          <h2>Замовлення</h2>
+          <a href="#" class="link">Історія →</a>
         </div>
-        <div class="price">
-          <strong>14 097 ₴</strong>
-          <span>3 товари</span>
-        </div>
-      </div>
 
-      <div class="order">
-        <div>
-          <strong>#ORD-2024-1198</strong>
-          <span class="status pending">В обробці</span>
-          <p>12 січня 2026</p>
+        <!-- ті ж order-блоки, або зробиш список інший -->
+        <div class="order">
+          <div>
+            <strong>#ORD-2024-1234</strong>
+            <span class="status success">Доставлено</span>
+            <p>28 січня 2026</p>
+          </div>
+          <div class="price">
+            <strong>14 097 ₴</strong>
+            <span>3 товари</span>
+          </div>
         </div>
-        <div class="price">
-          <strong>1 248 ₴</strong>
-          <span>2 товари</span>
-        </div>
-      </div>
 
-      <div class="order">
-        <div>
-          <strong>#ORD-2023-0987</strong>
-          <span class="status success">Доставлено</span>
-          <p>20 грудня 2025</p>
+        <div class="order">
+          <div>
+            <strong>#ORD-2024-1198</strong>
+            <span class="status pending">В обробці</span>
+            <p>12 січня 2026</p>
+          </div>
+          <div class="price">
+            <strong>1 248 ₴</strong>
+            <span>2 товари</span>
+          </div>
         </div>
-        <div class="price">
-          <strong>2 399 ₴</strong>
-          <span>1 товар</span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- QUICK -->
-    <section class="quick">
-      <h2>Швидкі дії</h2>
-      <div class="quick-grid">
-        <div class="quick-item">🔔 Сповіщення</div>
-        <div class="quick-item">💳 Способи оплати</div>
-        <div class="quick-item">🛡️ Безпека</div>
-      </div>
-    </section>
+    <!-- ===== WISHLIST TAB ===== -->
+    <div class="tab-section" data-section="wishlist">
+      <section class="orders">
+        <div class="orders-header">
+          <h2>Бажане</h2>
+          <a href="#" class="link">Перейти в каталог →</a>
+        </div>
+        <div class="empty">
+          <strong>Поки що порожньо</strong>
+          <p>Додайте товари в “Бажане”, щоб не загубити їх.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== ADDRESSES TAB ===== -->
+    <div class="tab-section" data-section="addresses">
+      <section class="orders">
+        <div class="orders-header">
+          <h2>Адреси</h2>
+          <a href="#" class="link">Додати →</a>
+        </div>
+        <div class="empty">
+          <strong>Адрес ще немає</strong>
+          <p>Додайте адресу доставки для швидкого оформлення.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== SETTINGS TAB ===== -->
+    <div class="tab-section" data-section="settings">
+      <section class="orders">
+        <div class="orders-header">
+          <h2>Налаштування</h2>
+          <a href="#" class="link">Змінити →</a>
+        </div>
+        <div class="empty">
+          <strong>Налаштування профілю</strong>
+          <p>Тут можна буде змінити дані акаунта та пароль.</p>
+        </div>
+      </section>
+    </div>
 
   </main>
 </div>
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -248,5 +352,7 @@
 
 <script src="../js/theme-toggle.js"></script>
 <script src="../js/account.js"></script>
+<script src="../js/filter-account.js"></script>
+
 </body>
 </html>
