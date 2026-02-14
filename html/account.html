@@ -197,10 +197,23 @@
       <section class="bonus">
         <div class="bonus-top">
           <div>
-            <h2>⭐ Бонусна програма</h2>
+            <h2>
+              <svg class="bonus-title-icon" viewBox="0 0 24 24">
+                <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 16.9 7.1 18.2 8 12.7 4 8.8 9.5 8 12 3z"/>
+              </svg>
+            Бонусна програма
+            </h2>
+
             <p>Член спільноти з 15 березня 2021</p>
           </div>
-          <div class="bonus-badge">🏅</div>
+          <div class="bonus-badge">
+            <div class="bonus-badge">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/>
+            </svg>
+          </div>
+          </div>
         </div>
 
         <div class="points">
@@ -213,7 +226,6 @@
             <span>До Premium статусу:</span>
             <strong>550 балів</strong>
           </div>
-
           <div class="progress">
             <div class="progress-bar" style="width:65%"></div>
           </div>
@@ -270,9 +282,32 @@
       <section class="quick">
         <h2>Швидкі дії</h2>
         <div class="quick-grid">
-          <div class="quick-item">🔔 Сповіщення</div>
-          <div class="quick-item">💳 Способи оплати</div>
-          <div class="quick-item">🛡️ Безпека</div>
+          <div class="quick-item">
+      <!-- notifications -->
+      <svg viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 10-12 0c0 7-3 7-3 7h18s-3 0-3-7"/>
+        <path d="M13.7 21a2 2 0 01-3.4 0"/>
+      </svg>
+      Сповіщення
+    </div>
+
+    <div class="quick-item">
+      <!-- payment card -->
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="5" width="20" height="14" rx="2"/>
+        <path d="M2 10h20"/>
+      </svg>
+      Способи оплати
+    </div>
+
+    <div class="quick-item">
+      <!-- shield security -->
+      <svg viewBox="0 0 24 24">
+        <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/>
+      </svg>
+      Безпека
+    </div>
+
         </div>
       </section>
     </div>
@@ -342,17 +377,51 @@
 
     <!-- ===== SETTINGS TAB ===== -->
     <div class="tab-section" data-section="settings">
-      <section class="orders">
-        <div class="orders-header">
-          <h2>Налаштування</h2>
-          <a href="#" class="link">Змінити →</a>
-        </div>
-        <div class="empty">
-          <strong>Налаштування профілю</strong>
-          <p>Тут можна буде змінити дані акаунта та пароль.</p>
-        </div>
-      </section>
+  <section class="settings-card">
+    <h2 class="settings-title">Налаштування</h2>
+
+    <div class="settings-block">
+      <h3 class="settings-subtitle">Особиста інформація</h3>
+
+      <div class="settings-grid">
+        <label class="field">
+          <span class="field-label">Ім'я</span>
+          <input class="field-input" type="text" value="  Данило Нагорнюк">
+        </label>
+
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input class="field-input" type="email" value="danyakenobi@gmail.com">
+        </label>
+      </div>
     </div>
+
+    <div class="settings-divider"></div>
+
+    <div class="settings-block">
+      <h3 class="settings-subtitle">Змінити пароль</h3>
+
+      <div class="settings-stack">
+        <label class="field">
+          <span class="field-label">Поточний пароль</span>
+          <input class="field-input" type="password" placeholder="">
+        </label>
+
+        <label class="field">
+          <span class="field-label">Новий пароль</span>
+          <input class="field-input" type="password" placeholder="">
+        </label>
+      </div>
+    </div>
+
+    <div class="settings-divider"></div>
+
+    <div class="settings-actions">
+      <button class="settings-save" type="button">Зберегти зміни</button>
+    </div>
+  </section>
+</div>
+
 
   </main>
 </div>
