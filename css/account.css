@@ -9,15 +9,25 @@ a { color: inherit; }
 
 /* ================= PAGE LAYOUT ================= */
 
+/* ====== PAGE LAYOUT (fix width like screenshot) ====== */
 .page{
-  max-width: 92rem;
+  max-width: 78rem;                 /* було 92rem — звужуємо всю сторінку */
   margin: 0 auto;
   padding: 1.75rem;
+
   display: grid;
-  grid-template-columns: 17rem 1fr;
+  grid-template-columns: 17rem minmax(0, 58rem); /* сайдбар той самий, права колонка фіксована */
   gap: 1.5rem;
   align-items: start;
 }
+
+/* щоб правий контент не розтягувався навіть якщо щось впливає */
+.content{
+  width: 100%;
+  max-width: 58rem;
+  justify-self: start;
+}
+
 
 /* ================= SIDEBAR ================= */
 
@@ -53,7 +63,7 @@ a { color: inherit; }
 .profile h3{
   margin: 0.5rem 0 0.25rem;
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -69,7 +79,7 @@ a { color: inherit; }
   padding: 0.45rem 0.95rem;
   border-radius: 999rem;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #fff;
   background: linear-gradient(90deg,#6d5dfc,#9b5cff);
   box-shadow: 0 0.75rem 1.5rem rgba(109,93,252,0.18);
@@ -92,7 +102,7 @@ a { color: inherit; }
   text-align: left;
   cursor: pointer;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #334155;
 
   display: flex;
@@ -110,6 +120,7 @@ a { color: inherit; }
   background: linear-gradient(90deg,#6d5dfc,#9b5cff);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(109,93,252,0.22);
+  font-weight: 600;
 }
 
 .logout{
@@ -118,7 +129,7 @@ a { color: inherit; }
   background: transparent;
   cursor: pointer;
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ef4444;
 
   display: flex;
@@ -178,6 +189,7 @@ a { color: inherit; }
   font-size: 1.6rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 .stat-meta span{
@@ -185,6 +197,7 @@ a { color: inherit; }
   margin-top: 0.95rem;
   color: #64748b;
   font-weight: 650;
+  font-weight: 500;
 }
 
 /* ================= BONUS ================= */
@@ -222,14 +235,14 @@ a { color: inherit; }
 .bonus h2{
   margin: 0 0 0.5rem;
   font-size: 1.45rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .bonus p{
   margin: 0;
   opacity: 0.92;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .bonus-badge{
@@ -254,13 +267,14 @@ a { color: inherit; }
   display: block;
   font-size: 3.1rem;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 .points span{
   display: block;
   margin-top: 0.65rem;
+  font-weight: 500; 
   font-size: 1.1rem;
   font-weight: 700;
   opacity: 0.95;
@@ -284,12 +298,12 @@ a { color: inherit; }
 }
 
 .bonus-progress-head span{
-  font-weight: 700;
+  font-weight: 500;
   opacity: 0.95;
 }
 
 .bonus-progress-head strong{
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .progress{
@@ -315,7 +329,7 @@ a { color: inherit; }
   background: #fff;
   color: #6d5dfc;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer;
 
   box-shadow: 0 1rem 2rem rgba(2,6,23,0.16);
@@ -352,7 +366,7 @@ a { color: inherit; }
 .orders-header h2{
   margin: 0;
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -379,13 +393,13 @@ a { color: inherit; }
 }
 
 .order strong{
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .order p{
   margin: 0.5rem 0 0;
   color: #64748b;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .status{
@@ -416,14 +430,14 @@ a { color: inherit; }
 .price strong{
   display: block;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .price span{
   display: block;
   margin-top: 0.35rem;
   color: #64748b;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 /* ================= QUICK ================= */
@@ -438,7 +452,7 @@ a { color: inherit; }
 .quick h2{
   margin: 0 0 1.25rem;
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -453,7 +467,7 @@ a { color: inherit; }
   background: #f8fafc;
   border-radius: 1rem;
   border: 0.0625rem solid rgba(2,6,23,0.04);
-  font-weight: 800;
+  font-weight: 500;
   color: #0f172a;
 }
 
@@ -465,14 +479,14 @@ a { color: inherit; }
   border-radius: 1.1rem;
   padding: 1.25rem;
   color: #64748b;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .empty strong{
   display: block;
   color: #0f172a;
   margin-bottom: 0.35rem;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 
