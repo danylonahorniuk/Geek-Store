@@ -727,3 +727,220 @@ cursor: pointer;
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ================= MODAL ================= */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.modal.is-open{ display: block; }
+
+.modal-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(2,6,23,0.55);
+  backdrop-filter: blur(2px);
+}
+
+.modal-dialog{
+  position: relative;
+  width: min(68rem, calc(100% - 3rem));
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2rem 5rem rgba(2,6,23,0.25);
+  padding: 1.75rem;
+  max-height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title{
+  margin: 0 0 1.25rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.modal-close{
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: none;
+  border-radius: 999rem;
+  background: #f1f5f9;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #0f172a;
+  transition: background .2s ease, transform .2s ease;
+}
+.modal-close:hover{ background:#e2e8f0; transform: translateY(-1px); }
+
+.modal-body{
+  overflow: auto;
+  padding-right: .25rem; /* щоб скрол не з’їдав контент */
+}
+
+.orders-list{
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* ================= ORDER ROW (modal) ================= */
+.order-row{
+  border: 0.0625rem solid rgba(2,6,23,0.10);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: background .2s ease, box-shadow .25s ease, transform .2s ease, border-color .2s ease;
+}
+
+.order-row:hover{
+  background: #fbfdff;
+  border-color: rgba(2,6,23,0.14);
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2.5rem rgba(2,6,23,0.10);
+}
+
+.order-left{
+  display: flex;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.order-ico{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.order-ico svg{
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke: #4f46e5;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.order-main{ min-width: 0; }
+
+.order-topline{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.order-id{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.order-date{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.order-date svg,
+.meta-item svg{
+  width: 1.05rem;
+  height: 1.05rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.order-meta{
+  margin-top: .9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem 1.25rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.meta-item{
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
+  min-width: 11rem;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  padding: .38rem .8rem;
+  border-radius: 999rem;
+  font-weight: 650;
+  font-size: .85rem;
+}
+.pill-success{ background:#dcfce7; color:#166534; }
+.pill-warn{ background:#fef3c7; color:#92400e; }
+
+.order-summary{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: .9rem;
+  border-top: 0.0625rem solid rgba(2,6,23,0.08);
+}
+
+.order-count{
+  color: #475569;
+  font-weight: 600;
+}
+
+.order-total{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* responsive */
+@media (max-width: 860px){
+  .modal-title{ font-size: 1.75rem; }
+  .order-row{ flex-direction: column; align-items: stretch; }
+  .order-right{ align-items: flex-start; min-width: 0; }
+  .order-meta{ grid-template-columns: 1fr; }
+}

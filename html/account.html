@@ -238,13 +238,15 @@
       <section class="orders">
         <div class="orders-header">
           <h2>Останні замовлення</h2>
-          <a href="#" class="link">Переглянути всі →</a>
+          
+        <a href="#" id="openOrdersModal" class="link">Переглянути всі →</a>
+
         </div>
 
         <div class="order">
           <div>
             <strong>#ORD-2024-1234</strong>
-            <span class="status success">Доставлено</span>
+            <span class="status pending">В обробці</span>
             <p>28 січня 2026</p>
           </div>
           <div class="price">
@@ -256,7 +258,7 @@
         <div class="order">
           <div>
             <strong>#ORD-2024-1198</strong>
-            <span class="status pending">В обробці</span>
+            <span class="status success">Доставлено</span>
             <p>12 січня 2026</p>
           </div>
           <div class="price">
@@ -317,7 +319,6 @@
       <section class="orders">
         <div class="orders-header">
           <h2>Замовлення</h2>
-          <a href="#" class="link">Історія →</a>
         </div>
 
         <!-- ті ж order-блоки, або зробиш список інший -->
@@ -352,7 +353,7 @@
       <section class="orders">
         <div class="orders-header">
           <h2>Бажане</h2>
-          <a href="#" class="link">Перейти в каталог →</a>
+          <a href="shop.html" class="link">Перейти в каталог →</a>
         </div>
         <div class="empty">
           <strong>Поки що порожньо</strong>
@@ -497,9 +498,338 @@
   </div>
 </footer>
 
+
+
+<!-- ORDERS MODAL -->
+<div class="modal" id="ordersModal" aria-hidden="true">
+  <div class="modal-overlay" data-close="true"></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="ordersModalTitle">
+    <button class="modal-close" type="button" aria-label="Закрити" data-close="true">✕</button>
+
+    <h2 class="modal-title" id="ordersModalTitle">Всі замовлення</h2>
+
+    <div class="modal-body">
+      <div class="orders-list">
+
+        <!-- Order item -->
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- ще 1 приклад -->
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1198</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  12 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  пр. Перемоги, 45, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  MasterCard •••• 8888
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-warn">В обробці</span>
+            <div class="order-summary">
+              <span class="order-count">2 товари</span>
+              <strong class="order-total">1 248 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="order-row">
+          <div class="order-left">
+            <div class="order-ico">
+              <!-- package icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+                <path d="M3 8v8l9 5 9-5V8"/>
+                <path d="M12 13v8"/>
+              </svg>
+            </div>
+
+            <div class="order-main">
+              <div class="order-topline">
+                <strong class="order-id">#ORD-2024-1234</strong>
+                <span class="order-date">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                  28 січня 2026
+                </span>
+              </div>
+
+              <div class="order-meta">
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                  вул. Хрещатик, 22, Київ
+                </span>
+
+                <span class="meta-item">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                  Visa •••• 4242
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <span class="pill pill-success">Доставлено</span>
+            <div class="order-summary">
+              <span class="order-count">3 товари</span>
+              <strong class="order-total">14 097 ₴</strong>
+            </div>
+          </div>
+        </article>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="../js/theme-toggle.js"></script>
 <script src="../js/account.js"></script>
 <script src="../js/filter-account.js"></script>
+<script src="../js/acc-modal.js"></script>
 
 </body>
 </html>
