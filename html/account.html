@@ -75,14 +75,63 @@
     </div>
 
     <nav class="menu">
-      <button class="menu-item active" data-section="overview">👤 Огляд</button>
-      <button class="menu-item" data-section="orders">📦 Замовлення</button>
-      <button class="menu-item" data-section="wishlist">❤️ Бажане</button>
-      <button class="menu-item" data-section="addresses">📍 Адреси</button>
-      <button class="menu-item" data-section="settings">⚙️ Налаштування</button>
+      <button class="menu-item active" data-section="overview">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M20 21a8 8 0 10-16 0M12 11a4 4 0 100-8 4 4 0 000 8z"/>
+      </svg>
+
+        Огляд
+      </button>
+
+      <button class="menu-item" data-section="orders">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.3 7l8.7 5 8.7-5"/>
+      </svg>
+        Замовлення
+      </button>
+
+      <button class="menu-item" data-section="wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+          d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/>
+        </svg>
+         Бажане
+        </button>
+
+      <button class="menu-item" data-section="addresses">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 21s-7-4.35-7-10a7 7 0 1114 0c0 5.65-7 10-7 10z"/>
+          <circle cx="12" cy="11" r="3"/>
+        </svg>
+         Адреси
+        </button>
+
+      <button class="menu-item" data-section="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 15a3 3 0 100-6 3 3 0 000 6z"/>
+          <path stroke-linecap="round" stroke-linejoin="round"
+          d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06A1.65 1.65 0 0015 19.4a1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09A1.65 1.65 0 0015 4.6c.67 0 1.31-.26 1.82-.76l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9c0 .66.26 1.3.76 1.82H21a2 2 0 110 4h-.09c-.66 0-1.3.26-1.51 1z"/>
+        </svg>
+
+         Налаштування
+        </button>
     </nav>
 
-    <button class="logout">🚪 Вийти</button>
+    <button class="logout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/>
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M16 17l5-5-5-5M21 12H9"/>
+      </svg>
+       Вийти
+      </button>
   </aside>
 
   <!-- CONTENT -->
@@ -91,31 +140,58 @@
     <!-- ===== OVERVIEW TAB ===== -->
     <div class="tab-section is-active" data-section="overview">
       <!-- STATS -->
-      <div class="stats">
-        <div class="stat-card">
-          <div class="stat-icon">📦</div>
-          <div class="stat-meta">
-            <strong>24</strong>
-            <span>Всього замовлень</span>
-          </div>
-        </div>
+<div class="stats">
 
-        <div class="stat-card">
-          <div class="stat-icon">📈</div>
-          <div class="stat-meta">
-            <strong>42 899 ₴</strong>
-            <span>Витрачено</span>
-          </div>
-        </div>
+  <!-- Orders -->
+  <div class="stat-card">
+    <div class="stat-icon">
+      <!-- shopping bag (як на скріні) -->
+      <svg viewBox="0 0 24 24">
+        <path d="M21 8l-9-5-9 5 9 5 9-5z"/>
+        <path d="M3 8v8l9 5 9-5V8"/>
+        <path d="M12 13v8"/>
+      </svg>
 
-        <div class="stat-card">
-          <div class="stat-icon">🎖️</div>
-          <div class="stat-meta">
-            <strong>VIP</strong>
-            <span>Рівень</span>
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="stat-meta">
+      <strong>24</strong>
+      <span>Всього замовлень</span>
+    </div>
+  </div>
+
+  <!-- Spent -->
+  <div class="stat-card">
+    <div class="stat-icon">
+      <!-- trending up (чітко промальована) -->
+      <svg viewBox="0 0 24 24">
+        <path d="M3 17l6-6 4 4 7-7"/>
+        <path d="M14 8h6v6"/>
+      </svg>
+    </div>
+    <div class="stat-meta">
+      <strong>42,899 ₴</strong>
+      <span>Витрачено</span>
+    </div>
+  </div>
+
+  <!-- VIP -->
+  <div class="stat-card">
+    <div class="stat-icon">
+      <!-- medal/award (як на скріні) -->
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/>
+      </svg>
+
+    </div>
+    <div class="stat-meta">
+      <strong>VIP</strong>
+      <span>Рівень</span>
+    </div>
+  </div>
+
+</div>
+
 
       <!-- BONUS -->
       <section class="bonus">
