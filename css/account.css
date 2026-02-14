@@ -159,6 +159,23 @@ a { color: inherit; }
   gap: 0.5rem;
 }
 
+/* робимо logout таким же як menu-item */
+.logout-item{
+  width: 100%;
+  justify-content: flex-start;
+  color: #ef4444;
+}
+
+/* легкий червоний hover */
+.logout-item:hover{
+  background: rgba(239,68,68,0.10);
+}
+
+/* щоб іконка теж була червона */
+.logout-item svg{
+  color: currentColor;
+}
+
 .menu-item svg,
 .logout svg{
   width: 1.25rem;
@@ -944,3 +961,5 @@ cursor: pointer;
   .order-right{ align-items: flex-start; min-width: 0; }
   .order-meta{ grid-template-columns: 1fr; }
 }
+
+
