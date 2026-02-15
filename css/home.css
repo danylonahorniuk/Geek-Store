@@ -35,10 +35,16 @@
 .content {
   position: relative;
   z-index: 2;
-  max-width: 640px;
-  padding: 120px 80px;
+  max-width: 40rem;
+
+  padding-top: 7.5rem;      /* було 120px */
+  padding-bottom: 7.5rem;
+  padding-left: 9rem;       /* 🔥 було 5rem — тепер не перекривається */
+  padding-right: 5rem;
+
   color: #fff;
 }
+
 
 .badge-banner {
   background: #facc15;
@@ -92,20 +98,67 @@ p {
 }
 
 
-.arrow {
+.arrow{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 56px;
-  background: none;
-  border: none;
-  color: #fff;
+
+  width: 4rem;              /* 64px */
+  height: 4rem;             /* 64px */
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.0625rem solid rgba(255,255,255,0.25); /* 1px */
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(0.625rem); /* 10px */
+
   cursor: pointer;
   z-index: 5;
+
+  transition: all .25s ease;
 }
 
-.left { left: 30px; }
-.right { right: 30px; }
+/* svg */
+.arrow svg{
+  width: 1.75rem;           /* 28px */
+  height: 1.75rem;          /* 28px */
+  stroke: white;
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform .25s ease;
+}
+
+/* позиції */
+.left { left: clamp(0.5rem, 3vw, 2rem); }
+.right { right: clamp(0.5rem, 3vw, 2rem); }
+
+/* hover */
+.arrow:hover{
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* рух стрілки */
+.left:hover svg{
+  transform: translateX(-0.25rem); /* -4px */
+}
+
+.right:hover svg{
+  transform: translateX(0.25rem);  /* 4px */
+}
+
+/* active */
+.arrow:active{
+  transform: translateY(-50%) scale(0.95);
+}
+
 
 .hero-footer {
   position: absolute;
