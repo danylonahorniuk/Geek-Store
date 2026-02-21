@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Каталог товарів — GEEK STORE</title>
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/shop.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<nav class="header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <img src="../assets/icons/flash.png">
+      </div>
+      <div class="logo-text">GEEK STORE</div>
+      <div class="logo-badge">Ukraine</div>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="#" class="nav-link active">Каталог</a>
+      <a href="about.html" class="nav-link">Про нас</a>
+      <a href="stores.html" class="nav-link">Магазини</a>
+      <a href="contact.html" class="nav-link">Контакти</a>
+    </div>
+
+    <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Перемикач теми">
+      <img
+        src="../assets/icons/half-moon.png"
+        alt="Dark mode"
+        class="theme-icon theme-icon--moon"
+      >
+      <img
+        src="../assets/icons/sun.png"
+        alt="Light mode"
+        class="theme-icon theme-icon--sun"
+      >
+    </button>
+
+
+      <!-- Account -->
+      <a href="account.html" class="account" aria-label="Особистий кабінет">
+        <img src="../assets/icons/user.png" class="account-icon account-icon--black">
+        <img src="../assets/icons/user-white.png" class="account-icon account-icon--white">
+      </a>
+
+
+      <!-- Cart -->
+      <a href="cart.html" class="cart">
+        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black">
+        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white">
+        <span class="cart-count">3</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="shop-hero">
+    <div class="shop-hero__inner">
+      <h1 class="shop-hero__title">Каталог товарів</h1>
+      <p class="shop-hero__desc">
+        Знайди улюблені товари з світів Marvel, Star Wars, DC та багато іншого.
+        Понад 850 унікальних товарів для справжніх фанатів.
+      </p>
+
+      <form class="shop-search" id="searchForm" autocomplete="off">
+        <span class="shop-search__icon" aria-hidden="true">
+          <!-- search icon -->
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+        </span>
+        <input
+          class="shop-search__input"
+          id="searchInput"
+          type="search"
+          placeholder="Шукай товари, персонажів, серії..."
+        />
+      </form>
+    </div>
+  </header>
+
+  <!-- UNIVERSES -->
+  <section class="universe-pills">
+    <div class="container">
+      <h2 class="universe-pills__title">Обирай всесвіт</h2>
+
+      <div class="pill-row" id="universeRow">
+        <!-- pills injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="shop-main">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="filters">
+          <div class="filters__head">
+            <span class="filters__icon" aria-hidden="true">
+              <!-- funnel icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"></path>
+              </svg>
+            </span>
+            <h3>Фільтри</h3>
+          </div>
+
+          <div class="filters__section">
+            <div class="filters__label">КАТЕГОРІЇ</div>
+
+            <div class="filters__list" id="categoryList">
+              <!-- categories injected by JS -->
+            </div>
+          </div>
+
+          <div class="filters__divider"></div>
+
+          <div class="help-card">
+            <h4>Потрібна допомога?</h4>
+            <p>Наші експерти допоможуть знайти ідеальний товар</p>
+            <a href="contact.html" class="help-card__btn">Зв’язатися</a>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <section class="results">
+
+          <div class="results-top">
+            <div class="results-top__count">
+              Знайдено товарів: <strong id="foundCount">0</strong>
+            </div>
+
+            <div class="results-top__view">
+              <button class="view-btn is-active" type="button" aria-label="Grid view">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"></path>
+                </svg>
+              </button>
+              <button class="view-btn" type="button" aria-label="List view (soon)">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 6h13M8 12h13M8 18h13"></path>
+                  <path d="M4 6h.01M4 12h.01M4 18h.01"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="products-grid" id="productsGrid">
+            <!-- product cards injected by JS -->
+          </div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <strong>Нічого не знайдено</strong>
+            <p>Спробуй змінити фільтри або пошуковий запит.</p>
+            <button class="reset-btn" type="button" id="resetBtn">Скинути фільтри</button>
+          </div>
+
+        </section>
+      </div>
+    </div>
+  </main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-company">
+        <div class="footer-logo">GEEK STORE</div>
+        <p class="footer-text">
+          Найбільший магазин гік-культури в Україні. Marvel, Star Wars, DC та багато іншого.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/facebook (1).png" alt="Facebook">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/instagram (1).png" alt="Instagram">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/telegram (2).png" alt="Telegram">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/youtube (2).png" alt="YouTube">
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Навігація</h3>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="shop.html">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="stores.html">Магазини</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-section">
+        <h3>Категорії</h3>
+        <ul>
+          <li><a href="shop.html">LEGO</a></li>
+          <li><a href="shop.html">Funko Pop</a></li>
+          <li><a href="shop.html">Постери</a></li>
+          <li><a href="shop.html">Комікси</a></li>
+          <li><a href="shop.html">Ексклюзиви</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="footer-section">
+        <h3>Підтримка</h3>
+        <ul>
+          <li><a href="#">Доставка та оплата</a></li>
+          <li><a href="#">Повернення товару</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Часті питання</a></li>
+          <li><a href="#">Політика конфіденційності</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 GEEK STORE. Всі права захищені.</p>
+      <p>Зроблено з ❤️ для українських гіків</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="../js/shop.js"></script>
+  <script src="../js/theme-toggle.js"></script>
+</body>
+</html>
