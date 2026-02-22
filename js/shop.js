@@ -157,33 +157,93 @@ function buildUniversePills() {
 }
 
 function buildCategoryFilters() {
+  const icons = {
+    all: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3l9 6-9 6-9-6 9-6z"></path>
+        <path d="M3 9v6l9 6 9-6V9"></path>
+      </svg>
+    `,
+    lego: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="4" y="9" width="16" height="11" rx="2"></rect>
+        <rect x="7" y="5" width="3" height="4" rx="1"></rect>
+        <rect x="14" y="5" width="3" height="4" rx="1"></rect>
+      </svg>
+    `,
+    mask: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7c3-2 5-3 8-3s5 1 8 3v5c0 5-3 9-8 9s-8-4-8-9V7z"></path>
+        <path d="M8.5 12.2h.01"></path>
+        <path d="M15.5 12.2h.01"></path>
+        <path d="M9 15c1.2 1 2.2 1.5 3 1.5S13.8 16 15 15"></path>
+      </svg>
+    `,
+    poster: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="5" y="4" width="14" height="16" rx="2"></rect>
+        <path d="M8 14l2-2 3 3 2-2 2 2"></path>
+        <path d="M9 9h.01"></path>
+      </svg>
+    `,
+    comics: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 4h12v16H6z"></path>
+        <path d="M9 8h6"></path>
+        <path d="M9 12h6"></path>
+        <path d="M9 16h4"></path>
+      </svg>
+    `,
+    figure: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z"></path>
+        <path d="M6 21v-2a6 6 0 0 1 12 0v2"></path>
+      </svg>
+    `,
+    tshirt: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 5l4 2 4-2 3 3-2 2v12H7V10L5 8l3-3z"></path>
+      </svg>
+    `,
+    bag: `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6 7h12l-1 14H7L6 7z"></path>
+        <path d="M9 7a3 3 0 0 1 6 0"></path>
+      </svg>
+    `
+  };
+
   const categories = [
-    { key: "Всі категорії", icon: "🎯" },
-    { key: "LEGO", icon: "🧱" },
-    { key: "Funko Pop", icon: "🎭" },
-    { key: "Постери", icon: "🖼️" },
-    { key: "Комікси", icon: "📚" },
-    { key: "Фігурки", icon: "🎪" },
-    { key: "Одяг", icon: "👕" },
-    { key: "Аксесуари", icon: "🎒" }
+    { key: "Всі категорії", icon: icons.all },
+    { key: "LEGO", icon: icons.lego },
+    { key: "Funko Pop", icon: icons.mask },
+    { key: "Постери", icon: icons.poster },
+    { key: "Комікси", icon: icons.comics },
+    { key: "Фігурки", icon: icons.figure },
+    { key: "Одяг", icon: icons.tshirt },
+    { key: "Аксесуари", icon: icons.bag }
   ];
 
   categoryList.innerHTML = categories.map(c => `
     <button class="filter-item ${c.key === state.category ? "is-active" : ""}"
             type="button"
             data-category="${c.key}">
-      <span class="filter-emoji" aria-hidden="true">${c.icon}</span>
-      ${c.key}
+      <span class="filter-icon" aria-hidden="true">${c.icon}</span>
+      <span class="filter-text">${c.key}</span>
     </button>
   `).join("");
 
-  categoryList.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-category]");
-    if (!btn) return;
-    state.category = btn.dataset.category;
-    syncActiveStates();
-    render();
-  });
+  // ⚠️ Важливо: не множимо listener при повторному рендері
+  if (!categoryList.dataset.bound) {
+    categoryList.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-category]");
+      if (!btn) return;
+      state.category = btn.dataset.category;
+      syncActiveStates();
+      render();
+    });
+    categoryList.dataset.bound = "1";
+  }
 }
 
 function syncActiveStates() {

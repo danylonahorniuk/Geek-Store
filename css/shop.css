@@ -205,6 +205,17 @@ body{
   stroke-linejoin: round;
 }
 
+.filter-icon svg{
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke: currentColor;
+  fill: none;              /* 🔥 щоб не було "заливки" */
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.95;
+}
+
 .filters__label{
   font-size: 0.9rem;
   font-weight: 600;
@@ -245,10 +256,19 @@ body{
   box-shadow: 0 1rem 2rem rgba(109,93,252,0.22);
 }
 
-.filter-emoji{
+/* текст у кнопці */
+.filter-text{
+  font-size: 1.02rem;      /* було замало — підняли */
+  line-height: 1.2;
+}
+
+.filter-icon{
   width: 1.6rem;
+  height: 1.6rem;
   display: inline-flex;
+  align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
 }
 
 .filters__divider{
