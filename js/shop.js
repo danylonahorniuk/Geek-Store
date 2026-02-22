@@ -3,22 +3,22 @@
 const PRODUCTS = [
   {
     id: "p1",
-    title: "LEGO Star Wars Millennium Falcon",
-    price: 12999,
+    title: "LEGO Star Wars Швидкісний мотоцикл Мандалорця й Ґроґу",
+    price: 479,
     universe: "Star Wars",
     category: "LEGO",
     badge: "Новинка",
-    image: "https://images.unsplash.com/photo-1520975693411-b4ed88b5f0cf?auto=format&fit=crop&w=1200&q=80",
-    tags: ["lego", "falcon", "star wars", "sw"]
+    image: "../assets/new-goods-home/LEGO-Star-Wars-mandos-spider.jpg",
+    tags: ["lego", "mandalorian", "star wars", "sw"]
   },
   {
     id: "p2",
-    title: "Funko Pop! Iron Man",
-    price: 599,
+    title: "Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition",
+    price: 1897,
     universe: "Marvel",
     category: "Funko Pop",
     badge: "Топ продажів",
-    image: "https://images.unsplash.com/photo-1520975688781-7f5b0b8a5f63?auto=format&fit=crop&w=1200&q=80",
+    image: "../assets/cataloge-goods/funko-iron-man.jpg",
     tags: ["funko", "iron man", "marvel"]
   },
   {
@@ -28,17 +28,17 @@ const PRODUCTS = [
     universe: "DC",
     category: "Постери",
     badge: "",
-    image: "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=80",
+    image: "../assets/cataloge-goods/poster-batman.jpg",
     tags: ["poster", "batman", "dc"]
   },
   {
     id: "p4",
     title: "Фігурка Kratos God of War",
-    price: 3999,
+    price: 2640,
     universe: "Gaming",
     category: "Фігурки",
     badge: "",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    image: "../assets/cataloge-goods/Kratos-God-of-War.jpg",
     tags: ["kratos", "god of war", "gaming"]
   },
   {
@@ -48,38 +48,38 @@ const PRODUCTS = [
     universe: "Інше",
     category: "Одяг",
     badge: "",
-    image: "https://images.unsplash.com/photo-1520975743539-7f3f8b5d1cbb?auto=format&fit=crop&w=1200&q=80",
+    image: "../assets/cataloge-goods/Футболка-Stranger-Things.webp",
     tags: ["tshirt", "stranger things", "clothes"]
   },
   {
     id: "p6",
-    title: "Термос Lightsaber",
-    price: 899,
+    title: "Шолом Hasbro Star Wars Black Series The Mandalorian",
+    price: 7696,
     universe: "Star Wars",
     category: "Аксесуари",
     badge: "Новинка",
-    image: "https://images.unsplash.com/photo-1520975686261-0c2f3fa2b7b0?auto=format&fit=crop&w=1200&q=80",
-    tags: ["thermos", "lightsaber", "star wars"]
+    image: "../assets/new-goods-home/mando-helmet1.1.webp",
+    tags: ["helmet", "mandalorian", "star wars"]
   },
   {
     id: "p7",
-    title: "Комікс Spider-Man: Homecoming",
-    price: 449,
+    title: "Комікс Ultimate Spider-Man by Jonathan Hickman Vol. 1",
+    price: 1361,
     universe: "Marvel",
     category: "Комікси",
     badge: "",
-    image: "https://images.unsplash.com/photo-1520975666598-9c0f33e32e3c?auto=format&fit=crop&w=1200&q=80",
+    image: "../assets/cataloge-goods/comic-spider-man2.jpg",
     tags: ["comic", "spiderman", "marvel"]
   },
   {
     id: "p8",
-    title: "Паличка Герміони",
-    price: 999,
+    title: "Чарівна паличка Wizarding world Гаррі Поттера",
+    price: 499,
     universe: "Harry Potter",
     category: "Аксесуари",
     badge: "Топ продажів",
-    image: "https://images.unsplash.com/photo-1520975659129-7d33dcb162d4?auto=format&fit=crop&w=1200&q=80",
-    tags: ["wand", "hermione", "hp"]
+    image: "../assets/cataloge-goods/паличка-поттера.webp",
+    tags: ["wand", "harry potter", "hp"]
   }
 ];
 

@@ -329,6 +329,8 @@ body{
   border-radius: 1.5rem;
   box-shadow: 0 0.875rem 2.25rem rgba(2,6,23,0.08);
   padding: 1.25rem 1.5rem;
+  max-width: 72rem; /* щоб співпадало з grid */
+  margin: 0 auto 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -390,8 +392,15 @@ body{
 /* products grid */
 .products-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); /* було 17rem */
+  gap: 1.75rem; /* трохи більше повітря */
+  max-width: 72rem; /* було 64rem */
+  margin: 0 auto;
+}
+
+.shop-main .container{
+  max-width: 90rem;
+  padding-left: 0.75rem;
 }
 
 .product-card{
@@ -409,7 +418,7 @@ body{
 
 .product-media{
   position: relative;
-  height: 16.5rem;
+  height: 20.5rem; /* було 19rem */
   background: #f1f5f9;
 }
 
@@ -433,7 +442,7 @@ body{
 }
 
 .product-body{
-  padding: 1.25rem 1.25rem 1.35rem;
+  padding: 1.5rem 1.25rem 1.7rem;
 }
 
 .product-meta{
