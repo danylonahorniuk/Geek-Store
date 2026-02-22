@@ -1,4 +1,6 @@
-
+body{
+  font-weight: 400;
+}
 
 /* utils */
 .container{
@@ -24,7 +26,7 @@
 .shop-hero__title{
   margin: 0 0 1rem;
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -34,7 +36,7 @@
   font-size: 1.25rem;
   line-height: 1.6;
   opacity: 0.92;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* search */
@@ -79,7 +81,7 @@
   padding: 0 1.25rem 0 3.25rem;
   color: #fff;
   font-size: 1rem;
-  font-weight: 550;
+  font-weight: 400;
 }
 
 .shop-search__input::placeholder{
@@ -94,9 +96,9 @@
 }
 
 .universe-pills__title{
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem 4rem;
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -104,6 +106,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center; /* 🔥 центр по горизонталі */
 }
 
 .pill{
@@ -125,13 +128,13 @@
 
 .pill strong{
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .pill span{
   font-size: 0.95rem;
   color: #64748b;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .pill:hover{
@@ -157,7 +160,7 @@
 
 .shop-layout{
   display: grid;
-  grid-template-columns: 22rem 1fr;
+  grid-template-columns: 19.5rem 1fr; /* 🔥 ідеальний баланс */
   gap: 1.75rem;
   align-items: start;
 }
@@ -182,7 +185,7 @@
 .filters__head h3{
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .filters__icon{
@@ -204,7 +207,7 @@
 
 .filters__label{
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #64748b;
   letter-spacing: 0.06em;
   margin-bottom: 0.9rem;
@@ -227,7 +230,7 @@
   cursor: pointer;
   text-align: left;
   color: #0f172a;
-  font-weight: 700;
+  font-weight: 500;
   transition: background .2s ease, transform .2s ease, box-shadow .25s ease;
 }
 
@@ -265,13 +268,13 @@
 .help-card h4{
   margin: 0 0 0.5rem;
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .help-card p{
   margin: 0 0 1rem;
   color:#475569;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -286,7 +289,7 @@
   border-radius: 1rem;
   padding: 0.95rem 1rem;
 
-  font-weight: 800;
+  font-weight: 600;
   color: #fff;
 
   background: linear-gradient(90deg,#4f46e5,#7c3aed);
@@ -315,7 +318,7 @@
 
 .results-top__count{
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .results-top__count strong{
@@ -415,7 +418,7 @@
 
 .product-meta{
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #6d5dfc;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -424,7 +427,7 @@
 .product-title{
   margin: 0.65rem 0 1rem;
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -437,7 +440,7 @@
 
 .product-price{
   font-size: 1.7rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .buy-btn{
@@ -445,7 +448,7 @@
   border-radius: 1rem;
   padding: 0.9rem 1.15rem;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 600;
   color: #fff;
   background: linear-gradient(90deg,#6d5dfc,#9b5cff);
   box-shadow: 0 1rem 2rem rgba(109,93,252,0.22);
@@ -472,7 +475,7 @@
   font-size: 1.1rem;
   color: #0f172a;
   margin-bottom: 0.35rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .reset-btn{
@@ -481,7 +484,7 @@
   border-radius: 1rem;
   padding: 0.85rem 1.1rem;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 500;
   color: #0f172a;
   background: #e2e8f0;
 }
