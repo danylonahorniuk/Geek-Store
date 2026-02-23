@@ -245,7 +245,84 @@
   </div>
 </footer>
 
-  <script src="../js/shop.js"></script>
+  <script src="../js/shop.js" defer></script>
   <script src="../js/theme-toggle.js"></script>
+
+  <!-- ===== PRODUCT MODAL (place before </body>) ===== -->
+<div class="pmodal" id="productModal" aria-hidden="true">
+  <div class="pmodal__overlay" data-close="modal"></div>
+
+  <div class="pmodal__dialog" role="dialog" aria-modal="true" aria-labelledby="pmodalTitle">
+    <button class="pmodal__close" type="button" aria-label="Закрити" data-close="modal">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6L6 18"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <div class="pmodal__grid">
+      <div class="pmodal__media">
+        <img id="pmodalImage" alt="">
+      </div>
+
+      <div class="pmodal__info">
+        <div class="pmodal__pills" id="pmodalPills"></div>
+
+        <h2 class="pmodal__title" id="pmodalTitle"></h2>
+
+        <div class="pmodal__rating">
+          <div class="pmodal__stars" id="pmodalStars" aria-hidden="true"></div>
+          <div class="pmodal__ratingText" id="pmodalRatingText"></div>
+        </div>
+
+        <div class="pmodal__priceRow">
+          <div class="pmodal__price" id="pmodalPrice"></div>
+          <div class="pmodal__stock" id="pmodalStock"></div>
+        </div>
+
+        <div class="pmodal__actions">
+          <button class="pmodal__add" type="button" id="pmodalAdd">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6h15l-2 9H7L6 6z"></path>
+              <path d="M6 6l-2-2"></path>
+              <path d="M9 20h.01"></path>
+              <path d="M17 20h.01"></path>
+            </svg>
+            Додати в кошик
+          </button>
+
+          <button class="pmodal__iconBtn" type="button" title="В обране">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7-4.6-9.2-8.6C1.2 9.3 3.1 6.5 6.3 6.1c1.8-.2 3.4.6 4.4 1.8 1-1.2 2.6-2 4.4-1.8 3.2.4 5.1 3.2 3.5 6.3C19 16.4 12 21 12 21z"></path>
+            </svg>
+          </button>
+
+          <button class="pmodal__iconBtn" type="button" title="Поділитись">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 6a3 3 0 1 0 0.01 0"></path>
+              <path d="M6 12a3 3 0 1 0 0.01 0"></path>
+              <path d="M18 18a3 3 0 1 0 0.01 0"></path>
+              <path d="M8.7 10.9l6.6-3.8"></path>
+              <path d="M8.7 13.1l6.6 3.8"></path>
+            </svg>
+          </button>
+        </div>
+
+        <button class="pmodal__buyNow" type="button" id="pmodalBuyNow">Купити зараз</button>
+
+        <div class="pmodal__divider"></div>
+
+        <h3 class="pmodal__h">Опис товару</h3>
+        <p class="pmodal__desc" id="pmodalDesc"></p>
+
+        <h3 class="pmodal__h">Характеристики:</h3>
+        <ul class="pmodal__specs" id="pmodalSpecs"></ul>
+
+        <div class="pmodal__benefits" id="pmodalBenefits"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ===== /PRODUCT MODAL ===== -->
 </body>
 </html>

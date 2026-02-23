@@ -95,17 +95,32 @@ const PRODUCTS = [
     id: "p10",
     title: "Ігра Sony PlayStation 5 Marvel’s Spider-Man 2",
     price: 1790,
-    universe: "Gaming", 
+    universe: "Gaming",
     category: "Ігри",
     badge: "",
     image: "../assets/cataloge-goods/ps5-marvel-s-spider-man-2-bd-disk.webp",
-    tags: ["PlayStation 5", "spiderman", "gaming", "marvel"]
+    tags: ["PlayStation 5", "spiderman", "gaming", "marvel"],
+
+    desc: "Екшен-гра для PS5. Пітер Паркер і Майлз Моралес проти нових ворогів.",
+    inStock: true,
+    rating: 4.8,
+    reviews: 312,
+    specs: [
+      "Платформа: PlayStation 5",
+      "Жанр: Action / Adventure",
+      "Мова: Англійська (саб/укр. залежить від видання)"
+    ],
+    benefits: [
+      { dot: "#22c55e", title: "Швидка доставка", text: "1–2 дні по Україні" },
+      { dot: "#3b82f6", title: "Оригінальний диск", text: "Запаковано, нове" },
+      { dot: "#a855f7", title: "Підтримка", text: "Допоможемо з оплатою/доставкою" }
+    ]
   },
   {
     id: "p11",
     title: "Ігра Sony PlayStation 5 Marvel's Spider-Man: Miles Morales",
     price: 1299,
-    universe: "Gaming", 
+    universe: "Gaming",
     category: "Ігри",
     badge: "",
     image: "../assets/cataloge-goods/ps5-marvel-spider-man-miles-morales-disk.webp",
@@ -115,11 +130,11 @@ const PRODUCTS = [
     id: "p12",
     title: "Sony PlayStation 5 Slim Blu-ray 1TB White",
     price: 25499,
-    universe: "Gaming", 
+    universe: "Gaming",
     category: "Ігри",
     badge: "",
     image: "../assets/cataloge-goods/ps5.png",
-    tags: ["PlayStation 5", "gaming",]
+    tags: ["PlayStation 5", "gaming"]
   },
   {
     id: "p13",
@@ -139,7 +154,7 @@ const PRODUCTS = [
     category: "LEGO",
     badge: "",
     image: "../assets/cataloge-goods/lego-minifigures-spiderman.webp",
-    tags: [ "spiderman", "lego", "marvel"]
+    tags: ["spiderman", "lego", "marvel"]
   },
   {
     id: "p15",
@@ -155,11 +170,11 @@ const PRODUCTS = [
     id: "p16",
     title: "Геймпад Бездротовий Sony PlayStation 5 DualSense",
     price: 3299,
-    universe: "Gaming", 
+    universe: "Gaming",
     category: "Ігри",
     badge: "",
     image: "../assets/cataloge-goods/gamepad.webp",
-    tags: ["PlayStation 5", "gaming",]
+    tags: ["PlayStation 5", "gaming"]
   },
   {
     id: "p17",
@@ -172,7 +187,7 @@ const PRODUCTS = [
     tags: ["funko", "batman", "dc"]
   },
   {
-  id: "p18",
+    id: "p18",
     title: "Чашка Marvel",
     price: 280,
     universe: "Marvel",
@@ -209,9 +224,8 @@ const PRODUCTS = [
     category: "Одяг",
     badge: "",
     image: "../assets/cataloge-goods/футболка-star-wars.jpg",
-    tags: ["tshirt", "star wars", "sw","clothes"]
-  },
-
+    tags: ["tshirt", "star wars", "sw", "clothes"]
+  }
 ];
 
 // ======= UI refs =======
@@ -225,6 +239,23 @@ const categoryList = document.getElementById("categoryList");
 const searchInput = document.getElementById("searchInput");
 const searchForm = document.getElementById("searchForm");
 
+// ======= Modal refs =======
+const productModal = document.getElementById("productModal");
+const pmodalImage = document.getElementById("pmodalImage");
+const pmodalPills = document.getElementById("pmodalPills");
+const pmodalTitle = document.getElementById("pmodalTitle");
+const pmodalPrice = document.getElementById("pmodalPrice");
+const pmodalStock = document.getElementById("pmodalStock");
+const pmodalDesc = document.getElementById("pmodalDesc");
+const pmodalSpecs = document.getElementById("pmodalSpecs");
+const pmodalStars = document.getElementById("pmodalStars");
+const pmodalRatingText = document.getElementById("pmodalRatingText");
+const pmodalBenefits = document.getElementById("pmodalBenefits");
+const pmodalAdd = document.getElementById("pmodalAdd");
+const pmodalBuyNow = document.getElementById("pmodalBuyNow");
+
+let currentProductId = null;
+
 // ======= State =======
 const state = {
   universe: "Всі всесвіти",
@@ -236,10 +267,7 @@ const state = {
 const fmtUAH = (n) => new Intl.NumberFormat("uk-UA").format(n) + " ₴";
 
 function normalize(str) {
-  return (str || "")
-    .toString()
-    .trim()
-    .toLowerCase();
+  return (str || "").toString().trim().toLowerCase();
 }
 
 function matchesQuery(product, q) {
@@ -252,6 +280,116 @@ function matchesQuery(product, q) {
   ].map(normalize).join(" ");
   return hay.includes(normalize(q));
 }
+
+// ======= Modal helpers =======
+function getProductById(id) {
+  return PRODUCTS.find(p => p.id === id);
+}
+
+function openProductModal(productId) {
+  const p = getProductById(productId);
+  if (!p || !productModal) return;
+
+  currentProductId = p.id;
+
+  // image
+  if (pmodalImage) {
+    pmodalImage.src = p.image;
+    pmodalImage.alt = p.title;
+  }
+
+  // pills
+  const universeLabel = (p.universe === "Gaming") ? "Ігри" : p.universe;
+  if (pmodalPills) {
+    pmodalPills.innerHTML = `
+      <span class="pmodal__pill">${p.category}</span>
+      <span class="pmodal__pill is-accent">${universeLabel}</span>
+    `;
+  }
+
+  // title + price
+  if (pmodalTitle) pmodalTitle.textContent = p.title;
+  if (pmodalPrice) pmodalPrice.textContent = fmtUAH(p.price);
+
+  // stock
+  const inStock = (p.inStock ?? true);
+  if (pmodalStock) {
+    pmodalStock.textContent = inStock ? "✓ В наявності" : "✕ Немає в наявності";
+    pmodalStock.style.background = inStock ? "#eefbf1" : "#fff1f2";
+    pmodalStock.style.color = inStock ? "#166534" : "#9f1239";
+  }
+
+  // rating
+  const rating = p.rating ?? 4.9;
+  const reviews = p.reviews ?? 127;
+
+  if (pmodalStars) {
+    pmodalStars.innerHTML = "★★★★★".split("").map((s, i) =>
+      `<span style="font-size:1.1rem; color:${i < Math.round(rating) ? "#facc15" : "#cbd5e1"}">${s}</span>`
+    ).join("");
+  }
+  if (pmodalRatingText) pmodalRatingText.textContent = `${rating.toFixed(1)} (${reviews} відгуків)`;
+
+  // description + specs
+  if (pmodalDesc) pmodalDesc.textContent = p.desc ?? "Опис скоро з’явиться. Ми готуємо деталі для цього товару.";
+
+  const specs = p.specs ?? ["Офіційний товар", "Якісні матеріали", "Підійде для подарунку"];
+  if (pmodalSpecs) pmodalSpecs.innerHTML = specs.map(s => `<li>${s}</li>`).join("");
+
+  // benefits
+  const benefits = p.benefits ?? [
+    { dot: "#22c55e", title: "Безкоштовна доставка", text: "При замовленні від 1000 ₴" },
+    { dot: "#3b82f6", title: "Повернення протягом 14 днів", text: "Без питань" },
+    { dot: "#a855f7", title: "Офіційна гарантія", text: "Від виробника" }
+  ];
+
+  if (pmodalBenefits) {
+    pmodalBenefits.innerHTML = benefits.map(b => `
+      <div class="pmodal__benefit">
+        <span class="pmodal__dot" style="background:${b.dot}"></span>
+        <div>
+          <div style="font-weight:700; margin-bottom:.15rem;">${b.title}</div>
+          <div style="color:#475569; font-weight:450;">${b.text}</div>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  // open
+  productModal.classList.add("is-open");
+  productModal.setAttribute("aria-hidden", "false");
+  document.documentElement.style.overflow = "hidden";
+}
+
+function closeProductModal() {
+  if (!productModal) return;
+  productModal.classList.remove("is-open");
+  productModal.setAttribute("aria-hidden", "true");
+  document.documentElement.style.overflow = "";
+  currentProductId = null;
+}
+
+// ======= Modal listeners =======
+// close overlay / close button
+document.addEventListener("click", (e) => {
+  if (e.target.closest('[data-close="modal"]')) closeProductModal();
+});
+
+// esc
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && productModal?.classList.contains("is-open")) closeProductModal();
+});
+
+// modal buttons
+pmodalAdd?.addEventListener("click", () => {
+  if (!currentProductId) return;
+  alert("Додано в кошик: " + currentProductId);
+});
+
+pmodalBuyNow?.addEventListener("click", () => {
+  if (!currentProductId) return;
+  alert("Купити зараз: " + currentProductId);
+});
 
 // ======= Build pills + categories =======
 function buildUniversePills() {
@@ -433,14 +571,6 @@ function renderProducts(items) {
       </div>
     </article>
   `).join("");
-
-  productsGrid.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-buy]");
-    if (!btn) return;
-    const id = btn.dataset.buy;
-    // тут потім підв’яжеш кошик/модалку
-    alert("Додано в кошик: " + id);
-  }, { once: true });
 }
 
 function render() {
@@ -478,6 +608,13 @@ resetBtn.addEventListener("click", () => {
   searchInput.value = "";
   syncActiveStates();
   render();
+});
+
+// ✅ відкриття модалки по кнопці "Купити" (делегування, без once)
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-buy]");
+  if (!btn) return;
+  openProductModal(btn.dataset.buy);
 });
 
 // init
