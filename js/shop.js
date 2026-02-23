@@ -86,7 +86,7 @@ const PRODUCTS = [
     title: "Фігурка Funko Pop Доббі",
     price: 750,
     universe: "Harry Potter",
-    category: "Аксесуари",
+    category: "Funko Pop",
     badge: "Новинка",
     image: "../assets/new-goods-home/dobby-funkopop.webp",
     tags: ["funko", "harry potter", "hp"]
@@ -140,6 +140,76 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/lego-minifigures-spiderman.webp",
     tags: [ "spiderman", "lego", "marvel"]
+  },
+  {
+    id: "p15",
+    title: "LEGO Star Wars Джедайский перехватчик Асоки",
+    price: 1749,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-ahsoka.webp",
+    tags: ["lego", "ahsoka", "star wars", "sw"]
+  },
+  {
+    id: "p16",
+    title: "Геймпад Бездротовий Sony PlayStation 5 DualSense",
+    price: 3299,
+    universe: "Gaming", 
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/gamepad.webp",
+    tags: ["PlayStation 5", "gaming",]
+  },
+  {
+    id: "p17",
+    title: "Фігурка Funko Pop Batman 80th Batman 1989",
+    price: 1395,
+    universe: "DC",
+    category: "Funko Pop",
+    badge: "Новинка",
+    image: "../assets/cataloge-goods/funko-batman.webp",
+    tags: ["funko", "batman", "dc"]
+  },
+  {
+  id: "p18",
+    title: "Чашка Marvel",
+    price: 280,
+    universe: "Marvel",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/marvel-mug.jpg",
+    tags: ["mug", "marvel"]
+  },
+  {
+    id: "p19",
+    title: "Іграшка-фігурка Star Wars Grogu",
+    price: 1643,
+    universe: "Star Wars",
+    category: "Фігурки",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/grogu.jpg",
+    tags: ["Grogu", "mandalorian", "star wars", "sw"]
+  },
+  {
+    id: "p20",
+    title: "Футболка Batman",
+    price: 459,
+    universe: "Marvel",
+    category: "Одяг",
+    badge: "",
+    image: "../assets/cataloge-goods/футболка-marvel.jpg",
+    tags: ["tshirt", "marvel", "clothes"]
+  },
+  {
+    id: "p21",
+    title: "Футболка Star Wars",
+    price: 469,
+    universe: "Star Wars",
+    category: "Одяг",
+    badge: "",
+    image: "../assets/cataloge-goods/футболка-star-wars.jpg",
+    tags: ["tshirt", "star wars", "sw","clothes"]
   },
 
 ];
