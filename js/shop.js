@@ -252,7 +252,6 @@ const pmodalStars = document.getElementById("pmodalStars");
 const pmodalRatingText = document.getElementById("pmodalRatingText");
 const pmodalBenefits = document.getElementById("pmodalBenefits");
 const pmodalAdd = document.getElementById("pmodalAdd");
-const pmodalBuyNow = document.getElementById("pmodalBuyNow");
 
 let currentProductId = null;
 
@@ -386,10 +385,7 @@ pmodalAdd?.addEventListener("click", () => {
   alert("Додано в кошик: " + currentProductId);
 });
 
-pmodalBuyNow?.addEventListener("click", () => {
-  if (!currentProductId) return;
-  alert("Купити зараз: " + currentProductId);
-});
+
 
 // ======= Build pills + categories =======
 function buildUniversePills() {

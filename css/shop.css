@@ -572,15 +572,17 @@ body{
 
 .pmodal__close{
   position: absolute;
-  top: .9rem;
-  right: .9rem;
+  top: 1rem;
+  right: 1rem;
 
   width: 2.6rem;
   height: 2.6rem;
 
-  border-radius: .9rem;
-  border: 1px solid rgba(2,6,23,.12);
-  background: rgba(255,255,255,.95);
+  border-radius: 1rem;
+  border: none;
+
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
 
   display: inline-flex;
   align-items: center;
@@ -588,6 +590,24 @@ body{
 
   cursor: pointer;
   z-index: 2;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.08),
+    0 1px 2px rgba(0,0,0,.06);
+
+  transition: all .2s ease;
+}
+
+.pmodal__close:hover{
+  background: #fff;
+  transform: scale(1.08);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.12),
+    0 2px 4px rgba(0,0,0,.08);
+}
+
+.pmodal__close:active{
+  transform: scale(.96);
 }
 
 .pmodal__close svg{
@@ -595,9 +615,15 @@ body{
   height: 1.25rem;
   stroke: #0f172a;
   fill: none;
-  stroke-width: 2;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
+
+  transition: stroke .2s ease;
+}
+
+.pmodal__close:hover svg{
+  stroke: #000;
 }
 
 .pmodal__grid{
@@ -703,14 +729,17 @@ body{
 
 .pmodal__actions{
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr;   /* було 1fr auto auto */
   gap: .85rem;
   align-items: center;
+
   margin-bottom: .9rem;
+  margin-top: 1.4rem;           /* трохи повітря зверху */
 }
 
 .pmodal__add{
   height: 3.25rem;
+  width: 100%;                  /* щоб займала всю ширину */
   border: none;
   border-radius: 1rem;
 
@@ -725,6 +754,20 @@ body{
   align-items: center;
   justify-content: center;
   gap: .6rem;
+
+  transition: all .2s ease;
+}
+
+/* hover більш “живий” */
+.pmodal__add:hover{
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* активний стан */
+.pmodal__add:active{
+  transform: translateY(0);
+  background: #1e293b;
 }
 
 .pmodal__add svg{
@@ -761,19 +804,6 @@ body{
   stroke-linecap: round;
   stroke-linejoin: round;
   opacity: .9;
-}
-
-.pmodal__buyNow{
-  width: 100%;
-  height: 3.25rem;
-
-  border-radius: 1rem;
-  border: 2px solid rgba(2,6,23,.18);
-  background: #fff;
-
-  font-weight: 650;
-  font-size: 1.02rem;
-  cursor: pointer;
 }
 
 .pmodal__divider{
