@@ -80,7 +80,68 @@ const PRODUCTS = [
     badge: "Топ продажів",
     image: "../assets/cataloge-goods/паличка-поттера.webp",
     tags: ["wand", "harry potter", "hp"]
-  }
+  },
+  {
+    id: "p9",
+    title: "Фігурка Funko Pop Доббі",
+    price: 750,
+    universe: "Harry Potter",
+    category: "Аксесуари",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/dobby-funkopop.webp",
+    tags: ["funko", "harry potter", "hp"]
+  },
+  {
+    id: "p10",
+    title: "Ігра Sony PlayStation 5 Marvel’s Spider-Man 2",
+    price: 1790,
+    universe: "Gaming", 
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/ps5-marvel-s-spider-man-2-bd-disk.webp",
+    tags: ["PlayStation 5", "spiderman", "gaming", "marvel"]
+  },
+  {
+    id: "p11",
+    title: "Ігра Sony PlayStation 5 Marvel's Spider-Man: Miles Morales",
+    price: 1299,
+    universe: "Gaming", 
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/ps5-marvel-spider-man-miles-morales-disk.webp",
+    tags: ["PlayStation 5", "spiderman", "gaming", "marvel"]
+  },
+  {
+    id: "p12",
+    title: "Sony PlayStation 5 Slim Blu-ray 1TB White",
+    price: 25499,
+    universe: "Gaming", 
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/ps5.png",
+    tags: ["PlayStation 5", "gaming",]
+  },
+  {
+    id: "p13",
+    title: "Футболка Batman",
+    price: 499,
+    universe: "DC",
+    category: "Одяг",
+    badge: "",
+    image: "../assets/cataloge-goods/T-Shirts _ Official  The Dark Knight's Rogues Gallery Cover Unisex T-Shirt _ Batman.jpg",
+    tags: ["tshirt", "dc", "clothes"]
+  },
+  {
+    id: "p14",
+    title: "LEGO Minifigures Людина-павук: Крізь Всесвіт",
+    price: 129,
+    universe: "Marvel",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-minifigures-spiderman.webp",
+    tags: [ "spiderman", "lego", "marvel"]
+  },
+
 ];
 
 // ======= UI refs =======
