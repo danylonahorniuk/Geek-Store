@@ -286,6 +286,96 @@ const PRODUCTS = [
     image: "../assets/cataloge-goods/naruto.jpg",
     tags: ["naruto uzumaki", "anime",]
   },
+  {
+    id: "p28",
+    title: "Фігурка Star Wars The Black Series Darth Vader (Duel’s End)",
+    price: 1399,
+    universe: "Star Wars",
+    category: "Фігурки",
+    badge: "",
+    image: "../assets/cataloge-goods/figure-darth-vader.webp",
+    tags: ["darth vader", "star wars", "sw"]
+  },
+  {
+    id: "p29",
+    title: "PlayStation Logo LED Light",
+    price: 1200,
+    universe: "Gaming",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/playstation-logo-led-light.jpg",
+    tags: ["PlayStation", "gaming", "led light"]
+  },
+  {
+    id: "p30",
+    title: "Ігра Sony PlayStation 5 The Last Of Us Part I",
+    price: 2199,
+    universe: "Gaming",
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/ps5-the-last-of-us-part-one.jpg",
+    tags: ["PlayStation 5", "the last of us", "gaming"]
+  },
+  {
+    id: "p31",
+    title: "Ігра Sony PlayStation 5 The Last Of Us Part II Remastered",
+    price: 1899,
+    universe: "Gaming",
+    category: "Ігри",
+    badge: "",
+    image: "../assets/cataloge-goods/ps5-the-last-of-us-part-two-remastered.jpg",
+    tags: ["PlayStation 5", "the last of us", "gaming"]
+  },
+  {
+    id: "p32",
+    title: "Фігурка  Halo Infinite Master Chief Mjolnir MK VI",
+    price: 1817,
+    universe: "Інше",
+    category: "Фігурки",
+    badge: "",
+    image: "../assets/cataloge-goods/halo-master-chief.jpg",
+    tags: ["master chief", "halo"]
+  },
+  {
+    id: "p33",
+    title: "LEGO Marvel Логотип і мініфігурки MARVEL",
+    price: 3919,
+    universe: "Marvel",
+    category: "LEGO",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/lego-marvel-logo-set.jpg",
+    tags: ["lego", "marvel"]
+  },
+  {
+    id: "p34",
+    title: "Набір стікерів Star Wars",
+    price: 50,
+    universe: "Інше",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/stikers-sw.jpg",
+    tags: ["star wars", "sw", "stikers"]
+  },
+  {
+    id: "p35",
+    title: "Постер Naruto",
+    price: 390,
+    universe: "Аніме",
+    category: "Постери",
+    badge: "",
+    image: "../assets/cataloge-goods/poster-naruto.jpg",
+    tags: ["poster", "naruto", "anime"]
+  },
+  {
+    id: "p36",
+    title: "Брелок Funko Pocket POP! Keychain: Harry Potter",
+    price: 395,
+    universe: "Інше",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/keychain-hp.jpg",
+    tags: ["keychain", "harrry potter",]
+  },
 ];
 
 // ======= UI refs =======
