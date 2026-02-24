@@ -59,7 +59,7 @@ const PRODUCTS = [
     category: "Аксесуари",
     badge: "Новинка",
     image: "../assets/new-goods-home/mando-helmet1.1.webp",
-    tags: ["helmet", "mandalorian", "star wars"]
+    tags: ["helmet", "mandalorian", "star wars", "sw"]
   },
   {
     id: "p7",
@@ -171,7 +171,7 @@ const PRODUCTS = [
     title: "Геймпад Бездротовий Sony PlayStation 5 DualSense",
     price: 3299,
     universe: "Gaming",
-    category: "Ігри",
+    category: "Аксесуари",
     badge: "",
     image: "../assets/cataloge-goods/gamepad.webp",
     tags: ["PlayStation 5", "gaming"]
@@ -536,6 +536,57 @@ const PRODUCTS = [
     image: "../assets/cataloge-goods/funko-groot.jpg",
     tags: ["groot", "marvel", "funko pop"]
   },
+  {
+    id: "p53",
+    title: "Фігурка Funko POP! Bobble Star Wars Mandalorian Child w/ Butterfly",
+    price: 649,
+    universe: "Star Wars",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-grogu.jpg",
+    tags: ["grogu", "star wars", "sw", "funko pop"]
+  },
+  {
+    id: "p54",
+    title: "Фігурка Funko POP! Anime: Bleach - Toshiro Hitsugaya",
+    price: 1000,
+    universe: "Аніме",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-anime2.jpg",
+    tags: ["anime"]
+  },
+  {
+    id: "p55",
+    title: "Геймпад Бездротовий Sony PlayStation 5 DualSense Galactic Purple",
+    price: 3699,
+    universe: "Gaming",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/gamepad- Galactic Purple.webp",
+    tags: ["PlayStation 5", "gaming"]
+  },
+  {
+    id: "p56",
+    title: "Геймпад Бездротовий Sony PlayStation 5 DualSense Nova Pink",
+    price: 3759,
+    universe: "Gaming",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/gamepad-nova-pink.jpg",
+    tags: ["PlayStation 5", "gaming"]
+  },
+  {
+    id: "p57",
+    title: "Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition",
+    price: 15670,
+    universe: "Marvel",
+    category: "Фігурки",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/iron-man-6.4.jpg",
+    tags: ["hot toys", "iron man", "marvel"]
+  },
+  
 ];
 
 // ======= UI refs =======
