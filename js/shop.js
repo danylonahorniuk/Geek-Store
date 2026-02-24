@@ -234,7 +234,7 @@ const PRODUCTS = [
     category: "Постери",
     badge: "",
     image: "../assets/cataloge-goods/poster-marvel.jpg",
-    tags: ["poster", "avangers", "marvel"]
+    tags: ["poster", "avengers", "marvel"]
   },
   {
     id: "p23",
@@ -350,7 +350,7 @@ const PRODUCTS = [
     id: "p34",
     title: "Набір стікерів Star Wars",
     price: 50,
-    universe: "Інше",
+    universe: "Star Wars",
     category: "Аксесуари",
     badge: "",
     image: "../assets/cataloge-goods/stikers-sw.jpg",
@@ -375,6 +375,166 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/keychain-hp.jpg",
     tags: ["keychain", "harrry potter",]
+  },
+  {
+    id: "p37",
+    title: "Брелок Lego Batman",
+    price: 399,
+    universe: "DC",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/keychain-lego-batman.jpg",
+    tags: ["keychain", "dc", "batman"]
+  },
+  {
+    id: "p38",
+    title: "Комікс Таємні Війни",
+    price: 990,
+    universe: "Marvel",
+    category: "Комікси",
+    badge: "Топ продажів",
+    image: "../assets/cataloge-goods/comic-spider-man-secret-war.jpg",
+    tags: ["comic", "marvel", "spiderman"]
+  },
+  {
+    id: "p39",
+    title: "Комікс Відьмак. Дім зі Скла. Том 1",
+    price: 500,
+    universe: "Інше",
+    category: "Комікси",
+    badge: "",
+    image: "../assets/cataloge-goods/Комікс-Відьмак.jpg",
+    tags: ["comic", "the witcher"]
+  },
+  {
+    id: "p40",
+    title: "Комікс Відьмак. Лисячі Діти. Том 2",
+    price: 500,
+    universe: "Інше",
+    category: "Комікси",
+    badge: "",
+    image: "../assets/cataloge-goods/Комікс-Відьмак2.jpg",
+    tags: ["comic", "the witcher"]
+  },
+  {
+    id: "p41",
+    title: "Набір стікерів The Big Bang Theory",
+    price: 50,
+    universe: "Інше",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/stikers-the-big-bang-theory.jpg",
+    tags: ["the big bang theory", "stikers"]
+  },
+  {
+    id: "p42",
+    title: "LEGO Marvel Вежа Месників",
+    price: 25799,
+    universe: "Marvel",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-avengers-tower.jpg",
+    tags: ["lego", "marvel"]
+  },
+  {
+    id: "p43",
+    title: "Kinder Star Wars",
+    price: 95,
+    universe: "Star Wars",
+    category: "Фігурки",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/kinder-star-wars.webp",
+    tags: ["kinder", "star wars", "sw"]
+  },
+  {
+    id: "p44",
+    title: "Kinder Joy Stranger Things",
+    price: 125,
+    universe: "Інше",
+    category: "Фігурки",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/kinder-sranger-things2.png",
+    tags: ["kinder", "stranger things"]
+  },
+  {
+    id: "p45",
+    title: "LEGO Star Wars Бойовий загін бійців-клонів 501-го легіону",
+    price: 750,
+    universe: "Star Wars",
+    category: "Lego",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/501-legion2.webp",
+    tags: ["lego", "star wars", "sw"]
+  },
+  {
+    id: "p46",
+    title: "LEGO BrickHeadz Stranger Things",
+    price: 3499,
+    universe: "Інше",
+    category: "Lego",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-strangers-things.jpg",
+    tags: ["lego", "stranger things",]
+  },
+  {
+    id: "p47",
+    title: "Фігурка Funko POP! Naruto Shippuden - Kakashi Hatake with Pakkun",
+    price: 1300,
+    universe: "Аніме",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-anime.jpg",
+    tags: ["anime", "naruto"]
+  },
+  {
+    id: "p48",
+    title: "Брелок Funko Pop Naruto Uzumaki",
+    price: 350,
+    universe: "Аніме",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-anime-брелок.jpg",
+    tags: ["keychain", "anime", "naruto"]
+  },
+  {
+    id: "p49",
+    title: "Фігурка Funko POP! Star Wars: Book of Boba Fett - Boba Fett",
+    price: 1100,
+    universe: "Star Wars",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-boba-fett.jpg",
+    tags: ["star wars", "sw", "funko pop"]
+  },
+  {
+    id: "p50",
+    title: "Фігурка Funko POP! Marvel: Spider-Man with Gift",
+    price: 649,
+    universe: "Marvel",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-spider-man.jpg",
+    tags: ["spiderman", "marvel", "funko pop"]
+  },
+  {
+    id: "p51",
+    title: "Фігурка Funko POP! Spider-Man 2 Game Advanced Suit 2.0 Symbiote Takeover",
+    price: 1225,
+    universe: "Marvel",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-spider-man-symbiot.jpg",
+    tags: ["spiderman", "marvel", "funko pop"]
+  },
+  {
+    id: "p52",
+    title: "Фігурка Funko POP! Marvel Holiday Baby GROOT",
+    price: 750,
+    universe: "Marvel",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-groot.jpg",
+    tags: ["groot", "marvel", "funko pop"]
   },
 ];
 
