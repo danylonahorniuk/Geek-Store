@@ -75,7 +75,7 @@ const PRODUCTS = [
     id: "p8",
     title: "Чарівна паличка Wizarding world Гаррі Поттера",
     price: 499,
-    universe: "Harry Potter",
+    universe: "Інше",
     category: "Аксесуари",
     badge: "Топ продажів",
     image: "../assets/cataloge-goods/паличка-поттера.webp",
@@ -85,7 +85,7 @@ const PRODUCTS = [
     id: "p9",
     title: "Фігурка Funko Pop Доббі",
     price: 750,
-    universe: "Harry Potter",
+    universe: "Інше",
     category: "Funko Pop",
     badge: "Новинка",
     image: "../assets/new-goods-home/dobby-funkopop.webp",
@@ -225,7 +225,67 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/футболка-star-wars.jpg",
     tags: ["tshirt", "star wars", "sw", "clothes"]
-  }
+  },
+  {
+    id: "p22",
+    title: "Постер Marvel ",
+    price: 390,
+    universe: "Marvel",
+    category: "Постери",
+    badge: "",
+    image: "../assets/cataloge-goods/poster-marvel.jpg",
+    tags: ["poster", "avangers", "marvel"]
+  },
+  {
+    id: "p23",
+    title: "LEGO Star Wars Death Star UCS",
+    price: 53325,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/death-star-usc1.png",
+    tags: ["lego", "Death Star", "star wars", "sw"]
+  },
+  {
+    id: "p24",
+    title: "Шолом Hasbro Ant-Man Marvel Legends Series Electronic Helmet",
+    price: 4297,
+    universe: "Marvel",
+    category: "Аксесуари",
+    badge: "Новинка",
+    image: "../assets/new-goods-home/ant-man.jpg",
+    tags: ["helmet", "antman", "marvel"]
+  },
+  {
+    id: "p25",
+    title: "Книга The DC Comics Encyclopedia (New Edition)",
+    price: 1823,
+    universe: "DC",
+    category: "Комікси",
+    badge: "",
+    image: "../assets/cataloge-goods/the-dc-comics-encyclopedia-new-edition.jpg",
+    tags: ["comic", "dc",]
+  },
+  {
+    id: "p26",
+    title: "Набір стікерів The Lord of The Rings",
+    price: 50,
+    universe: "Інше",
+    category: "Аксесуари",
+    badge: "",
+    image: "../assets/cataloge-goods/stikers-The Lord of The Rings.jpg",
+    tags: ["comic", "dc", "stikers"]
+  },
+  {
+    id: "p27",
+    title: "Фігурка Bandai: Anime Heroes: Naruto Uzumaki",
+    price: 1690,
+    universe: "Аніме",
+    category: "Фігурки",
+    badge: "",
+    image: "../assets/cataloge-goods/naruto.jpg",
+    tags: ["naruto uzumaki", "anime",]
+  },
 ];
 
 // ======= UI refs =======
