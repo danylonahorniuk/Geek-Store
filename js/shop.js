@@ -831,6 +831,39 @@ function addToCart(product){
   writeCart(cart);
 }
 
+
+function showToast(message){
+  const container = document.getElementById("toastContainer");
+  if (!container) return;
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+
+  toast.innerHTML = `
+    <div class="toast__content">
+      <span class="toast__icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 6L9 17l-5-5"></path>
+        </svg>
+      </span>
+      <span>${message}</span>
+    </div>
+    <a href="cart.html" class="toast__link">Кошик</a>
+  `;
+
+  container.appendChild(toast);
+
+  // анімація появи
+  setTimeout(() => toast.classList.add("is-show"), 10);
+
+  // авто-закриття
+  setTimeout(() => {
+    toast.classList.remove("is-show");
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+
+
 // ======= Modal helpers =======
 function getProductById(id) {
   return PRODUCTS.find(p => p.id === id);
@@ -933,16 +966,12 @@ document.addEventListener("keydown", (e) => {
 // modal buttons
 pmodalAdd?.addEventListener("click", () => {
   if (!currentProductId) return;
+
   const p = getProductById(currentProductId);
   if (!p) return;
 
   addToCart(p);
-
-  // можеш так: просто повідомлення
-  alert("Додано в кошик!");
-
-  // або так: одразу на сторінку кошика
-  window.location.href = "cart.html";
+  showToast("Товар додано в кошик");
 });
 
 

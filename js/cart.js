@@ -43,7 +43,7 @@ const checkoutBtn = document.getElementById("checkoutBtn");
 // ===============================
 // Config
 // ===============================
-const FREE_SHIPPING_FROM = 5000;
+const FREE_SHIPPING_FROM = 2000;
 const SHIPPING_COST = 150;
 
 // промо приклад
