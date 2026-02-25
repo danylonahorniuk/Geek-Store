@@ -27,10 +27,11 @@
 .cart-main{ background:#fff; padding: 2.25rem 0 4rem; }
 
 .cart-layout{
-  display:grid;
-  grid-template-columns: 1fr 23rem;
-  gap: 1.75rem;
-  align-items:start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 3rem;
 }
 
 .back-link{
