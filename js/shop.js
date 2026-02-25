@@ -461,7 +461,7 @@ const PRODUCTS = [
     title: "LEGO Star Wars Бойовий загін бійців-клонів 501-го легіону",
     price: 750,
     universe: "Star Wars",
-    category: "Lego",
+    category: "LEGO",
     badge: "Новинка",
     image: "../assets/new-goods-home/501-legion2.webp",
     tags: ["lego", "star wars", "sw"]
@@ -471,7 +471,7 @@ const PRODUCTS = [
     title: "LEGO BrickHeadz Stranger Things",
     price: 3499,
     universe: "Інше",
-    category: "Lego",
+    category: "LEGO",
     badge: "",
     image: "../assets/cataloge-goods/lego-strangers-things.jpg",
     tags: ["lego", "stranger things",]
@@ -586,7 +586,56 @@ const PRODUCTS = [
     image: "../assets/new-goods-home/iron-man-6.4.jpg",
     tags: ["hot toys", "iron man", "marvel"]
   },
-  
+  {
+    id: "p58",
+    title: "LEGO One Piece Піратський корабель «Всюдихідний Меррі»",
+    price: 5279,
+    universe: "Аніме",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-one-piece.jpg",
+    tags: ["anime", "lego", "one piece"]
+  },
+  {
+    id: "p59",
+    title: "LEGO One Piece Цирковий намет клоуна Баґґі",
+    price: 1999,
+    universe: "Аніме",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-one-piece2.jpg",
+    tags: ["anime", "lego", "one piece"]
+  },
+  {
+    id: "p60",
+    title: "LEGO One Piece Хатина у Селищі Вітряків",
+    price: 1183,
+    universe: "Аніме",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-one-piece3.jpg",
+    tags: ["anime", "lego", "one piece"]
+  },
+  {
+    id: "p61",
+    title: "LEGO One Piece Битва в Арлонґ-парку",
+    price: 3199,
+    universe: "Аніме",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-one-piece4.jpg",
+    tags: ["anime", "lego", "one piece"]
+  },
+  {
+    id: "p62",
+    title: "LEGO One Piece Плавучий ресторан «Бараті»",
+    price: 12239,
+    universe: "Аніме",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-one-piece5.jpg",
+    tags: ["anime", "lego", "one piece"]
+  },
 ];
 
 // ======= UI refs =======
