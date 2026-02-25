@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Кошик — GEEK STORE</title>
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/global.css">
+
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<nav class="header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <img src="../assets/icons/flash.png">
+      </div>
+      <div class="logo-text">GEEK STORE</div>
+      <div class="logo-badge">Ukraine</div>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="shop.html" class="nav-link">Каталог</a>
+      <a href="about.html" class="nav-link">Про нас</a>
+      <a href="stores.html" class="nav-link">Магазини</a>
+      <a href="contact.html" class="nav-link">Контакти</a>
+    </div>
+
+    <div class="header-actions">
+      <!-- Theme toggle -->
+      <button class="theme-toggle" aria-label="Перемикач теми">
+      <img
+        src="../assets/icons/half-moon.png"
+        alt="Dark mode"
+        class="theme-icon theme-icon--moon"
+      >
+      <img
+        src="../assets/icons/sun.png"
+        alt="Light mode"
+        class="theme-icon theme-icon--sun"
+      >
+    </button>
+
+
+      <!-- Account -->
+      <a href="account.html" class="account" aria-label="Особистий кабінет">
+        <img src="../assets/icons/user.png" class="account-icon account-icon--black">
+        <img src="../assets/icons/user-white.png" class="account-icon account-icon--white">
+      </a>
+
+
+      <!-- Cart -->
+      <a href="cart.html" class="cart">
+        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black">
+        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white">
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header class="cart-hero">
+    <div class="cart-container cart-hero__inner">
+      <div class="cart-hero__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 8h12v13H6z"></path>
+          <path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+        </svg>
+      </div>
+
+      <div>
+        <h1 class="cart-hero__title">Кошик</h1>
+        <p class="cart-hero__sub">У вас <span id="cartItemsCount">0</span> товар(и) в кошику</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-main">
+    <div class="cart-container cart-layout">
+      <!-- LEFT -->
+      <section class="cart-left">
+        <a class="back-link" href="../html/shop.html">
+          <span class="back-link__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+          </span>
+          Назад до каталогу
+        </a>
+
+        <div class="free-ship" id="freeShipBox" hidden>
+          <div class="free-ship__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 12V8a2 2 0 0 0-2-2H7L4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+              <path d="M7 20a2 2 0 1 0 0.01 0"></path>
+              <path d="M17 20a2 2 0 1 0 0.01 0"></path>
+              <path d="M4 9h16"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="free-ship__title" id="freeShipTitle">Безкоштовна доставка від 5000 ₴</div>
+            <div class="free-ship__text" id="freeShipText">Додайте ще товарів, щоб отримати безкоштовну доставку</div>
+          </div>
+        </div>
+
+        <div class="cart-card">
+          <div class="cart-card__head">
+            <h2>Товари в кошику</h2>
+          </div>
+
+          <div class="cart-list" id="cartList">
+            <!-- items injected -->
+          </div>
+
+          <div class="cart-empty" id="cartEmpty" hidden>
+            <div class="cart-empty__title">Кошик порожній</div>
+            <div class="cart-empty__text">Перейдіть у каталог і додайте щось круте 🙂</div>
+            <a class="cart-empty__btn" href="../html/shop.html">Перейти в каталог</a>
+          </div>
+        </div>
+
+        <a class="continue-btn" href="../html/shop.html">
+          <span class="continue-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"></path></svg>
+          </span>
+          Продовжити покупки
+        </a>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="cart-right">
+        <div class="summary">
+          <h2 class="summary__title">Підсумок замовлення</h2>
+
+          <div class="promo">
+            <div class="promo__label">Промокод</div>
+            <div class="promo__row">
+              <input class="promo__input" id="promoInput" type="text" placeholder="GEEK10" />
+              <button class="promo__btn" id="promoApply" type="button">Застосувати</button>
+            </div>
+            <div class="promo__hint" id="promoHint"></div>
+          </div>
+
+          <div class="summary__lines">
+            <div class="line">
+              <span>Вартість товарів:</span>
+              <strong id="sumItems">0 ₴</strong>
+            </div>
+            <div class="line">
+              <span>Доставка:</span>
+              <strong id="sumShipping">0 ₴</strong>
+            </div>
+            <div class="line" id="lineDiscount" hidden>
+              <span>Знижка:</span>
+              <strong id="sumDiscount">0 ₴</strong>
+            </div>
+          </div>
+
+          <div class="summary__total">
+            <span>Разом:</span>
+            <strong id="sumTotal">0 ₴</strong>
+          </div>
+
+          <button class="checkout-btn" id="checkoutBtn" type="button">
+            Оформити замовлення
+            <span class="checkout-btn__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+            </span>
+          </button>
+
+          <ul class="summary-bullets">
+            <li>Безпечна оплата</li>
+            <li>Гарантія повернення 14 днів</li>
+            <li>Офіційна продукція</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-company">
+        <div class="footer-logo">GEEK STORE</div>
+        <p class="footer-text">
+          Найбільший магазин гік-культури в Україні. Marvel, Star Wars, DC та багато іншого.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/facebook (1).png" alt="Facebook">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/instagram (1).png" alt="Instagram">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/telegram (2).png" alt="Telegram">
+          </a>
+          <a href="#" class="social-icon">
+          <img src="../assets/icons/youtube (2).png" alt="YouTube">
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Навігація</h3>
+        <ul>
+          <li><a href="#">Головна</a></li>
+          <li><a href="shop.html">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="stores.html">Магазини</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-section">
+        <h3>Категорії</h3>
+        <ul>
+          <li><a href="shop.html">LEGO</a></li>
+          <li><a href="shop.html">Funko Pop</a></li>
+          <li><a href="shop.html">Постери</a></li>
+          <li><a href="shop.html">Комікси</a></li>
+          <li><a href="shop.html">Ексклюзиви</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="footer-section">
+        <h3>Підтримка</h3>
+        <ul>
+          <li><a href="#">Доставка та оплата</a></li>
+          <li><a href="#">Повернення товару</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Часті питання</a></li>
+          <li><a href="#">Політика конфіденційності</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 GEEK STORE. Всі права захищені.</p>
+      <p>Зроблено з ❤️ для українських гіків</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="../js/cart.js"></script>
+  <script src="../js/theme-toggle.js"></script>
+
+</body>
+</html>

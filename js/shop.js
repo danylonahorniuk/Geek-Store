@@ -800,6 +800,37 @@ function matchesQuery(product, q) {
   return hay.includes(normalize(q));
 }
 
+
+const CART_KEY = "GEEK_STORE_CART";
+
+function readCart(){
+  try { return JSON.parse(localStorage.getItem(CART_KEY)) || {}; }
+  catch { return {}; }
+}
+function writeCart(cart){
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function addToCart(product){
+  const cart = readCart();
+
+  if (cart[product.id]) {
+    cart[product.id].qty += 1;
+  } else {
+    cart[product.id] = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      universe: product.universe,
+      category: product.category,
+      qty: 1
+    };
+  }
+
+  writeCart(cart);
+}
+
 // ======= Modal helpers =======
 function getProductById(id) {
   return PRODUCTS.find(p => p.id === id);
@@ -902,7 +933,16 @@ document.addEventListener("keydown", (e) => {
 // modal buttons
 pmodalAdd?.addEventListener("click", () => {
   if (!currentProductId) return;
-  alert("Додано в кошик: " + currentProductId);
+  const p = getProductById(currentProductId);
+  if (!p) return;
+
+  addToCart(p);
+
+  // можеш так: просто повідомлення
+  alert("Додано в кошик!");
+
+  // або так: одразу на сторінку кошика
+  window.location.href = "cart.html";
 });
 
 
