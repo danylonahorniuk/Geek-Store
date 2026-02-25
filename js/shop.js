@@ -578,7 +578,7 @@ const PRODUCTS = [
   },
   {
     id: "p57",
-    title: "Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition",
+    title: "Фігурка Hot Toys 1/6 Iron Man 2 Mark 6",
     price: 15670,
     universe: "Marvel",
     category: "Фігурки",
@@ -635,6 +635,116 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/lego-one-piece5.jpg",
     tags: ["anime", "lego", "one piece"]
+  },
+  {
+  id: "p63",
+    title: "Фігурка Funko POP! Anime: DEMON SLAYER - TANJIRO KAMADO",
+    price: 990,
+    universe: "Аніме",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-anime3.jpg",
+    tags: ["anime"]
+  },
+  {
+  id: "p64",
+    title: "LEGO DC Batman Бетмен Тумблер проти Дволикого і Джокера",
+    price: 2699,
+    universe: "DC",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/LEGO-DC-Batman-Tumbler.jpg",
+    tags: ["dc", "lego", "batman"]
+  },
+  {
+  id: "p65",
+    title: "Фігурка Funko POP! DC: Patchwork Joker",
+    price: 790,
+    universe: "DC",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-joker.jpg",
+    tags: ["dc", "funko pop", "joker"]
+  },
+  {
+  id: "p66",
+    title: "Фігурка Funko POP! DC: Флеш The Flash",
+    price: 795,
+    universe: "DC",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-flash.jpg",
+    tags: ["dc", "funko pop", "flash"]
+  },
+  {
+  id: "p67",
+    title: "Фігурка Funko POP! DC: Superman 2025",
+    price: 845,
+    universe: "DC",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-super-man.jpg",
+    tags: ["dc", "funko pop", "super man"]
+  },
+  {
+  id: "p68",
+    title: "Фігурка Funko POP! DC: Aquaman: Arthur Curry in Hero Suit",
+    price: 429,
+    universe: "DC",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-aquaman.jpg",
+    tags: ["dc", "funko pop", "aquaman"]
+  },
+  {
+  id: "p69",
+    title: "LEGO DC Batman: Бетмобіль із фільму «Бетмен проти Супермена",
+    price: 1479,
+    universe: "DC",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-batmobile.jpg",
+    tags: ["dc", "lego", "batman"]
+  },
+  {
+    id: "p70",
+    title: "Фігурка Funko POP! Star Wars: Grogu with armor",
+    price: 799,
+    universe: "Star Wars",
+    category: "Funko Pop",
+    badge: "",
+    image: "../assets/cataloge-goods/funko-grogu2.jpg",
+    tags: ["grogu", "star wars", "sw", "funko pop"]
+  },
+  {
+    id: "p71",
+    title: "LEGO Star Wars Крокохід AT-TE",
+    price: 5858,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-sw-at-te.jpg",
+    tags: ["lego", "star wars", "sw"]
+  },
+  {
+    id: "p72",
+    title: "LEGO Star Wars Зореліт Джанго Фетта",
+    price: 2799,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-sw-jango.jpg",
+    tags: ["lego", "star wars", "sw"]
+  },
+  {
+    id: "p73",
+    title: "LEGO Star Wars Зоряний винищувач V-19 «Потік»",
+    price: 2599,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-sw-v-19.jpg",
+    tags: ["lego", "star wars", "sw"]
   },
 ];
 
