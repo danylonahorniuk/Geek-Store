@@ -507,24 +507,35 @@
 <!-- MODAL -->
 <div class="qb-modal" id="quickBuyModal">
   <div class="qb-content">
-    <button class="qb-close" onclick="closeModal()">✕</button>
+  <button class="qb-close" onclick="closeModal()" aria-label="Закрити">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M18 6L6 18"></path>
+    <path d="M6 6l12 12"></path>
+  </svg>
+</button>
 
-    <div class="qb-grid">
+  <div class="qb-grid">
+    <div class="qb-media">
       <img id="qbImage" src="" alt="">
+    </div>
 
-      <div>
-        <h3 id="qbTitle"></h3>
-        <p id="qbDesc"></p>
-        <div class="qb-price" id="qbPrice"></div>
-        <div class="qb-quantity">
-          <button type="button" class="qty-btn minus">−</button>
-          <span class="qty-value">1</span>
-          <button type="button" class="qty-btn plus">+</button>
-        </div>
-        <button class="qb-add">Додати в кошик</button>
-      </div>
+    <div class="qb-info">
+      <h3 id="qbTitle"></h3>
+      <p id="qbDesc"></p>
+
+      <div class="qb-price" id="qbPrice"></div>
+
+      <button class="qb-add">
+        <svg class="qb-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="9" cy="21" r="1.6"></circle>
+          <circle cx="18" cy="21" r="1.6"></circle>
+          <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L22 7H6"></path>
+        </svg>
+        <span>Додати в кошик</span>
+    </button>
     </div>
   </div>
+</div>
 </div>
 
 
