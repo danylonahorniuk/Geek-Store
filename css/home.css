@@ -422,9 +422,22 @@ p {
 
 
 /* === NEW ARRIVALS === */
-.new-arrivals {
+.new-arrivals{
   padding: 5rem 0;
+  background: #f1f5f9;
+  position: relative;
 }
+
+.new-arrivals::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:1px;
+  background: rgba(15,23,42,0.06);
+}
+
 
 .na-header {
   max-width: 1400px;
@@ -453,17 +466,39 @@ p {
 }
 
 .na-card {
-  flex: 0 0 340px; /* 🔥 ШИРОКІ */
-  background: #fff;
-  border-radius: 20px;
+  flex: 0 0 340px;
+  background: #ffffff;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  border: 1px solid rgba(15,23,42,0.06);
+
+  box-shadow:
+    0 6px 18px rgba(15,23,42,0.06),
+    0 2px 6px rgba(15,23,42,0.04);
+
+  transition: 
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.na-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(15,23,42,0.12),
+    0 6px 12px rgba(15,23,42,0.06);
+
+  border-color: rgba(99,102,241,0.25);
 }
 
 .na-image {
   position: relative;
   height: 260px;
   overflow: hidden;
+
+  background: #f8fafc;
 }
 
 .na-image img {
@@ -500,11 +535,15 @@ p {
 
 .na-info h3 {
   font-size: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: .6rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
 .na-info strong {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
 }
 
 .na-arrow {
