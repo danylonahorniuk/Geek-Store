@@ -2,52 +2,108 @@ body{
   font-weight: 400;
 }
 
-/* utils */
+/* ===== контейнер (як у тебе) ===== */
 .shop-container{
   max-width: 92rem;
   margin: 0 auto;
   padding: 0 1.75rem;
 }
 
-/* HERO */
+/* ===== HERO (фон як cart-hero) ===== */
 .shop-hero{
-  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 45%, #ec4899 100%);
-  padding: 5rem 0 4rem;
+  position: relative;
+  padding: 4rem 1.5rem 3rem;
+  overflow: hidden;
+  text-align: center;
+
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(99,102,241,0.45), transparent 65%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.35), transparent 60%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.30), transparent 60%),
+    linear-gradient(180deg, #e0e7ff 0%, #f1f5ff 100%);
 }
 
+/* світлова форма справа зверху */
+.shop-hero::before{
+  content:"";
+  position:absolute;
+  width:42rem;
+  height:42rem;
+  top:-14rem;
+  right:-14rem;
+  z-index:0;
+  background: radial-gradient(circle, rgba(124,58,237,0.22), transparent 65%);
+  filter: blur(2px);
+}
+
+/* світлова форма зліва знизу */
+.shop-hero::after{
+  content:"";
+  position:absolute;
+  width:44rem;
+  height:44rem;
+  bottom:-18rem;
+  left:-18rem;
+  z-index:0;
+  background: radial-gradient(circle, rgba(79,70,229,0.18), transparent 65%);
+  filter: blur(2px);
+}
+
+/* grain */
+.shop-hero .hero-grain{
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  opacity:0.12;
+  background-image: radial-gradient(circle at 1px 1px, rgba(17,24,39,0.12) 1px, transparent 0);
+  background-size: 0.875rem 0.875rem; /* 14px */
+}
+
+/* ===== контент ===== */
 .shop-hero__inner{
+  position: relative;
+  z-index: 1;
   max-width: 62rem;
   margin: 0 auto;
-  text-align: center;
   padding: 0 1.75rem;
-  color: #fff;
 }
 
+/* ===== текст як у hero-about ===== */
 .shop-hero__title{
-  margin: 0 0 1rem;
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin: 1.5rem 0 1.25rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #0f172a;
+}
+
+.shop-hero .accent{
+  background: linear-gradient(90deg, #4f46e5 0%, #8b5cf6 45%, #9333ea 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .shop-hero__desc{
+  max-width: 46rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #64748b;
   margin: 0 auto 2rem;
-  max-width: 48rem;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  opacity: 0.92;
-  font-weight: 400;
 }
 
-/* search */
+/* ===== search (під світлий hero) ===== */
 .shop-search{
   position: relative;
   width: min(50rem, 100%);
   margin: 0 auto;
-  background: rgba(255,255,255,0.14);
-  border: 0.0625rem solid rgba(255,255,255,0.18);
+
+  background: rgba(255,255,255,0.72);
+  border: 0.0625rem solid rgba(15,23,42,0.08);
   border-radius: 1.25rem;
-  box-shadow: 0 1.25rem 3rem rgba(2,6,23,0.18);
+  box-shadow: 0 1.25rem 3rem rgba(2,6,23,0.12);
   backdrop-filter: blur(0.75rem);
 }
 
@@ -65,7 +121,7 @@ body{
 .shop-search__icon svg{
   width: 100%;
   height: 100%;
-  stroke: #fff;
+  stroke: #64748b;
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
@@ -79,13 +135,13 @@ body{
   outline: none;
   background: transparent;
   padding: 0 1.25rem 0 3.25rem;
-  color: #fff;
+  color: #0f172a;
   font-size: 1rem;
   font-weight: 400;
 }
 
 .shop-search__input::placeholder{
-  color: rgba(255,255,255,0.8);
+  color: #94a3b8;
 }
 
 /* pills */

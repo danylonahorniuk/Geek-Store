@@ -65,31 +65,37 @@
 
 
   <!-- HERO -->
-  <header class="shop-hero">
-    <div class="shop-hero__inner">
-      <h1 class="shop-hero__title">Каталог товарів</h1>
-      <p class="shop-hero__desc">
-        Знайди улюблені товари з світів Marvel, Star Wars, DC та багато іншого.
-        Понад 850 унікальних товарів для справжніх фанатів.
-      </p>
+<header class="shop-hero">
+  <div class="hero-grain"></div>
 
-      <form class="shop-search" id="searchForm" autocomplete="off">
-        <span class="shop-search__icon" aria-hidden="true">
-          <!-- search icon -->
-          <svg viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="M20 20l-3.5-3.5"></path>
-          </svg>
-        </span>
-        <input
-          class="shop-search__input"
-          id="searchInput"
-          type="search"
-          placeholder="Шукай товари, персонажів, серії..."
-        />
-      </form>
-    </div>
-  </header>
+  <div class="shop-hero__inner">
+    <h1 class="shop-hero__title">
+      <span class="accent">Каталог товарів</span>
+    </h1>
+
+    <p class="shop-hero__desc">
+      Знайди улюблені товари з світів Marvel, Star Wars, DC та багато іншого.
+      Понад 850 унікальних товарів для справжніх фанатів.
+    </p>
+
+    <form class="shop-search" id="searchForm" autocomplete="off">
+      <span class="shop-search__icon" aria-hidden="true">
+        <!-- search icon -->
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </span>
+
+      <input
+        class="shop-search__input"
+        id="searchInput"
+        type="search"
+        placeholder="Шукай товари, персонажів, серії..."
+      />
+    </form>
+  </div>
+</header>
 
   <!-- UNIVERSES -->
   <section class="universe-pills">
@@ -204,8 +210,8 @@
       <div class="footer-section">
         <h3>Навігація</h3>
         <ul>
-          <li><a href="#">Головна</a></li>
-          <li><a href="shop.html">Каталог</a></li>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="#">Каталог</a></li>
           <li><a href="about.html">Про нас</a></li>
           <li><a href="stores.html">Магазини</a></li>
           <li><a href="contact.html">Контакти</a></li>
