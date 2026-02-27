@@ -981,6 +981,366 @@ p {
 }
 
 
+/* ===== Special Offers (Banners) ===== */
+.offers{
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+  color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle noise/dots */
+.offers::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.08;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.35) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.offers__container{
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.offers__head{
+  text-align: center;
+  max-width: 56rem;
+  margin: 0 auto 2.5rem;
+}
+
+.offers__badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(255,255,255,.88);
+  font-weight: 650;
+  letter-spacing: .01em;
+}
+
+.offers__badge svg{
+  width: 1.05rem;
+  height: 1.05rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .95;
+}
+
+.offers__title{
+  margin: 1rem 0 .75rem;
+  font-size: 3rem;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  font-weight: 900;
+  color: #fff;
+}
+
+.offers__subtitle{
+  margin: 0 auto;
+  max-width: 48rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(226,232,240,.86);
+}
+
+/* Grid: 2 small + 1 big */
+.offers__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* ===== shared hover (premium) ===== */
+.offerCard,
+.offerHero{
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  overflow: hidden;
+  position: relative;
+  transform: translateY(0);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.offerCard:hover,
+.offerHero:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0,0,0,.38);
+  border-color: rgba(255,255,255,.16);
+}
+
+/* ===== Small cards ===== */
+.offerCard{
+  padding: 1.6rem 1.6rem 1.4rem;
+  min-height: 15.5rem;
+}
+
+.offerCard__top{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.offerCard__tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding: .4rem .75rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.10);
+  font-weight: 700;
+  font-size: .9rem;
+  color: rgba(255,255,255,.92);
+}
+
+.offerCard__h{
+  margin: 0 0 .55rem;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 850;
+  color: #fff;
+}
+
+.offerCard__p{
+  margin: 0 0 1.2rem;
+  color: rgba(226,232,240,.88);
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
+.offerCard__code{
+  font-weight: 900;
+  letter-spacing: .08em;
+  padding: .15rem .45rem;
+  border-radius: .55rem;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Decorative background layer */
+.offerCard__bg{
+  position:absolute;
+  inset:-60px;
+  opacity:.9;
+  filter: blur(0);
+  pointer-events:none;
+}
+
+/* Blue card theme */
+.offerCard--blue .offerCard__bg{
+  background:
+    radial-gradient(600px 240px at 15% 20%, rgba(59,130,246,.35), transparent 60%),
+    radial-gradient(520px 240px at 80% 40%, rgba(99,102,241,.28), transparent 60%),
+    radial-gradient(520px 280px at 50% 100%, rgba(14,165,233,.18), transparent 60%);
+}
+
+/* Spider-Verse theme */
+.offerCard--spider .offerCard__bg{
+  background:
+    radial-gradient(520px 260px at 20% 25%, rgba(239,68,68,.28), transparent 62%),
+    radial-gradient(520px 260px at 85% 30%, rgba(59,130,246,.24), transparent 62%),
+    radial-gradient(520px 300px at 60% 110%, rgba(168,85,247,.20), transparent 62%);
+}
+
+/* Fake “minifigures” placeholders */
+.offerCard__figs{
+  position:absolute;
+  right: 1.2rem;
+  bottom: 1.1rem;
+  display:flex;
+  gap:.6rem;
+  opacity: .9;
+}
+
+.offerCard__figs .fig{
+  width: 2.2rem;
+  height: 3rem;
+  border-radius: .9rem;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+/* ===== Big banner (Quiz) ===== */
+.offerHero{
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  min-height: 19rem;
+  align-items: stretch;
+}
+
+.offerHero__content{
+  padding: 2rem;
+}
+
+.offerHero__tag{
+  display:inline-flex;
+  padding: .45rem .8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.9);
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.offerHero__h{
+  margin: 1rem 0 .7rem;
+  font-size: 2.4rem;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  color: #fff;
+}
+
+.offerHero__p{
+  margin: 0 0 1.4rem;
+  max-width: 42rem;
+  color: rgba(226,232,240,.90);
+  line-height: 1.75;
+  font-size: 1.06rem;
+}
+
+.offerHero__actions{
+  display:flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  align-items: center;
+}
+
+/* Right art side */
+.offerHero__art{
+  position: relative;
+  overflow: hidden;
+}
+
+.offerHero--quiz{
+  background:
+    radial-gradient(900px 400px at 15% 20%, rgba(99,102,241,.30), transparent 60%),
+    radial-gradient(720px 340px at 70% 35%, rgba(168,85,247,.26), transparent 60%),
+    radial-gradient(720px 340px at 55% 110%, rgba(59,130,246,.18), transparent 60%),
+    rgba(255,255,255,.05);
+}
+
+/* pattern grid */
+.offerHero__art .artGrid{
+  position:absolute;
+  inset:0;
+  opacity:.22;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transform: translateX(10px) translateY(6px);
+}
+
+/* soft blob */
+.offerHero__art .artGlow{
+  position:absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  top: -10rem;
+  right: -10rem;
+  background: radial-gradient(circle, rgba(168,85,247,.30), transparent 60%);
+  filter: blur(2px);
+  opacity: .9;
+}
+
+/* ===== Buttons ===== */
+.offerBtn{
+  height: 3.1rem;
+  padding: 0 1.1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.55rem;
+
+  text-decoration:none;
+  font-weight: 750;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  user-select:none;
+}
+
+.offerBtn svg{
+  width: 1.15rem;
+  height: 1.15rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.offerBtn--light{
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.offerBtn--light:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-2px);
+}
+
+.offerBtn--dark{
+  background: #fff;
+  color: #0b1220;
+  box-shadow: 0 16px 30px rgba(0,0,0,.25);
+}
+
+.offerBtn--dark:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 22px 40px rgba(0,0,0,.32);
+}
+
+.offerBtn--ghost{
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.offerBtn--ghost:hover{
+  background: rgba(255,255,255,.06);
+  transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .offers__title{ font-size: 2.4rem; }
+  .offerHero{ grid-template-columns: 1fr; }
+  .offerHero__art{ min-height: 12rem; }
+}
+
+@media (max-width: 760px){
+  .offers{ padding: 4rem 0; }
+  .offers__grid{ grid-template-columns: 1fr; }
+  .offerCard{ min-height: auto; }
+  .offers__title{ font-size: 2.05rem; }
+}
+
+
 
 /* === Geek Family CTA (Home only) === */
 .geek-family {
