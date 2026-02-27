@@ -329,3 +329,22 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+
+.offerCard__p--gift{
+  display: inline-block; /* або просто нічого */
+}
+
+.giftIcon{
+  display: inline-block;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: .5rem;
+  vertical-align: middle; /* ключовий момент */
+}
+
+.giftIcon svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+}

@@ -615,9 +615,40 @@
   </div>
 
   <h3 class="offerCard__h">-10% на перше замовлення</h3>
-  <p class="offerCard__p">
-    Відкрий подарунок і отримай свій стартовий бонус 🎁
-  </p>
+  <p class="offerCard__p offerCard__p--gift">
+  Відкрий подарунок і отримай свій стартовий бонус
+  <span class="giftIcon" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <defs>
+        <linearGradient id="giftGradient" x1="0" y1="0" x2="24" y2="24">
+          <stop offset="0%" stop-color="#ef4444"/>
+          <stop offset="60%" stop-color="#f97316"/>
+          <stop offset="100%" stop-color="#facc15"/>
+        </linearGradient>
+      </defs>
+
+      <!-- кришка -->
+      <rect x="3" y="8" width="18" height="4" rx="1.2"
+        fill="url(#giftGradient)" />
+
+      <!-- коробка -->
+      <rect x="4" y="12" width="16" height="8" rx="1.6"
+        fill="url(#giftGradient)" />
+
+      <!-- стрічка вертикальна -->
+      <rect x="11" y="8" width="2" height="12"
+        fill="#fff" opacity="0.85"/>
+
+      <!-- стрічка горизонтальна -->
+      <rect x="3" y="10" width="18" height="2"
+        fill="#fff" opacity="0.85"/>
+
+      <!-- бантик -->
+      <path d="M12 8 C10 4,6 5,8 7 C9 8,12 8,12 8Z" fill="#ef4444"/>
+      <path d="M12 8 C14 4,18 5,16 7 C15 8,12 8,12 8Z" fill="#ef4444"/>
+    </svg>
+  </span>
+</p>
 
   <div class="offerCard__actions">
     <button 
