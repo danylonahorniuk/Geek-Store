@@ -3,16 +3,33 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  display: none;
+
+  /* замість display none */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity .22s ease, visibility .22s ease;
 }
 
-.promoModal2.is-open{ display: block; }
+.promoModal2.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .promoModal2__overlay{
   position: absolute;
   inset: 0;
   background: rgba(2,6,23,.55);
   backdrop-filter: blur(10px);
+
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+
+.promoModal2.is-open .promoModal2__overlay{
+  opacity: 1;
 }
 
 .promoModal2__dialog{
@@ -24,13 +41,15 @@
   border-radius: 1.6rem;
   box-shadow: 0 30px 80px rgba(2,6,23,.30);
   overflow: hidden;
-  transform: translateY(10px);
+
+  /* анімація */
+  transform: translateY(14px) scale(.98);
   opacity: 0;
   transition: transform .22s ease, opacity .22s ease;
 }
 
 .promoModal2.is-open .promoModal2__dialog{
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   opacity: 1;
 }
 

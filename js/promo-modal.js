@@ -30,9 +30,9 @@
   openBtns.forEach(btn => btn.addEventListener('click', open));
 
   modal.addEventListener('click', (e) => {
-    const t = e.target;
-    if (t && t.hasAttribute('data-close-promo')) close();
-  });
+  const closeEl = e.target.closest('[data-close-promo]');
+  if (closeEl) close();
+});
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) close();
