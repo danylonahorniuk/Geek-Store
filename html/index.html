@@ -265,6 +265,152 @@
 </div>
   </section>
 
+
+<!-- === Top Sales / Product Slider === -->
+<section class="top-sales">
+  <div class="ts-header">
+    <h2>Топ продажів</h2>
+  </div>
+
+  <div class="ts-wrapper">
+<button class="ts-arrow left" onclick="slideProducts('topSalesSlider', -1)">‹</button>
+
+    <div class="ts-slider" id="topSalesSlider">
+
+      <!-- CARD (копія na-card, але з ts- класами) -->
+      <div class="ts-card"
+        data-name="Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition"
+        data-price="1897"
+        data-image="../assets/cataloge-goods/funko-iron-man.jpg"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/top-sales-home/funko-iron-man2.jpg" alt="Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Фігурка Funko POP! Marvel: Avengers - Iron Man Special Edition</h3>
+          <strong>1897 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+       <div class="ts-card"
+        data-name="Назва товару"
+        data-price="999"
+        data-image="../assets/....webp"
+        data-description="Опис...">
+
+        <div class="ts-image">
+          <img src="../assets/....webp" alt="Назва товару">
+          <button class="ts-quick">Швидко купити</button>
+        </div>
+
+        <div class="ts-info">
+          <h3>Назва товару</h3>
+          <strong>999 ₴</strong>
+        </div>
+      </div>
+
+    </div>
+
+<button class="ts-arrow right" onclick="slideProducts('topSalesSlider', 1)">›</button>  </div>
+</section>
+
+
+
+
 <!-- === New Arrivals / Product Slider === -->
 <section class="new-arrivals">
   <div class="na-header">
@@ -272,7 +418,7 @@
   </div>
 
   <div class="na-wrapper">
-    <button class="na-arrow left" onclick="slideProducts(-1)">‹</button>
+<button class="na-arrow left" onclick="slideProducts('productSlider', -1)">‹</button>
 
     <div class="na-slider" id="productSlider">
 
@@ -501,8 +647,7 @@
 
     </div>
 
-    <button class="na-arrow right" onclick="slideProducts(1)">›</button>
-  </div>
+<button class="na-arrow right" onclick="slideProducts('productSlider', 1)">›</button>  </div>
 </section>
 
 <!-- MODAL -->

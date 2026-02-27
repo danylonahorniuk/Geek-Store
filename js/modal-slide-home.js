@@ -1,35 +1,49 @@
-const slider = document.getElementById('productSlider');
 const modal = document.getElementById('quickBuyModal');
 
-/* ================= SLIDER ================= */
-function slideProducts(dir) {
-  const card = slider.querySelector('.na-card');
+/* ================= SLIDER (UNIVERSAL) ================= */
+function slideProducts(sliderId, dir) {
+  const slider = document.getElementById(sliderId);
+  if (!slider) return;
+
+  // шукаємо будь-яку картку (для na і ts)
+  const card = slider.querySelector('.na-card, .ts-card');
+  if (!card) return;
+
+  // gap між картками (у тебе 2rem = 32px, але краще зчитати реально)
+  const gap = parseFloat(getComputedStyle(slider).gap || 0);
+  const step = card.offsetWidth + gap;
+
   slider.scrollBy({
-    left: dir * (card.offsetWidth + 32),
+    left: dir * step,
     behavior: 'smooth'
   });
 }
 
-/* ================= OPEN MODAL ================= */
-document.querySelectorAll('.na-quick').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
+/* ================= OPEN MODAL (NA + TS) ================= */
+function openQuickBuyFromButton(btn) {
+  const card = btn.closest('.na-card, .ts-card');
+  if (!card) return;
 
-    const card = e.target.closest('.na-card');
+  document.getElementById('qbTitle').textContent = card.dataset.name || '';
+  document.getElementById('qbDesc').textContent = card.dataset.description || '';
 
-    document.getElementById('qbTitle').textContent = card.dataset.name;
-    document.getElementById('qbDesc').textContent = card.dataset.description;
+  const price = Number(card.dataset.price || 0);
+  document.getElementById('qbPrice').textContent = price.toLocaleString() + ' ₴';
 
-    const price = Number(card.dataset.price);
+  const img = document.getElementById('qbImage');
+  img.src = card.dataset.image || '';
+  img.alt = card.dataset.name || '';
 
-    document.getElementById('qbPrice').textContent =
-      price.toLocaleString() + ' ₴';
+  modal.classList.add('active');
+}
 
-    document.getElementById('qbImage').src = card.dataset.image;
-    document.getElementById('qbImage').alt = card.dataset.name;
+// делегування подій: працює і для .na-quick і для .ts-quick
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.na-quick, .ts-quick');
+  if (!btn) return;
 
-    modal.classList.add('active');
-  });
+  e.stopPropagation();
+  openQuickBuyFromButton(btn);
 });
 
 /* ================= CLOSE MODAL ================= */
@@ -38,6 +52,7 @@ function closeModal() {
 }
 
 modal.addEventListener('click', e => {
+  // закривати, якщо клік по фону (оверлею), а не по контенту
   if (e.target === modal) closeModal();
 });
 
