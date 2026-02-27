@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/promo-modal.css">
 </head>
 <body>
 
@@ -609,21 +610,26 @@
 
       <!-- -10% -->
       <article class="offerCard offerCard--blue">
-        <div class="offerCard__top">
-          <span class="offerCard__tag">Welcome</span>
-        </div>
+  <div class="offerCard__top">
+    <span class="offerCard__tag">Welcome</span>
+  </div>
 
-        <h3 class="offerCard__h">-10% на перше замовлення</h3>
-        <p class="offerCard__p">
-          Промокод: <span class="offerCard__code">GEEK10</span>
-        </p>
+  <h3 class="offerCard__h">-10% на перше замовлення</h3>
+  <p class="offerCard__p">
+    Відкрий подарунок і отримай свій стартовий бонус 🎁
+  </p>
 
-        <div class="offerCard__actions">
-          <a class="offerBtn offerBtn--light" href="#catalog">Отримати знижку</a>
-        </div>
+  <div class="offerCard__actions">
+    <button 
+      class="offerBtn offerBtn--light" 
+      type="button" 
+      data-open-promo>
+      Отримати промокод
+    </button>
+  </div>
 
-        <div class="offerCard__bg" aria-hidden="true"></div>
-      </article>
+  <div class="offerCard__bg" aria-hidden="true"></div>
+</article>
 
       <!-- LEGO -->
       <article class="offerCard offerCard--spider">
@@ -686,6 +692,66 @@
     </div>
   </div>
 </section>
+
+
+<!-- === Promo Modal (-10%) === -->
+<div class="promoModal2" id="promoModal2" aria-hidden="true">
+  <div class="promoModal2__overlay" data-close-promo></div>
+
+  <div class="promoModal2__dialog" role="dialog" aria-modal="true" aria-labelledby="promoModal2Title">
+    <button class="promoModal2__close" type="button" aria-label="Закрити" data-close-promo>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6L6 18"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <div class="promoModal2__grid">
+      <div class="promoModal2__left">
+        <span class="promoModal2__badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 12v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9"/>
+            <path d="M4 12h16"/>
+            <path d="M12 12v10"/>
+            <path d="M12 12H7.5a2.5 2.5 0 1 1 0-5C10 7 12 12 12 12Z"/>
+            <path d="M12 12h4.5a2.5 2.5 0 1 0 0-5C14 7 12 12 12 12Z"/>
+            <path d="M4 7h16v5H4z"/>
+          </svg>
+          Welcome бонус
+        </span>
+
+        <h3 class="promoModal2__title" id="promoModal2Title">Твій промокод на -10%</h3>
+        <p class="promoModal2__text">
+          Використай його в кошику під час оформлення замовлення. Діє на першу покупку.
+        </p>
+
+        <div class="promoModal2__codeRow">
+          <div class="promoModal2__code" id="promoModal2Code">GEEK10</div>
+
+          <button class="promoModal2__copy" type="button" id="promoModal2Copy">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 9h10v10H9z"></path>
+              <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path>
+            </svg>
+            Скопіювати
+          </button>
+        </div>
+
+        <div class="promoModal2__hint" id="promoModal2Hint" aria-live="polite"></div>
+
+        <div class="promoModal2__actions">
+          <button class="promoModal2__primary" type="button" data-close-promo>Окей</button>
+          <a class="promoModal2__ghost" href="#catalog" data-close-promo>Перейти в каталог</a>
+        </div>
+      </div>
+
+      <div class="promoModal2__right" aria-hidden="true">
+        <div class="promoModal2__glow"></div>
+        <div class="promoModal2__gridBg"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <!-- Featured Collections Preview -->
@@ -849,6 +915,7 @@
 <script src="../js/banners.js"></script>
 <script src="../js/modal-slide-home.js"> </script>
 <script src="../js/universes.js"></script>
+<script src="../js/promo-modal.js"> </script>
 
 <div id="toast-container"></div>
 
