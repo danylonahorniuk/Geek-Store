@@ -544,3 +544,304 @@
 .offerBtn--spider:hover svg{
   transform: translateX(3px);
 }
+
+
+/* ================================
+   QUIZ HERO (offerHero--quiz)
+   Neon green + improved art SVG styling
+   Paste this WHOLE block as one piece
+   ================================ */
+
+/* Card wrapper */
+.offerHero.offerHero--quiz{
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+
+  /* neon-green themed background */
+  background:
+    radial-gradient(900px 520px at 15% 0%, rgba(0,255,136,.22), transparent 60%),
+    radial-gradient(760px 520px at 70% 40%, rgba(57,255,20,.18), transparent 65%),
+    radial-gradient(640px 420px at 92% 65%, rgba(0,255,204,.14), transparent 62%),
+    linear-gradient(135deg, #02110b 0%, #061a12 55%, #02110b 100%);
+
+  color: #fff;
+
+  border: 1px solid rgba(0,255,136,.28);
+
+  box-shadow:
+    0 26px 64px rgba(0,0,0,.46),
+    0 0 60px rgba(0,255,136,.14),
+    0 1px 0 rgba(255,255,255,.05) inset;
+}
+
+/* Soft inner vignette for readability */
+.offerHero.offerHero--quiz::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(1200px 520px at 0% 0%, rgba(0,0,0,.30), transparent 60%),
+    linear-gradient(90deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.08) 45%, rgba(0,0,0,0) 70%);
+  opacity: .9;
+}
+
+/* Content on top */
+.offerHero.offerHero--quiz .offerHero__content{
+  position: relative;
+  z-index: 2;
+}
+
+/* Tag */
+.offerHero.offerHero--quiz .offerHero__tag{
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.92);
+}
+
+/* Typography */
+.offerHero.offerHero--quiz .offerHero__h{
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.offerHero.offerHero--quiz .offerHero__p{
+  color: rgba(236,253,245,.86);
+  line-height: 1.6;
+  max-width: 34rem;
+}
+
+/* ================================
+   QUIZ HERO BUTTONS (scoped)
+   Applies ONLY inside .offerHero--quiz
+   ================================ */
+
+.offerHero.offerHero--quiz .offerHero__actions{
+  display: flex;
+  gap: .9rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* --- Primary: Start Quiz --- */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+
+  height: 3.25rem;
+  padding: 0 1.25rem;
+
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,136,.35);
+
+  background: rgba(11,18,32,.78);
+  color: #fff;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.35),
+    0 0 0 rgba(0,255,136,0);
+
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+  overflow: hidden;
+}
+
+/* subtle neon sweep (only on hover) */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(0,255,136,.0) 0%,
+    rgba(0,255,136,.18) 35%,
+    rgba(57,255,20,.22) 55%,
+    rgba(0,255,204,.16) 75%,
+    rgba(0,255,136,.0) 100%
+  );
+  opacity: 0;
+  transition: opacity .22s ease;
+  pointer-events: none;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark:hover{
+  transform: translateY(-2px);
+  border-color: rgba(0,255,136,.55);
+  background: rgba(11,18,32,.90);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45),
+    0 0 28px rgba(0,255,136,.22),
+    0 0 70px rgba(0,255,136,.10);
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark:hover::after{
+  opacity: 1;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark:active{
+  transform: translateY(0);
+  box-shadow:
+    0 12px 26px rgba(0,0,0,.42),
+    0 0 18px rgba(0,255,136,.18);
+}
+
+/* icon in primary */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark svg{
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke: #00ff88;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .95;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* your play icon is a filled triangle path; make it look crisp */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark svg path{
+  fill: #00ff88;
+  stroke: none;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark:hover svg{
+  transform: translateX(2px);
+  opacity: 1;
+}
+
+/* keyboard focus */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--dark:focus-visible{
+  outline: none;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45),
+    0 0 0 4px rgba(0,255,136,.18),
+    0 0 34px rgba(0,255,136,.20);
+}
+
+/* --- Secondary: Rules (ghost) --- */
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+
+  height: 3.25rem;
+  padding: 0 1.05rem;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16);
+
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.88);
+
+  backdrop-filter: blur(10px);
+
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost:hover{
+  transform: translateY(-2px);
+  border-color: rgba(0,255,136,.35);
+  background: rgba(0,255,136,.10);
+  color: #fff;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost:active{
+  transform: translateY(0);
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost svg{
+  width: 1.05rem;
+  height: 1.05rem;
+  stroke: rgba(255,255,255,.90);
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .2s ease, stroke .2s ease;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost:hover svg{
+  transform: translateX(2px);
+  stroke: #00ff88;
+}
+
+.offerHero.offerHero--quiz .offerBtn.offerBtn--ghost:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0,255,136,.16);
+}
+
+/* --- Mobile: full width buttons if needed --- */
+@media (max-width: 520px){
+  .offerHero.offerHero--quiz .offerHero__actions{
+    gap: .75rem;
+  }
+  .offerHero.offerHero--quiz .offerBtn.offerBtn--dark,
+  .offerHero.offerHero--quiz .offerBtn.offerBtn--ghost{
+    width: 100%;
+  }
+}
+
+/* Art wrapper (right side) */
+.offerHero.offerHero--quiz .offerHero__art.offerHero__art--quiz{
+  position: absolute;
+  right: -44px;
+  bottom: -44px;
+
+  width: 560px;
+  max-width: 62%;
+
+  pointer-events: none;
+  z-index: 1;
+
+  opacity: .98;
+  filter: drop-shadow(0 44px 76px rgba(0,0,0,.55));
+}
+
+/* Base SVG sizing */
+.offerHero.offerHero--quiz .offerHero__art.offerHero__art--quiz svg{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Pulse (soft, not flashy) */
+@keyframes quizNeonPulse{
+  0%{
+    filter: drop-shadow(0 0 8px rgba(0,255,136,.25));
+    opacity: .95;
+  }
+  50%{
+    filter: drop-shadow(0 0 18px rgba(57,255,20,.35));
+    opacity: 1;
+  }
+  100%{
+    filter: drop-shadow(0 0 8px rgba(0,255,136,.25));
+    opacity: .95;
+  }
+}
+
+.offerHero.offerHero--quiz .offerHero__art.offerHero__art--quiz svg{
+  animation: quizNeonPulse 3.2s ease-in-out infinite;
+}
+
+/* Optional: if your layout becomes stacked on smaller screens */
+@media (max-width: 900px){
+  .offerHero.offerHero--quiz .offerHero__art.offerHero__art--quiz{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    opacity: .95;
+  }
+}

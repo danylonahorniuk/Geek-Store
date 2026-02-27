@@ -723,10 +723,98 @@
           </div>
         </div>
 
-        <div class="offerHero__art" aria-hidden="true">
-          <div class="artGrid"></div>
-          <div class="artGlow"></div>
-        </div>
+        <div class="offerHero__art offerHero__art--quiz" aria-hidden="true">
+
+  <svg viewBox="0 0 560 340" aria-hidden="true">
+  <defs>
+    <linearGradient id="ng" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="45%" stop-color="#39ff14"/>
+      <stop offset="100%" stop-color="#00ffcc"/>
+    </linearGradient>
+
+    <radialGradient id="blob" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity=".30"/>
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b2"/>
+      <feColorMatrix in="b2" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0.18
+                0 0 1 0 0
+                0 0 0 0.45 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- soft blobs (background) -->
+  <circle cx="420" cy="140" r="150" fill="url(#blob)"/>
+  <circle cx="470" cy="230" r="120" fill="url(#blob)" opacity=".85"/>
+
+  <!-- subtle ring aura -->
+  <g opacity=".85" filter="url(#glowSoft)">
+    <circle cx="430" cy="170" r="120" fill="none" stroke="url(#ng)" stroke-width="2" opacity=".30"/>
+    <circle cx="430" cy="170" r="88"  fill="none" stroke="url(#ng)" stroke-width="2" opacity=".18"/>
+  </g>
+
+  <!-- QUIZ cards stack (right) -->
+  <g filter="url(#glowSoft)">
+    <!-- back card -->
+    <rect x="332" y="118" width="160" height="112" rx="18"
+          fill="rgba(11,18,32,.55)" stroke="rgba(0,255,136,.20)" stroke-width="2"/>
+    <!-- middle card -->
+    <rect x="312" y="104" width="170" height="122" rx="20"
+          fill="rgba(11,18,32,.70)" stroke="rgba(0,255,136,.28)" stroke-width="2"/>
+    <!-- front card -->
+    <rect x="292" y="90" width="182" height="132" rx="22"
+          fill="rgba(11,18,32,.82)" stroke="rgba(0,255,136,.40)" stroke-width="2.4"/>
+  </g>
+
+  <!-- lines on front card -->
+  <g opacity=".85">
+    <path d="M318 130h126" stroke="rgba(255,255,255,.16)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M318 154h96"  stroke="rgba(255,255,255,.12)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M318 178h112" stroke="rgba(255,255,255,.10)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- neon question mark (left, main) -->
+  <g filter="url(#glow)" opacity=".98">
+    <path d="M120 140c0-44 36-76 86-76 42 0 76 21 85 55 11 44-16 68-48 86-24 14-34 25-34 48v8"
+          fill="none" stroke="url(#ng)" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="209" cy="278" r="8" fill="#39ff14"/>
+  </g>
+
+  <!-- 5 вопросов indicator -->
+  <g filter="url(#glowSoft)" opacity=".95">
+    <circle cx="296" cy="252" r="6" fill="rgba(0,255,136,.75)"/>
+    <circle cx="318" cy="252" r="6" fill="rgba(0,255,136,.55)"/>
+    <circle cx="340" cy="252" r="6" fill="rgba(0,255,136,.55)"/>
+    <circle cx="362" cy="252" r="6" fill="rgba(0,255,136,.55)"/>
+    <circle cx="384" cy="252" r="6" fill="rgba(0,255,136,.55)"/>
+  </g>
+
+  <!-- tiny spark accents -->
+  <g filter="url(#glowSoft)" opacity=".55">
+    <path d="M88 92h18"  stroke="url(#ng)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M98 112h10" stroke="url(#ng)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M500 70h16" stroke="url(#ng)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
+
+</div>
       </article>
 
     </div>
