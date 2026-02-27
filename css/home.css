@@ -1144,38 +1144,36 @@ p {
 }
 
 /* Blue card theme */
+.offerCard.offerCard--blue{
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+
+  background:
+    radial-gradient(900px 520px at 15% 0%, rgba(96,165,250,.18), transparent 60%),
+    radial-gradient(760px 520px at 70% 40%, rgba(99,102,241,.15), transparent 65%),
+    linear-gradient(135deg, #0b1220 0%, #111a2e 55%, #0b1220 100%);
+
+  border: 1px solid rgba(96,165,250,.25);
+
+  box-shadow:
+    0 26px 64px rgba(0,0,0,.45),
+    0 0 60px rgba(59,130,246,.10),
+    0 1px 0 rgba(255,255,255,.05) inset;
+}
+
+/* тепліший glow фон */
 .offerCard--blue .offerCard__bg{
   background:
-    radial-gradient(600px 240px at 15% 20%, rgba(59,130,246,.35), transparent 60%),
-    radial-gradient(520px 240px at 80% 40%, rgba(99,102,241,.28), transparent 60%),
+    radial-gradient(600px 240px at 15% 20%, rgba(59,130,246,.25), transparent 60%),
+    radial-gradient(520px 240px at 80% 40%, rgba(99,102,241,.22), transparent 60%),
     radial-gradient(520px 280px at 50% 100%, rgba(14,165,233,.18), transparent 60%);
 }
 
-/* Spider-Verse theme */
-.offerCard--spider .offerCard__bg{
-  background:
-    radial-gradient(520px 260px at 20% 25%, rgba(239,68,68,.28), transparent 62%),
-    radial-gradient(520px 260px at 85% 30%, rgba(59,130,246,.24), transparent 62%),
-    radial-gradient(520px 300px at 60% 110%, rgba(168,85,247,.20), transparent 62%);
-}
 
-/* Fake “minifigures” placeholders */
-.offerCard__figs{
-  position:absolute;
-  right: 1.2rem;
-  bottom: 1.1rem;
-  display:flex;
-  gap:.6rem;
-  opacity: .9;
-}
+/* ===== Gift icon (filled version, bigger & stable) ===== */
 
-.offerCard__figs .fig{
-  width: 2.2rem;
-  height: 3rem;
-  border-radius: .9rem;
-  background: rgba(255,255,255,.12);
-  border: 1px solid rgba(255,255,255,.14);
-}
+
 
 /* ===== Big banner (Quiz) ===== */
 .offerHero{
@@ -1293,15 +1291,92 @@ p {
   stroke-linejoin: round;
 }
 
-.offerBtn--light{
-  background: rgba(255,255,255,.12);
+/* ======================================
+   WELCOME BUTTON (blue neon cinematic)
+   Scoped to .offerCard--blue
+   ====================================== */
+
+.offerCard--blue .offerBtn--light{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  height: 3.2rem;
+  padding: 0 1.4rem;
+
+  border-radius: 999px;
+  border: 1px solid rgba(96,165,250,.35);
+
+  background: rgba(11,18,32,.82);
   color: #fff;
-  border: 1px solid rgba(255,255,255,.16);
+
+  backdrop-filter: blur(10px);
+
+  font-weight: 650;
+  letter-spacing: .01em;
+
+  box-shadow:
+    0 14px 32px rgba(0,0,0,.40),
+    0 0 0 rgba(59,130,246,0);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background .22s ease;
+
+  overflow: hidden;
 }
 
-.offerBtn--light:hover{
-  background: rgba(255,255,255,.16);
+/* subtle neon sweep */
+.offerCard--blue .offerBtn--light::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(59,130,246,0) 0%,
+    rgba(96,165,250,.18) 35%,
+    rgba(99,102,241,.22) 55%,
+    rgba(59,130,246,.16) 75%,
+    rgba(59,130,246,0) 100%
+  );
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+
+/* hover */
+.offerCard--blue .offerBtn--light:hover{
   transform: translateY(-2px);
+  border-color: rgba(96,165,250,.65);
+  background: rgba(11,18,32,.95);
+
+  box-shadow:
+    0 20px 42px rgba(0,0,0,.55),
+    0 0 32px rgba(59,130,246,.25),
+    0 0 80px rgba(59,130,246,.12);
+}
+
+.offerCard--blue .offerBtn--light:hover::after{
+  opacity: 1;
+}
+
+/* active */
+.offerCard--blue .offerBtn--light:active{
+  transform: translateY(0);
+}
+
+/* focus */
+.offerCard--blue .offerBtn--light:focus-visible{
+  outline: none;
+  box-shadow:
+    0 20px 42px rgba(0,0,0,.55),
+    0 0 0 4px rgba(59,130,246,.18),
+    0 0 34px rgba(96,165,250,.18);
 }
 
 .offerBtn--dark{

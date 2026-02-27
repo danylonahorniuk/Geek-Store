@@ -1,15 +1,14 @@
-/* ===== Promo Modal (isolated) ===== */
+/* ===== Promo Modal2 (Cinematic Blue Neon) ===== */
 .promoModal2{
   position: fixed;
   inset: 0;
   z-index: 9999;
 
-  /* замість display none */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity .22s ease, visibility .22s ease;
+  transition: opacity .24s ease, visibility .24s ease;
 }
 
 .promoModal2.is-open{
@@ -18,34 +17,48 @@
   pointer-events: auto;
 }
 
+/* overlay */
 .promoModal2__overlay{
   position: absolute;
   inset: 0;
-  background: rgba(2,6,23,.55);
-  backdrop-filter: blur(10px);
+  background: rgba(2,6,23,.72);
+  backdrop-filter: blur(12px);
 
   opacity: 0;
-  transition: opacity .22s ease;
+  transition: opacity .24s ease;
 }
 
 .promoModal2.is-open .promoModal2__overlay{
   opacity: 1;
 }
 
+/* dialog */
 .promoModal2__dialog{
   position: relative;
   width: min(980px, calc(100% - 2rem));
   max-height: calc(100dvh - 2rem);
   margin: 1rem auto;
-  background: #fff;
+
   border-radius: 1.6rem;
-  box-shadow: 0 30px 80px rgba(2,6,23,.30);
   overflow: hidden;
 
-  /* анімація */
+  /* cinematic shell */
+  background:
+    radial-gradient(900px 420px at 20% 0%, rgba(96,165,250,.12), transparent 60%),
+    radial-gradient(800px 420px at 80% 40%, rgba(99,102,241,.10), transparent 60%),
+    linear-gradient(135deg, #0b1220 0%, #111a2e 60%, #0b1220 100%);
+
+  border: 1px solid rgba(96,165,250,.18);
+
+  box-shadow:
+    0 34px 90px rgba(0,0,0,.65),
+    0 0 70px rgba(59,130,246,.12),
+    0 1px 0 rgba(255,255,255,.05) inset;
+
+  /* animation */
   transform: translateY(14px) scale(.98);
   opacity: 0;
-  transition: transform .22s ease, opacity .22s ease;
+  transition: transform .24s ease, opacity .24s ease;
 }
 
 .promoModal2.is-open .promoModal2__dialog{
@@ -53,6 +66,7 @@
   opacity: 1;
 }
 
+/* close button – same vibe as pmodal__close */
 .promoModal2__close{
   position: absolute;
   top: 1rem;
@@ -62,31 +76,30 @@
   height: 2.6rem;
 
   border-radius: 1rem;
-  border: none;
+  border: 1px solid rgba(255,255,255,.12);
 
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(12px);
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
 
   box-shadow:
-    0 4px 12px rgba(0,0,0,.08),
-    0 1px 2px rgba(0,0,0,.06);
+    0 10px 24px rgba(0,0,0,.22);
 
-  transition: all .2s ease;
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
 .promoModal2__close:hover{
-  background: #fff;
+  background: rgba(255,255,255,.10);
   transform: scale(1.08);
   box-shadow:
-    0 8px 20px rgba(0,0,0,.12),
-    0 2px 4px rgba(0,0,0,.08);
+    0 16px 38px rgba(0,0,0,.30),
+    0 0 26px rgba(59,130,246,.16);
 }
 
 .promoModal2__close:active{ transform: scale(.96); }
@@ -94,60 +107,74 @@
 .promoModal2__close svg{
   width: 1.25rem;
   height: 1.25rem;
-  stroke: #0f172a;
+  stroke: rgba(255,255,255,.92);
   fill: none;
   stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
+/* grid */
 .promoModal2__grid{
   display: grid;
   grid-template-columns: 1.15fr .85fr;
   min-height: 22rem;
 }
 
+/* LEFT: now glassy + neon blue */
 .promoModal2__left{
   position: relative;
   padding: 2rem;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef2ff 100%);
   overflow: hidden;
+
+  background:
+    radial-gradient(900px 420px at 10% 0%, rgba(96,165,250,.14), transparent 60%),
+    radial-gradient(700px 420px at 95% 40%, rgba(99,102,241,.12), transparent 62%),
+    linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.03) 100%);
+
+  border-right: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(10px);
 }
 
+/* soft glows inside left */
 .promoModal2__left::before{
   content:"";
   position:absolute;
-  width: 28rem;
-  height: 28rem;
-  top: -10rem;
-  right: -8rem;
-  background: radial-gradient(circle, rgba(99,102,241,.25), transparent 70%);
-  filter: blur(40px);
+  width: 30rem;
+  height: 30rem;
+  top: -12rem;
+  right: -10rem;
+  background: radial-gradient(circle, rgba(96,165,250,.25), transparent 70%);
+  filter: blur(44px);
   pointer-events:none;
+  opacity:.95;
 }
-
 .promoModal2__left::after{
   content:"";
   position:absolute;
-  width: 24rem;
-  height: 24rem;
-  bottom: -8rem;
-  left: -8rem;
-  background: radial-gradient(circle, rgba(139,92,246,.18), transparent 70%);
-  filter: blur(40px);
+  width: 26rem;
+  height: 26rem;
+  bottom: -10rem;
+  left: -10rem;
+  background: radial-gradient(circle, rgba(99,102,241,.20), transparent 70%);
+  filter: blur(44px);
   pointer-events:none;
+  opacity:.9;
 }
 
+/* badge */
 .promoModal2__badge{
   display:inline-flex;
   align-items:center;
   gap:.55rem;
   padding:.5rem .85rem;
   border-radius:999px;
-  background: rgba(15,23,42,.06);
-  border: 1px solid rgba(15,23,42,.10);
-  color:#0f172a;
-  font-weight: 750;
+
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+
+  color: rgba(255,255,255,.92);
+  font-weight: 780;
 }
 
 .promoModal2__badge svg{
@@ -155,36 +182,40 @@
   height: 1.05rem;
   stroke: currentColor;
   fill:none;
-  stroke-width:2;
+  stroke-width:2.1;
   stroke-linecap:round;
   stroke-linejoin:round;
-  opacity:.9;
+  opacity:.92;
 }
 
+/* title */
 .promoModal2__title{
-  margin: .6rem 0 .6rem;
+  margin: .8rem 0 .65rem;
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1.05;
-  color:#0f172a;
+  color: #fff;
 }
 
+/* text */
 .promoModal2__text{
   margin: 0 0 1.25rem;
-  color:#475569;
+  color: rgba(226,232,240,.88);
   line-height: 1.7;
   max-width: 34rem;
 }
 
+/* code row */
 .promoModal2__codeRow{
   display:flex;
   gap:.8rem;
   align-items:center;
   flex-wrap: wrap;
-  margin-bottom: .7rem;
+  margin-bottom: .75rem;
 }
 
+/* promo code “token” */
 .promoModal2__code{
   font-size: 1.5rem;
   font-weight: 900;
@@ -192,22 +223,37 @@
   padding: .85rem 1.2rem;
   border-radius: 1.2rem;
 
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   color:#fff;
 
-  border: 1px solid rgba(15,23,42,.3);
+  background: rgba(11,18,32,.82);
+  border: 1px solid rgba(96,165,250,.30);
+
   box-shadow:
-    0 12px 24px rgba(15,23,42,.25),
+    0 14px 30px rgba(0,0,0,.35),
+    0 0 26px rgba(59,130,246,.18),
     inset 0 1px 0 rgba(255,255,255,.06);
+
+  /* reveal animation (your logic) */
+  opacity: 0;
+  transform: translateY(6px) scale(.96);
+  transition: opacity .28s ease, transform .28s ease;
 }
 
+.promoModal2__code.is-revealed{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* copy button -> same vibe as quiz buttons */
 .promoModal2__copy{
   height: 3.2rem;
   padding: 0 1.1rem;
-  border-radius: 1.1rem;
-  border: 1px solid rgba(15,23,42,.15);
-  background: #ffffff;
-  color:#0f172a;
+  border-radius: 999px;
+
+  border: 1px solid rgba(96,165,250,.26);
+  background: rgba(11,18,32,.72);
+  color: rgba(255,255,255,.92);
+
   font-weight: 800;
   cursor:pointer;
 
@@ -215,7 +261,8 @@
   align-items:center;
   gap:.55rem;
 
-  transition: all .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+  backdrop-filter: blur(10px);
 }
 
 .promoModal2__copy svg{
@@ -226,22 +273,28 @@
   stroke-width:2.2;
   stroke-linecap:round;
   stroke-linejoin:round;
-  opacity:.9;
+  opacity:.92;
 }
 
 .promoModal2__copy:hover{
   transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(15,23,42,.15);
-  background:#f1f5f9;
+  border-color: rgba(96,165,250,.55);
+  background: rgba(11,18,32,.90);
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.45),
+    0 0 28px rgba(59,130,246,.18);
 }
+
+.promoModal2__copy:active{ transform: translateY(0); }
 
 .promoModal2__hint{
   min-height: 1.25rem;
-  color:#16a34a;
-  font-weight: 650;
+  color:#22c55e;
+  font-weight: 700;
   margin-bottom: 1.1rem;
 }
 
+/* actions */
 .promoModal2__actions{
   display:flex;
   gap:.8rem;
@@ -249,58 +302,80 @@
   align-items:center;
 }
 
+/* primary (ok) */
 .promoModal2__primary{
   height: 3.1rem;
-  padding: 0 1.1rem;
-  border-radius: 1rem;
-  border: none;
-  background: #0b1220;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(96,165,250,.30);
+
+  background: rgba(11,18,32,.82);
   color:#fff;
-  font-weight: 800;
+
+  font-weight: 850;
   cursor:pointer;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  backdrop-filter: blur(10px);
 }
 
 .promoModal2__primary:hover{
   transform: translateY(-2px);
-  box-shadow: 0 18px 36px rgba(2,6,23,.22);
-  background:#000;
+  border-color: rgba(96,165,250,.60);
+  background: rgba(11,18,32,.95);
+  box-shadow:
+    0 18px 42px rgba(0,0,0,.55),
+    0 0 34px rgba(59,130,246,.18);
 }
 
+.promoModal2__primary:active{ transform: translateY(0); }
+
+/* ghost link */
 .promoModal2__ghost{
   height: 3.1rem;
-  padding: 0 1.1rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(2,6,23,.12);
-  background: transparent;
-  color:#0b1220;
-  font-weight: 750;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.90);
+
+  font-weight: 780;
   display:inline-flex;
   align-items:center;
   text-decoration:none;
-  transition: transform .18s ease, background .18s ease;
+
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  backdrop-filter: blur(10px);
 }
 
 .promoModal2__ghost:hover{
   transform: translateY(-2px);
-  background: #f8fafc;
+  border-color: rgba(96,165,250,.35);
+  background: rgba(96,165,250,.10);
 }
 
+/* RIGHT: keep your grid vibe (slightly darker for cohesion) */
 .promoModal2__right{
   position: relative;
-  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 55%, #eff6ff 100%);
+  background:
+    radial-gradient(900px 520px at 20% 0%, rgba(96,165,250,.12), transparent 60%),
+    radial-gradient(720px 520px at 80% 40%, rgba(99,102,241,.10), transparent 62%),
+    linear-gradient(135deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.02) 55%, rgba(255,255,255,.04) 100%);
 }
 
+/* grid bg */
 .promoModal2__gridBg{
   position:absolute;
   inset:0;
   opacity:.22;
   background-image:
-    linear-gradient(rgba(15,23,42,.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,23,42,.10) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
   background-size: 36px 36px;
 }
 
+/* glow */
 .promoModal2__glow{
   position:absolute;
   width: 26rem;
@@ -308,14 +383,15 @@
   border-radius: 999px;
   right: -10rem;
   top: -10rem;
-  background: radial-gradient(circle, rgba(99,102,241,.35), transparent 60%);
+  background: radial-gradient(circle, rgba(96,165,250,.26), transparent 60%);
   filter: blur(2px);
-  opacity: .9;
+  opacity: .95;
 }
 
 @media (max-width: 900px){
   .promoModal2__grid{ grid-template-columns: 1fr; }
   .promoModal2__right{ min-height: 12rem; }
+  .promoModal2__left{ border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
 }
 
 
@@ -337,8 +413,8 @@
 
 .giftIcon{
   display: inline-block;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   margin-left: .5rem;
   vertical-align: middle; /* ключовий момент */
 }
@@ -349,6 +425,12 @@
   display: block;
 }
 
+.giftIcon svg{
+  /* легкий glow, не перебор */
+  filter:
+    drop-shadow(0 0 8px rgba(239,68,68,.35))
+    drop-shadow(0 0 18px rgba(249,115,22,.25));
+}
 
 /* ===== Spider-Verse offer (box palette, balanced layout) ===== */
 .offerCard--spider{
