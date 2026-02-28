@@ -826,6 +826,46 @@ const PRODUCTS = [
     image: "../assets/top-sales-home/lego-iron-man2.jpg",
     tags: ["lego", "marvel", "iron man"]
   },
+  {
+    id: "p82",
+    title: "Постер Star Wars: Attack Of The Clones",
+    price: 390,
+    universe: "Star Wars",
+    category: "Постери",
+    badge: "",
+    image: "../assets/cataloge-goods/poster-sw-jango-vs-kenobi.jpg",
+    tags: ["poster", "star wars", "sw"]
+  },
+  {
+    id: "p83",
+    title: "Постер Star Wars: Revenge Of The Sith",
+    price: 390,
+    universe: "Star Wars",
+    category: "Постери",
+    badge: "",
+    image: "../assets/cataloge-goods/poster-sw-skywalker-vs-kenobi.jpg",
+    tags: ["poster", "star wars", "sw"]
+  },
+  {
+    id: "p84",
+    title: "LEGO Harry Potter: Корінь мандрагори",
+    price: 2499,
+    universe: "Інше",
+    category: "LEGO",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/lego-mandragora2.jpg",
+    tags: ["lego", "harry potter"]
+  },
+  {
+    id: "p85",
+    title: "Фігурка Star Wars: The Black Series The Mandalorian",
+    price: 1450,
+    universe: "Star Wars",
+    category: "Фігурки",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/figure-mando.jpg",
+    tags: ["mandalorian", "star wars", "sw"]
+  },
 ];
 
 // ======= UI refs =======
@@ -1275,7 +1315,7 @@ resetBtn.addEventListener("click", () => {
   render();
 });
 
-// ✅ відкриття модалки по кнопці "Купити" (делегування, без once)
+// відкриття модалки по кнопці "Купити" (делегування, без once)
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("[data-buy]");
   if (!btn) return;
