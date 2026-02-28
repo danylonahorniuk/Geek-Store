@@ -5,7 +5,7 @@
   console.log("[quiz] script loaded ✅");
 
   const QUIZ_PROMO = "GEEK15";
-  const PASS_SCORE = 4;
+  const PASS_SCORE = 5;
 
   const QUESTIONS = [
     {
@@ -98,11 +98,12 @@
   index = 0;
   chosen = new Array(QUESTIONS.length).fill(null);
 
-  // ЗАЛІЗНО ховаємо результат
   quizResult.hidden = true;
   quizResult.style.display = "none";
 
+  // ЗАЛІЗНО ховаємо промокод
   quizResultCodeRow.hidden = true;
+  quizResultCodeRow.style.display = "none";
 
   quizCopyHint.textContent = "";
   quizPromoEl.textContent = QUIZ_PROMO;
@@ -157,19 +158,44 @@
   quizBar.style.width = "100%";
 
   quizResult.hidden = false;
-  quizResult.style.display = "flex"; // важливо
+  quizResult.style.display = "flex";
 
   if (s >= PASS_SCORE) {
-    quizResultBadge.textContent = "Успіх ✅";
-    quizResultTitle.textContent = `Круто! ${s}/5 — знижка твоя 🎉`;
-    quizResultText.textContent = "Ось твій промокод на -15%. Використай його в кошику під час оформлення.";
-    quizResultCodeRow.hidden = false;
-  } else {
-    quizResultBadge.textContent = "Не пощастило 😅";
-    quizResultTitle.textContent = `Спроба непогана: ${s}/5`;
-    quizResultText.textContent = "Цього разу не зійшлось. Спробуй ще раз — питання легкі 🙂";
-    quizResultCodeRow.hidden = true;
-  }
+
+  quizResultBadge.innerHTML = `
+    <span class="quizBadgeIcon quizBadgeIcon--success">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M8 12.5l3 3 5-6"></path>
+      </svg>
+    </span>
+    Успіх
+  `;
+
+  quizResultTitle.textContent = `Ідеально! ${s}/5 — знижка твоя`;
+  quizResultText.textContent = "Ось твій промокод на -15%. Використай його в кошику під час оформлення.";
+
+  quizResultCodeRow.hidden = false;
+  quizResultCodeRow.style.display = "flex";
+
+} else {
+
+  quizResultBadge.innerHTML = `
+    <span class="quizBadgeIcon quizBadgeIcon--fail">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M9 9l6 6M15 9l-6 6"></path>
+      </svg>
+    </span>
+    Не пощастило
+  `;
+
+  quizResultTitle.textContent = `Спроба: ${s}/5`;
+  quizResultText.textContent = "Промокод видається лише за 5/5. Спробуй ще раз";
+
+  quizResultCodeRow.hidden = true;
+  quizResultCodeRow.style.display = "none";
+}
 }
 
   // ---- Event delegation for open buttons
