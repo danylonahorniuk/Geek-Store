@@ -1041,7 +1041,7 @@ function openProductModal(productId) {
 
   // benefits
   const benefits = p.benefits ?? [
-    { dot: "#22c55e", title: "Безкоштовна доставка", text: "При замовленні від 1000 ₴" },
+    { dot: "#22c55e", title: "Безкоштовна доставка", text: "При замовленні від 2000 ₴" },
     { dot: "#3b82f6", title: "Повернення протягом 14 днів", text: "Без питань" },
     { dot: "#a855f7", title: "Офіційна гарантія", text: "Від виробника" }
   ];
