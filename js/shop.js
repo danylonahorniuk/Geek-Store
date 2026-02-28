@@ -766,6 +766,16 @@ const PRODUCTS = [
     image: "../assets/top-sales-home/america-cap-keychain2.jpg",
     tags: ["keychain", "funlo pop", "capitan america"]
   },
+  {
+    id: "p76",
+    title: "Фігурка System Service DC Batman metallic Blue",
+    price: 2150,
+    universe: "DC",
+    category: "Фігурки",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/статуетка-бетмен2.webp",
+    tags: ["dc", "batman"]
+  },
 ];
 
 // ======= UI refs =======
