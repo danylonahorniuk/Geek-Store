@@ -267,16 +267,61 @@
   // retry
   quizAgain.addEventListener("click", () => resetQuiz());
 
-  // copy promo
-  quizCopy.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(QUIZ_PROMO);
-      quizCopyHint.textContent = "Скопійовано ✅";
-      setTimeout(() => (quizCopyHint.textContent = ""), 1800);
-    } catch {
-      quizCopyHint.textContent = "Не вдалось скопіювати. Скопіюй вручну 🙂";
-    }
-  });
+  // copy promo (like -10% modal: button changes to "Скопійовано" with green glow)
+function copyText(text){
+  if (navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+
+  // fallback
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.style.position = "fixed";
+  ta.style.left = "-9999px";
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand("copy");
+  ta.remove();
+  return Promise.resolve();
+}
+
+let quizCopyTimer;
+
+quizCopy.addEventListener("click", async () => {
+  const code = (quizPromoEl?.textContent || QUIZ_PROMO).trim();
+  if (!code) return;
+
+  try{
+    await copyText(code);
+
+    // green success state on button
+    quizCopy.classList.add("is-copied");
+    quizCopy.innerHTML = `
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 12.5l3 3 5-6"></path>
+      </svg>
+      Скопійовано
+    `;
+
+    // якщо раніше був hint — тепер прибираємо
+    if (quizCopyHint) quizCopyHint.textContent = "";
+
+    clearTimeout(quizCopyTimer);
+    quizCopyTimer = setTimeout(() => {
+      quizCopy.classList.remove("is-copied");
+      quizCopy.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 9h10v10H9z"></path>
+          <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path>
+        </svg>
+        Скопіювати
+      `;
+    }, 1400);
+
+  } catch(e){
+    // optional: light error feedback
+    quizCopy.classList.add("is-error");
+    setTimeout(() => quizCopy.classList.remove("is-error"), 900);
+  }
+});
 
   // init
   resetQuiz();

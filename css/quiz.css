@@ -570,3 +570,46 @@
 .quizBadgeIcon--fail svg{
   stroke: #ff4d4d;
 }
+
+
+.quizResult__copy{
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background .18s ease,
+    border-color .18s ease,
+    color .18s ease;
+}
+
+.quizResult__copy.is-copied{
+  background: rgba(57,255,20,.12);
+  border-color: rgba(57,255,20,.45);
+  color: #eafff1;
+
+  box-shadow:
+    0 0 0 1px rgba(57,255,20,.15) inset,
+    0 18px 38px rgba(57,255,20,.18),
+    0 0 22px rgba(57,255,20,.25);
+
+  animation: quizCopyPop .22s ease;
+}
+
+.quizResult__copy.is-copied svg{
+  stroke: #39ff14;
+  fill: none;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes quizCopyPop{
+  0%{ transform: scale(.95); }
+  100%{ transform: scale(1); }
+}
+
+/* optional error */
+.quizResult__copy.is-error{
+  background: rgba(255,80,80,.10);
+  border-color: rgba(255,80,80,.35);
+  box-shadow: 0 0 18px rgba(255,80,80,.22);
+}
