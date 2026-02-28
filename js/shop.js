@@ -152,7 +152,7 @@ const PRODUCTS = [
     price: 129,
     universe: "Marvel",
     category: "LEGO",
-    badge: "",
+    badge: "Топ продажів",
     image: "../assets/cataloge-goods/lego-minifigures-spiderman.webp",
     tags: ["spiderman", "lego", "marvel"]
   },
@@ -302,7 +302,7 @@ const PRODUCTS = [
     price: 1200,
     universe: "Gaming",
     category: "Аксесуари",
-    badge: "",
+    badge: "Топ продажів",
     image: "../assets/cataloge-goods/playstation-logo-led-light.jpg",
     tags: ["PlayStation", "gaming", "led light"]
   },
@@ -392,7 +392,7 @@ const PRODUCTS = [
     price: 990,
     universe: "Marvel",
     category: "Комікси",
-    badge: "Топ продажів",
+    badge: "",
     image: "../assets/cataloge-goods/comic-spider-man-secret-war.jpg",
     tags: ["comic", "marvel", "spiderman"]
   },
@@ -745,6 +745,26 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/lego-sw-v-19.jpg",
     tags: ["lego", "star wars", "sw"]
+  },
+  {
+    id: "p74",
+    title: "LEGO Star Wars Мікровинищувач Y-Wing Капітана Рекса",
+    price: 566,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/lego-y-wing-rex's2.jpg",
+    tags: ["lego", "star wars", "sw"]
+  },
+  {
+    id: "p75",
+    title: "Брелок Funko Pop! Marvel Captain America",
+    price: 350,
+    universe: "Marvel",
+    category: "Funko Pop",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/america-cap-keychain2.jpg",
+    tags: ["keychain", "funlo pop", "capitan america"]
   },
 ];
 
