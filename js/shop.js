@@ -352,7 +352,7 @@ const PRODUCTS = [
     price: 50,
     universe: "Star Wars",
     category: "Аксесуари",
-    badge: "",
+    badge: "Топ продажів",
     image: "../assets/cataloge-goods/stikers-sw.jpg",
     tags: ["star wars", "sw", "stikers"]
   },
@@ -642,9 +642,9 @@ const PRODUCTS = [
     price: 990,
     universe: "Аніме",
     category: "Funko Pop",
-    badge: "",
+    badge: "Топ продажів",
     image: "../assets/cataloge-goods/funko-anime3.jpg",
-    tags: ["anime"]
+    tags: ["anime", "funko pop"]
   },
   {
   id: "p64",
@@ -775,6 +775,56 @@ const PRODUCTS = [
     badge: "Топ продажів",
     image: "../assets/top-sales-home/статуетка-бетмен2.webp",
     tags: ["dc", "batman"]
+  },
+  {
+    id: "p77",
+    title: "LEGO Harry Potter: Добі домашній ельф",
+    price: 859,
+    universe: "Інше",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-dobby.jpg",
+    tags: ["lego", "harry potter", "dobby"]
+  },
+  {
+    id: "p78",
+    title: "Lego Harry Potter: Урок з Квідичу",
+    price: 129,
+    universe: "Інше",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-potter.jpg",
+    tags: ["lego", "harry potter"]
+  },
+  {
+    id: "p79",
+    title: "LEGO Harry Potter: Летючий Форд «Англія»",
+    price: 583,
+    universe: "Інше",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-potter2.jpg",
+    tags: ["lego", "harry potter"]
+  },
+  {
+    id: "p80",
+    title: "LEGO Marvel: Пограбування музею Веномом",
+    price: 129,
+    universe: "Marvel",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/lego-spider-man-polybag.jpg",
+    tags: ["lego", "marvel", "spider man"]
+  },
+  {
+    id: "p81",
+    title: "LEGO Marvel: Залізна людина та Бойова Машина проти Хаммер Дронів",
+    price: 775,
+    universe: "Marvel",
+    category: "LEGO",
+    badge: "Топ продажів",
+    image: "../assets/top-sales-home/lego-iron-man2.jpg",
+    tags: ["lego", "marvel", "iron man"]
   },
 ];
 
