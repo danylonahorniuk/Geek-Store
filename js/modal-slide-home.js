@@ -111,6 +111,41 @@ modal?.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
+
+function showCartToast(message = "Товар додано в кошик") {
+  const host = document.getElementById("toast-container");
+  if (!host) return;
+
+  const toast = document.createElement("div");
+  toast.className = "toast success"; // під твій стиль (фіолетова лінія зліва)
+
+  toast.innerHTML = `
+    <div class="toast__row">
+      <span class="toast__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 6L9 17l-5-5"></path>
+        </svg>
+      </span>
+
+      <span class="toast__text">${message}</span>
+
+      <a class="toast__link" href="cart.html">Кошик</a>
+    </div>
+  `;
+
+  host.appendChild(toast);
+
+  // показ (у тебе саме .show)
+  requestAnimationFrame(() => toast.classList.add("show"));
+
+  // авто-закриття
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 350);
+  }, 3500);
+}
+
+
 // ================= ADD TO CART =================
 document.querySelector(".qb-add")?.addEventListener("click", () => {
   if (!activeCardData?.id) {
@@ -121,9 +156,7 @@ document.querySelector(".qb-add")?.addEventListener("click", () => {
   const ok = addToCartFromCardData(activeCardData);
 
   if (ok) {
-    if (typeof showToast === "function") {
-      showToast("Товар додано в кошик");
-    }
-    // НЕ закриваємо модалку
-  }
+  showCartToast("Товар додано в кошик");
+  // НЕ закриваємо модалку
+}
 });

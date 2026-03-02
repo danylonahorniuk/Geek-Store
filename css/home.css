@@ -1687,8 +1687,8 @@ p {
     0 0 0 1px rgba(0,0,0,0.05);
 
   opacity: 0;
-  transform: translateY(-15px);
-  transition: all 0.35s ease;
+  transform: translateX(120%);
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
   font-size: 0.95rem;
 }
 
@@ -1708,3 +1708,48 @@ p {
   border-left: 4px solid #ef4444;
 }
 
+
+/* layout for cart toast (icon + text + link) */
+.toast__row{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+
+.toast__icon{
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: .6rem;
+  background: rgba(124,58,237,0.10);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex: 0 0 auto;
+}
+
+.toast__icon svg{
+  width: 1rem;
+  height: 1rem;
+  stroke: #7c3aed;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.toast__text{
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.toast__link{
+  margin-left: auto;
+  font-weight: 700;
+  color: #7c3aed;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.toast__link:hover{
+  text-decoration: underline;
+}
