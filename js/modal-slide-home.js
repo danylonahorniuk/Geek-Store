@@ -1,63 +1,125 @@
-const modal = document.getElementById('quickBuyModal');
+// ===============================
+// HOME: QUICK BUY + SLIDERS + CART (no products.js, no shop.js)
+// ===============================
 
-/* ================= SLIDER (UNIVERSAL) ================= */
+const modal = document.getElementById("quickBuyModal");
+let activeCardData = null;
+
+// ===============================
+// CART STORAGE (same key as cart page)
+// ===============================
+const CART_KEY = "GEEK_STORE_CART";
+
+function readCart() {
+  try { return JSON.parse(localStorage.getItem(CART_KEY)) || {}; }
+  catch { return {}; }
+}
+
+function writeCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+// додаємо в кошик з даних карточки (без PRODUCTS)
+function addToCartFromCardData(data) {
+  if (!data?.id) return false;
+
+  const cart = readCart();
+
+  if (cart[data.id]) {
+    cart[data.id].qty += 1;
+  } else {
+    cart[data.id] = {
+      id: data.id,
+      title: data.title || "",
+      price: Number(data.price || 0),
+      image: data.image || "",
+      // на головній цього нема — ставимо дефолт
+      universe: data.universe || "Інше",
+      category: data.category || "Товари",
+      qty: 1
+    };
+  }
+
+  writeCart(cart);
+  return true;
+}
+
+// ================= SLIDER (UNIVERSAL) =================
 function slideProducts(sliderId, dir) {
   const slider = document.getElementById(sliderId);
   if (!slider) return;
 
-  // шукаємо будь-яку картку (для na і ts)
-  const card = slider.querySelector('.na-card, .ts-card');
+  const card = slider.querySelector(".na-card, .ts-card");
   if (!card) return;
 
-  // gap між картками (у тебе 2rem = 32px, але краще зчитати реально)
   const gap = parseFloat(getComputedStyle(slider).gap || 0);
   const step = card.offsetWidth + gap;
 
-  slider.scrollBy({
-    left: dir * step,
-    behavior: 'smooth'
-  });
+  slider.scrollBy({ left: dir * step, behavior: "smooth" });
 }
 
-/* ================= OPEN MODAL (NA + TS) ================= */
+// ================= OPEN MODAL (NA + TS) =================
 function openQuickBuyFromButton(btn) {
-  const card = btn.closest('.na-card, .ts-card');
+  const card = btn.closest(".na-card, .ts-card");
   if (!card) return;
 
-  document.getElementById('qbTitle').textContent = card.dataset.name || '';
-  document.getElementById('qbDesc').textContent = card.dataset.description || '';
+  // id
+  let id = (card.dataset.id || "").trim();
+  if (id && !id.startsWith("p")) id = "p" + id; // якщо раптом "45"
 
-  const price = Number(card.dataset.price || 0);
-  document.getElementById('qbPrice').textContent = price.toLocaleString() + ' ₴';
+  // зберігаємо дані активної карточки
+  activeCardData = {
+    id,
+    title: card.dataset.name || "",
+    price: Number(card.dataset.price || 0),
+    image: card.dataset.image || "",
+    description: card.dataset.description || ""
+  };
 
-  const img = document.getElementById('qbImage');
-  img.src = card.dataset.image || '';
-  img.alt = card.dataset.name || '';
+  if (!activeCardData.id) {
+    console.warn("[home] No data-id on card.");
+  }
 
-  modal.classList.add('active');
+  // наповнення модалки
+  document.getElementById("qbTitle").textContent = activeCardData.title;
+  document.getElementById("qbDesc").textContent = activeCardData.description;
+  document.getElementById("qbPrice").textContent = activeCardData.price.toLocaleString() + " ₴";
+
+  const img = document.getElementById("qbImage");
+  img.src = activeCardData.image;
+  img.alt = activeCardData.title;
+
+  modal.classList.add("active");
 }
 
-// делегування подій: працює і для .na-quick і для .ts-quick
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.na-quick, .ts-quick');
+// делегування: працює і для на, і для тс
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".na-quick, .ts-quick");
   if (!btn) return;
 
   e.stopPropagation();
   openQuickBuyFromButton(btn);
 });
 
-/* ================= CLOSE MODAL ================= */
+// ================= CLOSE MODAL =================
 function closeModal() {
-  modal.classList.remove('active');
+  modal.classList.remove("active");
+  activeCardData = null;
 }
 
-modal.addEventListener('click', e => {
-  // закривати, якщо клік по фону (оверлею), а не по контенту
+modal?.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
-/* ================= ADD TO CART ================= */
-document.querySelector('.qb-add').addEventListener('click', () => {
-  console.log('Додано 1 товар у кошик');
-  closeModal();
+// ================= ADD TO CART =================
+document.querySelector(".qb-add")?.addEventListener("click", () => {
+  if (!activeCardData?.id) {
+    console.warn("[home] No activeCardData/id.");
+    return;
+  }
+
+  const ok = addToCartFromCardData(activeCardData);
+  console.log("[home] added to cart:", activeCardData.id, ok);
+
+  if (ok) closeModal();
 });
