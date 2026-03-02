@@ -119,7 +119,11 @@ document.querySelector(".qb-add")?.addEventListener("click", () => {
   }
 
   const ok = addToCartFromCardData(activeCardData);
-  console.log("[home] added to cart:", activeCardData.id, ok);
 
-  if (ok) closeModal();
+  if (ok) {
+    if (typeof showToast === "function") {
+      showToast("Товар додано в кошик");
+    }
+    // НЕ закриваємо модалку
+  }
 });
