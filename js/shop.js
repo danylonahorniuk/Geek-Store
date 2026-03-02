@@ -208,7 +208,7 @@ const PRODUCTS = [
   },
   {
     id: "p20",
-    title: "Футболка Batman",
+    title: "Футболка Marvel Comics",
     price: 459,
     universe: "Marvel",
     category: "Одяг",
