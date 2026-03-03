@@ -40,6 +40,82 @@ const promoApply = document.getElementById("promoApply");
 const promoHint = document.getElementById("promoHint");
 const checkoutBtn = document.getElementById("checkoutBtn");
 
+
+// ===============================
+// TOAST (forced visible, above modals)
+// ===============================
+function ensureToastContainer() {
+  let c = document.getElementById("toast-container");
+  if (!c) {
+    c = document.createElement("div");
+    c.id = "toast-container";
+    document.body.appendChild(c);
+  }
+
+  // форсуємо позицію і Z, щоб не ховалось під модалкою
+  c.style.position = "fixed";
+  c.style.top = "2rem";
+  c.style.right = "2rem";
+  c.style.zIndex = "10050";
+  c.style.display = "flex";
+  c.style.flexDirection = "column";
+  c.style.gap = "1rem";
+
+  return c;
+}
+
+function showToastCart(message, opts = {}) {
+  const { linkText = "", linkHref = "" } = opts;
+
+  const container = ensureToastContainer();
+
+  const toast = document.createElement("div");
+  toast.className = "toast success";
+
+  // якщо CSS тоста не підключений — теж буде норм виглядати
+  toast.style.background = "#f8f7ff";
+  toast.style.color = "#111827";
+  toast.style.padding = "1rem 1.5rem";
+  toast.style.borderRadius = "1rem";
+  toast.style.minWidth = "280px";
+  toast.style.boxShadow = "0 1.5rem 3rem rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05)";
+  toast.style.borderLeft = "4px solid #7c3aed";
+
+  // анімація “виїжджає справа”
+  toast.style.opacity = "0";
+  toast.style.transform = "translateX(120%)";
+  toast.style.transition = "all 0.35s ease";
+
+  toast.innerHTML = `
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+      <div style="display:flex; align-items:center; gap:.75rem; font-weight:600;">
+        <span style="width:1.6rem; height:1.6rem; border-radius:.6rem; background:rgba(17,24,39,.08); display:inline-flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 24 24" style="width:1rem; height:1rem; fill:none; stroke:#16a34a; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;">
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </span>
+        <span>${message}</span>
+      </div>
+
+      ${linkText && linkHref ? `<a href="${linkHref}" style="color:#7c3aed; font-weight:700; text-decoration:none; white-space:nowrap;">${linkText}</a>` : ""}
+    </div>
+  `;
+
+  container.appendChild(toast);
+
+  requestAnimationFrame(() => {
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(0)";
+  });
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateX(120%)";
+    setTimeout(() => toast.remove(), 400);
+  }, 3200);
+}
+
+
 // ===============================
 // Config
 // ===============================
@@ -281,13 +357,18 @@ checkoutBtn?.addEventListener("click", () => {
 checkoutForm?.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // нічого не валідимо — приймаємо будь-що
-  if (checkoutHint) checkoutHint.textContent = "✅ Замовлення прийнято (тестовий режим).";
+  // прибрати будь-які тексти під формою
+  if (checkoutHint) checkoutHint.textContent = "";
 
-  // якщо хочеш, можна очистити кошик:
+  // спочатку закриваємо модалку (щоб не перекривала)
+  closeCheckoutModal();
+
+  // показуємо тост після закриття (на наступному “кадрі”)
+  setTimeout(() => {
+    showToastCart("Замовлення оформлено ");
+  }, 0);
+
+  // якщо хочеш очищати кошик після “оформлення” — розкоментуй:
   // writeCart({});
   // renderCart();
-
-  // або закривати через 1.2с (якщо захочеш):
-  // setTimeout(closeCheckoutModal, 1200);
 });
