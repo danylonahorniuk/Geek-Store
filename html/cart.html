@@ -254,6 +254,88 @@
   </div>
 </footer>
 
+
+<!-- ===== CHECKOUT MODAL ===== -->
+<div class="checkoutModal" id="checkoutModal" aria-hidden="true">
+  <div class="checkoutModal__overlay" data-checkout-close></div>
+
+  <div class="checkoutModal__dialog" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="checkoutModal__close" type="button" aria-label="Закрити" data-checkout-close>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 6L6 18"></path>
+        <path d="M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <div class="checkoutModal__head">
+      <h3 class="checkoutModal__title" id="checkoutTitle">Оформлення замовлення</h3>
+      <p class="checkoutModal__sub">Заповніть контактні дані для доставки</p>
+    </div>
+
+    <form class="checkoutForm" id="checkoutForm">
+      <div class="checkoutGrid">
+        <label class="field">
+          <span class="field__label">Імʼя та прізвище</span>
+          <input class="field__input" type="text" name="name" placeholder="Напр. Даня Н." />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Телефон</span>
+          <input class="field__input" type="text" name="phone" placeholder="+38 (0__) ___ __ __" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Email</span>
+          <input class="field__input" type="text" name="email" placeholder="name@gmail.com" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Місто</span>
+          <input class="field__input" type="text" name="city" placeholder="Київ / Львів / ..." />
+        </label>
+
+        <label class="field field--full">
+          <span class="field__label">Відділення / поштомат</span>
+          <input class="field__input" type="text" name="branch" placeholder="НП відділення №12 / поштомат 12345" />
+        </label>
+
+        <div class="divider field--full"></div>
+
+        <label class="field">
+          <span class="field__label">Номер карти</span>
+          <!-- text, щоб можна було будь-що -->
+          <input class="field__input" type="text" name="card" placeholder="0000 0000 0000 0000" />
+          <small class="field__hint">Тестовий режим — валідність не перевіряємо.</small>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Термін (MM/YY)</span>
+          <input class="field__input" type="text" name="exp" placeholder="12/29" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">CVV</span>
+          <input class="field__input" type="text" name="cvv" placeholder="123" />
+        </label>
+
+        <label class="field field--full">
+          <span class="field__label">Коментар</span>
+          <textarea class="field__input field__textarea" name="comment" rows="3" placeholder="Напр. не дзвонити, писати в телеграм"></textarea>
+        </label>
+      </div>
+
+      <div class="checkoutActions">
+        <button class="btn btn--ghost" type="button" data-checkout-close>Скасувати</button>
+        <button class="btn btn--primary" type="submit">
+          Підтвердити замовлення
+        </button>
+      </div>
+
+      <div class="checkoutHint" id="checkoutHint" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
   <script src="../js/cart.js"></script>
   <script src="../js/theme-toggle.js"></script>
 

@@ -237,11 +237,57 @@ promoApply?.addEventListener("click", () => {
   renderCart();
 });
 
-checkoutBtn?.addEventListener("click", () => {
-  const cart = readCart();
-  if (cartCount(cart) === 0) return;
-  alert("Тут буде оформлення замовлення 🙂");
-});
-
 // init
 renderCart();
+
+// ===============================
+// CHECKOUT MODAL (fake, accepts anything)
+// ===============================
+const checkoutModal = document.getElementById("checkoutModal");
+const checkoutForm = document.getElementById("checkoutForm");
+const checkoutHint = document.getElementById("checkoutHint");
+
+function openCheckoutModal(){
+  if (!checkoutModal) return;
+  checkoutModal.classList.add("is-open");
+  checkoutModal.setAttribute("aria-hidden", "false");
+  document.documentElement.style.overflow = "hidden";
+}
+
+function closeCheckoutModal(){
+  if (!checkoutModal) return;
+  checkoutModal.classList.remove("is-open");
+  checkoutModal.setAttribute("aria-hidden", "true");
+  document.documentElement.style.overflow = "";
+  if (checkoutHint) checkoutHint.textContent = "";
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("[data-checkout-close]")) closeCheckoutModal();
+});
+
+// esc
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && checkoutModal?.classList.contains("is-open")) closeCheckoutModal();
+});
+
+// замінюємо твій alert на модалку
+checkoutBtn?.addEventListener("click", () => {
+  const cart = readCart();
+  if (cartCount(cart) === 0) return; // відкривати тільки якщо є товари
+  openCheckoutModal();
+});
+
+checkoutForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // нічого не валідимо — приймаємо будь-що
+  if (checkoutHint) checkoutHint.textContent = "✅ Замовлення прийнято (тестовий режим).";
+
+  // якщо хочеш, можна очистити кошик:
+  // writeCart({});
+  // renderCart();
+
+  // або закривати через 1.2с (якщо захочеш):
+  // setTimeout(closeCheckoutModal, 1200);
+});
