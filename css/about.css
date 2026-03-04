@@ -1068,47 +1068,157 @@ section {
 
 
 
-/* QUOTE */
-.quote-section {
-  padding: 5rem 1.5rem;
+/* ========== ABOUT OUTRO (no card, cinematic section) ========== */
+
+.about-outro{
+  position: relative;
+  overflow: hidden;
+  padding: 6.5rem 1.25rem 7rem;
+
+  /* базова підложка */
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbff 48%, #ffffff 100%);
 }
 
-.quote-container {
-  max-width: 900px; /* було 1100 */
-  margin: 0 auto;
+/* верхній розділювач (щоб відділити від stats) */
+.about-outro::before{
+  content:"";
+  position:absolute;
+  left:0; right:0; top:0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(99,102,241,.22),
+    rgba(236,72,153,.18),
+    transparent
+  );
+  opacity: .9;
 }
 
+/* декоративний фон */
+.about-outro__bg{
+  position:absolute;
+  inset:-140px -160px;
+  pointer-events:none;
 
-.quote-card {
-  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
-  border-radius: 2rem;
-  padding: 4rem 3rem;
+  background:
+    radial-gradient(circle at 18% 30%, rgba(99,102,241,.22), transparent 42%),
+    radial-gradient(circle at 82% 70%, rgba(236,72,153,.18), transparent 44%),
+    radial-gradient(circle at 50% 115%, rgba(124,58,237,.14), transparent 55%);
+
+  filter: blur(24px);
+  opacity: .8;
+}
+
+/* легка “зернистість/точки”, щоб не було пусто */
+.about-outro::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.06;
+
+  background-image: radial-gradient(rgba(2,6,23,.9) 1px, transparent 1px);
+  background-size: 18px 18px;
+
+  mask-image: radial-gradient(circle at 50% 35%, #000 35%, transparent 78%);
+}
+
+/* контент */
+.about-outro__inner{
+  position: relative;
   text-align: center;
-  color: #ffffff;
-
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+  max-width: 58rem;
 }
 
-.quote-card blockquote {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.6;
-  font-style: italic;
-  margin-bottom: 2rem;
+/* заголовок */
+.about-outro__inner h2{
+  font-size: 2.65rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.1rem;
+  color:#0f172a;
 }
 
-.quote-author {
-  font-size: 1.1rem;
-  opacity: 0.9;
+/* абзац */
+.about-outro__inner p{
+  margin: 0 auto 2.2rem;
+  max-width: 52rem;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color:#566275;
 }
 
-@media (max-width: 768px) {
-  .quote-card {
-    padding: 3rem 2rem;
-  }
+/* цитата як “герой-лінія” (без картки!) */
+.about-outro__quote{
+  position: relative;
+  display: inline-block;
+  max-width: 52rem;
+  padding: .2rem 0;
 
-  .quote-card blockquote {
-    font-size: 1.5rem;
-  }
+  font-size: 1.65rem;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  color:#0b1220;
+
+  /* підкреслення градієнтом (виглядає дорого) */
+  background:
+    linear-gradient(90deg,
+      rgba(79,70,229,.22),
+      rgba(124,58,237,.18),
+      rgba(236,72,153,.18)
+    )
+    0 100% / 100% 0.42rem no-repeat;
+  border-radius: .75rem;
+}
+
+.about-outro__quote::after{
+  content:"”";
+  position:absolute;
+  right: -1.1rem;
+  bottom: -1.35rem;
+
+  font-family: "Playfair Display", serif;
+  font-size: 5.2rem;
+  line-height: 1;
+
+  color:#7c3aed;
+  opacity:.14;
+  pointer-events:none;
+}
+
+/* велика лапка */
+.about-outro__qmark{
+  position:absolute;
+  left: -1.15rem;
+  top: -1.55rem;
+
+  font-family: "Playfair Display", serif;
+  font-size: 5.2rem;
+  line-height: 1;
+  color:#7c3aed;
+  opacity:.14;
+}
+
+/* автор */
+.about-outro__author{
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color:#64748b;
+}
+
+/* невеличкий hover “оживляє” блок */
+.about-outro:hover .about-outro__bg{
+  opacity: .95;
+  filter: blur(22px);
+  transition: opacity .5s ease, filter .5s ease;
+}
+
+/* мобайл */
+@media (max-width: 56.25rem){
+  .about-outro{ padding: 5.2rem 1.25rem 6rem; }
+  .about-outro__inner h2{ font-size: 2.05rem; }
+  .about-outro__inner p{ font-size: 1.05rem; }
+  .about-outro__quote{ font-size: 1.25rem; background-size: 100% 0.36rem; }
+  .about-outro__qmark{ left: -.65rem; top: -1.25rem; font-size: 4.2rem; }
 }
 
