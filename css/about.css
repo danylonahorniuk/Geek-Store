@@ -1039,9 +1039,13 @@ section {
 }
 
 
+/* ===============================
+   STATS
+================================ */
+
 .stats {
-  padding: 4rem 0; /* залишаємо як було */
-  background: #0b1220; /* темний фон */
+  padding: 4rem 0;
+  background: #0b1220;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
@@ -1054,26 +1058,56 @@ section {
   text-align: center;
 }
 
+/* цифри */
 .stat-value {
-  font-size: 2.75rem; /* твій розмір */
+  font-size: 2.75rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: #8b7bff; /* фіолетовий як на скріні */
+
+  /* gradient text */
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform .35s ease, filter .35s ease;
 }
 
+/* підпис */
 .stat-label {
   color: rgba(255,255,255,0.7);
   font-size: 1rem;
+  margin-top: .35rem;
 }
 
-.stats .stat-value{
-  transition: transform .25s ease;
-}
-.stats.is-counting .stat-value{
-  transform: translateY(-1px);
-  transition: transform .25s ease;
+/* ефект під час анімації */
+.stats.is-counting .stat-value {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(139,92,246,0.35));
 }
 
+/* легкий hover */
+.stat:hover .stat-value{
+  transform: scale(1.06);
+}
+
+/* адаптив */
+@media (max-width: 768px){
+
+  .stats{
+    padding: 3.2rem 0;
+  }
+
+  .stat-value{
+    font-size: 2.35rem;
+  }
+
+}
 
 
 /* ========== ABOUT OUTRO (no card, cinematic section) ========== */

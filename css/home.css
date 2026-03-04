@@ -204,40 +204,61 @@ p {
 }
 
 /* === Stats Section === */
+
 .stats {
   position: relative;
   padding: 4rem 0;
+
   background: linear-gradient(
     90deg,
     #4338ca 0%,
     #7c3aed 50%,
     #a21caf 100%
   );
+
   box-shadow: 
     inset 0 1px 0 rgba(255,255,255,0.08),
     inset 0 -60px 120px rgba(0,0,0,0.18);
 }
 
-
-
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
+
   max-width: 1200px;
   margin: 0 auto;
+
   text-align: center;
   color: white;
 }
 
+/* цифри */
+
 .stat-value {
   font-size: 2.75rem;
-  font-weight: 400;
+  font-weight: 550;
   letter-spacing: -0.02em;
+
+  transition: transform .35s ease, text-shadow .35s ease;
 }
+
+/* підпис */
 
 .stat-label {
   color: rgba(255,255,255,0.9);
+}
+
+/* bounce під час відліку */
+
+.stats.is-counting .stat-value {
+  transform: scale(1.03);
+}
+
+/* легкий hover */
+
+.stat:hover .stat-value{
+  transform: scale(1.02);
 }
 
 
