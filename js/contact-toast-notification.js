@@ -15,22 +15,22 @@ if (contactForm) {
     const message = (messageTextarea?.value || "").trim();
 
     if (!name) {
-      showToast("Вкажіть ім'я 🙂", "error");
+      showToast("Вкажіть ім'я", "error");
       return;
     }
 
     if (!validateEmail(email)) {
-      showToast("Введіть коректний email 🙃", "error");
+      showToast("Введіть коректний email", "error");
       return;
     }
 
     if (!topic || topic === "Оберіть тему") {
-      showToast("Оберіть тему звернення 🙂", "error");
+      showToast("Оберіть тему звернення", "error");
       return;
     }
 
     if (message.length < 10) {
-      showToast("Повідомлення має бути трохи детальнішим 🙂", "error");
+      showToast("Повідомлення має бути трохи детальнішим", "error");
       return;
     }
 
