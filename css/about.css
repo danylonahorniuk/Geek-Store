@@ -1066,6 +1066,14 @@ section {
   font-size: 1rem;
 }
 
+.stats .stat-value{
+  transition: transform .25s ease;
+}
+.stats.is-counting .stat-value{
+  transform: translateY(-1px);
+  transition: transform .25s ease;
+}
+
 
 
 /* ========== ABOUT OUTRO (no card, cinematic section) ========== */
