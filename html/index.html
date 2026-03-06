@@ -177,95 +177,181 @@
   </section>
 
   <!-- Popular Universes Section -->
-  <section class="universes container">
-    <div class="section-header">
-      <span class="brand-badge">Популярні всесвіти</span>
-      <h2>Обирай свій фандом</h2>
-      <p>Від супергероїв Marvel до далеких галактик Star Wars — у нас є все для справжніх фанатів. Кожен всесвіт представлений повною колекцією товарів: від LEGO і Funko Pop до постерів та коміксів.</p>
-    </div>
-    <div class="universe-grid">
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/Avengers.jpg" alt="Marvel">
-        <div class="universe-overlay">
-          <div class="universe-count">200+ товарів</div>
-          <h3>Marvel</h3>
-          <p>історії героїв, що стали легендами</p>
-        </div>
-      </a>
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/Star Wars_ Episode IV.jpg" alt="Star Wars">
-        <div class="universe-overlay">
-          <div class="universe-count">180+ товарів</div>
-          <h3>Star Wars</h3>
-          <p>Легенди далекої галактики</p>
-        </div>
-      </a>
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/dc.jpg" alt="DC">
-        <div class="universe-overlay">
-          <div class="universe-count">150+ товарів</div>
-          <h3>DC</h3>
-          <p>Темні герої. Важкий вибір</p>
-        </div>
-      </a>
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/Harry Potter.jpg" alt="Harry Potter">
-        <div class="universe-overlay">
-          <div class="universe-count">120+ товарів</div>
-          <h3>Harry Potter</h3>
-          <p>Світ магії та дорослішання</p>
-        </div>
-      </a>
+  <section class="universes container" id="universes">
+  <div class="section-header">
+    <span class="brand-badge">Популярні всесвіти</span>
+    <h2>Обирай свій фандом</h2>
+    <p>
+      Від супергероїв Marvel до далеких галактик Star Wars — у нас є все для справжніх фанатів.
+      Обери всесвіт і переходь до колекції.
+    </p>
+  </div>
 
-      <div class="universe-more" id="universeMore" aria-hidden="true">  
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/lord-of-rings.jpg" alt="Lord Of Rings">
-        <div class="universe-overlay">
-          <div class="universe-count">120+ товарів</div>
-          <h3>Lord Of Rings</h3>
-          <p>Епічна подорож, що змінила долю Середзем'я</p>
-        </div>
-      </a>
+  <div class="universes-layout">
+    <a class="universe-feature" id="universeFeature" href="shop.html" data-accent="violet">
+      <img id="universeFeatureImg"
+           src="../assets/images/Avengers.jpg"
+           alt="Marvel"
+           style="object-position: 50% 35%;">
+      <div class="universe-feature__overlay"></div>
 
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/The Big Gang Bang Theory Sticker.jpg" alt="The Big Bang Theory">
-        <div class="universe-overlay">
-          <div class="universe-count">120+ товарів</div>
-          <h3>The Big Bang Theory</h3>
-          <p>Гік-культура, наука і культовий серіал з характером</p>
+      <div class="universe-feature__content">
+        <div class="universe-feature__top">
+          <div class="universe-chip" id="universeFeatureCount">200+ товарів</div>
+          <div class="universe-chip universe-chip--ghost">Колекція</div>
         </div>
-      </a>
 
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/gaming.jpg" alt="Gaming">
-        <div class="universe-overlay">
-          <div class="universe-count">120+ товарів</div>
-          <h3>Gaming</h3>
-          <p>Легендарні ігрові світи та персонажі</p>
-        </div>
-      </a>
+        <h3 id="universeFeatureTitle">Marvel</h3>
+        <p id="universeFeatureDesc">історії героїв, що стали легендами</p>
 
-      <a href="shop.html" class="universe-card">
-        <img src="../assets/images/geek-room.jpg" alt="Geek Universe">
-        <div class="universe-overlay">
-          <div class="universe-count">120+ товарів</div>
-          <h3>Geek Universe</h3>
-          <p>Усе, що формує справжню гік-культуру</p>
+        <div class="universe-feature__cta">
+          Перейти в каталог
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      </a>
+      </div>
+    </a>
+
+    <div class="universe-picker">
+      <div class="universe-picker__head">
+        <div class="universe-picker__title">Всесвіти</div>
+
+        <button class="universes-toggle" id="universesToggle" type="button" aria-expanded="false">
+          Показати більше
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
       </div>
 
-      
+      <div class="universe-list" id="universeList">
+        <button class="universe-item is-active" type="button"
+          data-title="Marvel"
+          data-desc="історії героїв, що стали легендами"
+          data-count="200+ товарів"
+          data-img="../assets/images/Avengers.jpg"
+          data-link="shop.html"
+          data-accent="violet"
+          data-pos="50% 35%">
+          <span class="universe-item__left">
+            <span class="universe-item__name">Marvel</span>
+            <span class="universe-item__desc">Супергерої та легенди</span>
+          </span>
+          <span class="universe-item__meta">200+</span>
+        </button>
+
+        <button class="universe-item" type="button"
+          data-title="Star Wars"
+          data-desc="Легенди далекої галактики"
+          data-count="180+ товарів"
+          data-img="../assets/images/Star Wars_ Episode IV.jpg"
+          data-link="shop.html"
+          data-accent="blue"
+          data-pos="50% 30%">
+          <span class="universe-item__left">
+            <span class="universe-item__name">Star Wars</span>
+            <span class="universe-item__desc">Далека галактика</span>
+          </span>
+          <span class="universe-item__meta">180+</span>
+        </button>
+
+        <button class="universe-item" type="button"
+          data-title="DC"
+          data-desc="Темні герої. Важкий вибір"
+          data-count="150+ товарів"
+          data-img="../assets/images/dc.jpg"
+          data-link="shop.html"
+          data-accent="orange"
+          data-pos="50% 30%">
+          <span class="universe-item__left">
+            <span class="universe-item__name">DC</span>
+            <span class="universe-item__desc">Темний вайб</span>
+          </span>
+          <span class="universe-item__meta">150+</span>
+        </button>
+
+        <button class="universe-item" type="button"
+          data-title="Harry Potter"
+          data-desc="Світ магії та дорослішання"
+          data-count="120+ товарів"
+          data-img="../assets/images/Harry Potter.jpg"
+          data-link="shop.html"
+          data-accent="green"
+          data-pos="50% 25%">
+          <span class="universe-item__left">
+            <span class="universe-item__name">Harry Potter</span>
+            <span class="universe-item__desc">Магія і пригоди</span>
+          </span>
+          <span class="universe-item__meta">120+</span>
+        </button>
+
+        <div class="universe-more" id="universeMore" aria-hidden="true">
+          <button class="universe-item" type="button"
+            data-title="Lord Of Rings"
+            data-desc="Епічна подорож, що змінила долю Середзем'я"
+            data-count="120+ товарів"
+            data-img="../assets/images/lord-of-rings.jpg"
+            data-link="shop.html"
+            data-accent="green"
+            data-pos="50% 35%">
+            <span class="universe-item__left">
+              <span class="universe-item__name">Lord Of Rings</span>
+              <span class="universe-item__desc">Середзем’я</span>
+            </span>
+            <span class="universe-item__meta">120+</span>
+          </button>
+
+          <button class="universe-item" type="button"
+            data-title="The Big Bang Theory"
+            data-desc="Гік-культура, наука і культовий серіал з характером"
+            data-count="120+ товарів"
+            data-img="../assets/images/The Big Gang Bang Theory Sticker.jpg"
+            data-link="shop.html"
+            data-accent="orange"
+            data-pos="50% 35%">
+            <span class="universe-item__left">
+              <span class="universe-item__name">Big Bang Theory</span>
+              <span class="universe-item__desc">Серіал для гіків</span>
+            </span>
+            <span class="universe-item__meta">120+</span>
+          </button>
+
+          <button class="universe-item" type="button"
+            data-title="Gaming"
+            data-desc="Легендарні ігрові світи та персонажі"
+            data-count="120+ товарів"
+            data-img="../assets/images/gaming.jpg"
+            data-link="shop.html"
+            data-accent="blue"
+            data-pos="50% 35%">
+            <span class="universe-item__left">
+              <span class="universe-item__name">Gaming</span>
+              <span class="universe-item__desc">Ігрові всесвіти</span>
+            </span>
+            <span class="universe-item__meta">120+</span>
+          </button>
+
+          <button class="universe-item" type="button"
+            data-title="Geek Universe"
+            data-desc="Усе, що формує справжню гік-культуру"
+            data-count="120+ товарів"
+            data-img="../assets/images/geek-room.jpg"
+            data-link="shop.html"
+            data-accent="violet"
+            data-pos="50% 40%">
+            <span class="universe-item__left">
+              <span class="universe-item__name">Geek Universe</span>
+              <span class="universe-item__desc">Everything geek</span>
+            </span>
+            <span class="universe-item__meta">120+</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="universes-actions">
-  <button class="universes-toggle" id="universesToggle" type="button" aria-expanded="false">
-    Показати більше
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M6 9l6 6 6-6"/>
-    </svg>
-  </button>
-</div>
-  </section>
+  </div>
+</section>
 
 
 <!-- === Top Sales / Product Slider === -->
