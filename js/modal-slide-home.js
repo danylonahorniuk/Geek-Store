@@ -41,6 +41,7 @@ function addToCartFromCardData(data) {
   }
 
   writeCart(cart);
+  window.updateCartBadge?.();
   return true;
 }
 

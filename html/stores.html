@@ -54,9 +54,10 @@
 
 
       <!-- Cart -->
-      <a href="cart.html" class="cart">
-        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black">
-        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white">
+      <a href="cart.html" class="cart" aria-label="Кошик">
+        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black" alt="">
+        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white" alt="">
+        <span class="cart-badge" id="cartBadge" hidden>0</span>
       </a>
     </div>
   </div>
@@ -401,6 +402,7 @@
 <script src="../js/theme-toggle.js"></script>
 <script src="../js/reval-on-scroll.js"> </script>
 <script src="../js/stores.js"></script>
+<script src="../js/cart-badge.js"></script>
 
 
 </body>

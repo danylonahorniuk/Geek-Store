@@ -263,6 +263,7 @@ function incItem(id) {
   cart[id].qty += 1;
   writeCart(cart);
   renderCart();
+  window.updateCartBadge?.();
 }
 function decItem(id) {
   const cart = readCart();
@@ -271,6 +272,7 @@ function decItem(id) {
   if (cart[id].qty <= 0) delete cart[id];
   writeCart(cart);
   renderCart();
+  window.updateCartBadge?.();
 }
 function removeItem(id) {
   const cart = readCart();
@@ -278,6 +280,7 @@ function removeItem(id) {
   delete cart[id];
   writeCart(cart);
   renderCart();
+  window.updateCartBadge?.();
 }
 
 // click handlers (delegation)

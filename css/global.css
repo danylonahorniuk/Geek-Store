@@ -124,6 +124,40 @@
   transition: background 0.3s, transform 0.2s;
 }
 
+.cart{
+  position: relative;
+}
+
+.cart-badge{
+  position: absolute;
+  top: -0.35rem;
+  right: -0.35rem;
+
+  min-width: 1.2rem;
+  height: 1.2rem;
+  padding: 0 0.3rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ef4444, #ec4899);
+  color: #fff;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+
+  box-shadow:
+    0 0.25rem 0.75rem rgba(239,68,68,0.35),
+    0 0 0 0.125rem #fff;
+
+  pointer-events: none;
+  user-select: none;
+}
+
 .cart:hover {
   background: #e0e7ff;
   transform: translateY(-2px);

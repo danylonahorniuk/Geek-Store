@@ -57,9 +57,10 @@
 
 
       <!-- Cart -->
-      <a href="#" class="cart">
-        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black">
-        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white">
+      <a href="#" class="cart" aria-label="Кошик">
+        <img src="../assets/icons/shopping-cart-black.png" class="cart-icon cart-icon--black" alt="">
+        <img src="../assets/icons/shopping-cart-white.png" class="cart-icon cart-icon--white" alt="">
+        <span class="cart-badge" id="cartBadge" hidden>0</span>
       </a>
     </div>
   </div>
@@ -119,7 +120,7 @@
 
           <div class="cart-empty" id="cartEmpty" hidden>
             <div class="cart-empty__title">Кошик порожній</div>
-            <div class="cart-empty__text">Перейдіть у каталог і додайте щось круте 🙂</div>
+            <div class="cart-empty__text">Перейдіть у каталог і додайте щось круте</div>
             <a class="cart-empty__btn" href="../html/shop.html">Перейти в каталог</a>
           </div>
         </div>
@@ -337,6 +338,7 @@
 
   <script src="../js/cart.js"></script>
   <script src="../js/theme-toggle.js"></script>
+  <script src="../js/cart-badge.js"></script>
 
 </body>
 </html>

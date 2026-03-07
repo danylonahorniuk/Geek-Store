@@ -949,6 +949,7 @@ function addToCart(product){
   }
 
   writeCart(cart);
+  window.updateCartBadge?.();
 }
 
 
