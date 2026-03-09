@@ -1,4 +1,4 @@
-// ===== Universes: show more + featured switch (v4 - visible neon accents) =====
+// ===== Universes: show more + featured switch + catalog filter link =====
 (() => {
   const toggleBtn = document.getElementById("universesToggle");
   const moreBlock = document.getElementById("universeMore");
@@ -29,7 +29,14 @@
 
   if (!list || !feature || !img || !title || !desc || !count) return;
 
-  // set active accent bar color on item (simple inline style for visibility)
+  function buildUniverseLink(universeFilter) {
+    if (!universeFilter || universeFilter === "Всі всесвіти") {
+      return "shop.html";
+    }
+
+    return `shop.html?universe=${encodeURIComponent(universeFilter)}`;
+  }
+
   function applyItemNeon(item, accent) {
     const map = {
       violet: "rgba(167,139,250,.95)",
@@ -37,17 +44,18 @@
       green: "rgba(34,197,94,.95)",
       orange: "rgba(251,146,60,.95)",
     };
+
     const c = map[accent] || map.violet;
     item.style.setProperty("--item-neon", c);
   }
 
-  // Use CSS var on ::before via style injection (safe)
   const style = document.createElement("style");
   style.textContent = `
     .universe-item.is-active::before{
       background: var(--item-neon, rgba(167,139,250,.95)) !important;
       box-shadow: 0 0 18px color-mix(in srgb, var(--item-neon, rgba(167,139,250,.95)) 35%, transparent);
     }
+
     @supports not (color: color-mix(in srgb, red 50%, transparent)){
       .universe-item.is-active::before{
         box-shadow: 0 0 18px rgba(167,139,250,.22);
@@ -71,14 +79,22 @@
     desc.textContent = btn.dataset.desc || "";
     count.textContent = btn.dataset.count || "";
 
-    feature.href = btn.dataset.link || "shop.html";
-
     const accent = btn.dataset.accent || "violet";
+    const universeFilter = btn.dataset.universeFilter || "Всі всесвіти";
+
     feature.setAttribute("data-accent", accent);
+    feature.href = buildUniverseLink(universeFilter);
+
     applyItemNeon(btn, accent);
   });
 
-  // init neon on first active
   const first = list.querySelector(".universe-item.is-active");
-  if (first) applyItemNeon(first, first.dataset.accent || "violet");
+  if (first) {
+    const accent = first.dataset.accent || "violet";
+    const universeFilter = first.dataset.universeFilter || "Всі всесвіти";
+
+    applyItemNeon(first, accent);
+    feature.setAttribute("data-accent", accent);
+    feature.href = buildUniverseLink(universeFilter);
+  }
 })();

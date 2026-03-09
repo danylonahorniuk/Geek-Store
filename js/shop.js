@@ -1233,6 +1233,29 @@ function syncActiveStates() {
   });
 }
 
+function applyFiltersFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const universeFromUrl = params.get("universe");
+
+  if (!universeFromUrl) return;
+
+  const allowedUniverses = [
+    "Всі всесвіти",
+    "Marvel",
+    "Star Wars",
+    "DC",
+    "Аніме",
+    "Ігри",
+    "Інше"
+  ];
+
+  if (allowedUniverses.includes(universeFromUrl)) {
+    state.universe = universeFromUrl;
+  } else if (universeFromUrl === "Gaming") {
+    state.universe = "Ігри";
+  }
+}
+
 // ======= Render =======
 function filterProducts() {
   return PRODUCTS.filter(p => {
@@ -1326,4 +1349,6 @@ document.addEventListener("click", (e) => {
 // init
 buildUniversePills();
 buildCategoryFilters();
+applyFiltersFromUrl();
+syncActiveStates();
 render();
