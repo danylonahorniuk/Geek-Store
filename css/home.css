@@ -155,12 +155,50 @@ p {
 }
 
 
-.hero-footer {
-  position: absolute;
-  bottom: 100px;
-  right: 40px;
-  color: #fff;
-  z-index: 5;
+.hero-indicator{
+  position:absolute;
+  top:2rem;
+  right:2rem;
+
+  background:rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
+
+  padding:.45rem .8rem;
+  border-radius:999px;
+
+  font-size:.9rem;
+  font-weight:600;
+
+  color:#fff;
+  z-index:6;
+}
+
+/* ===== Dots navigation ===== */
+
+.hero-dots{
+  position:absolute;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:.6rem;
+  z-index:6;
+}
+
+.dot{
+  width:.55rem;
+  height:.55rem;
+  border-radius:50%;
+  background:rgba(255,255,255,.4);
+  transition:all .35s ease;
+  cursor:pointer;
+}
+
+/* активна */
+.dot.active{
+  width:1.8rem;
+  border-radius:999px;
+  background:#fff;
 }
 
 
