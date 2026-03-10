@@ -166,6 +166,16 @@ body{
 }
 
 .pill{
+  --pill-bg: #ffffff;
+  --pill-border: rgba(2,6,23,0.10);
+  --pill-shadow: rgba(2,6,23,0.06);
+  --pill-title: #0f172a;
+  --pill-text: #64748b;
+
+  --pill-accent-1: #6d5dfc;
+  --pill-accent-2: #9b5cff;
+  --pill-soft: rgba(109,93,252,0.08);
+
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -173,40 +183,109 @@ body{
   min-width: 10.5rem;
   padding: 1.1rem 1.25rem;
   border-radius: 1rem;
-  border: 0.0625rem solid rgba(2,6,23,0.10);
-  background: #fff;
+  border: 0.0625rem solid var(--pill-border);
+  background: var(--pill-bg);
   text-decoration: none;
-  color:#0f172a;
-  box-shadow: 0 0.875rem 2.25rem rgba(2,6,23,0.06);
-  transition: transform .2s ease, box-shadow .25s ease, background .2s ease, border-color .2s ease;
+  color: var(--pill-title);
+  box-shadow: 0 0.875rem 2.25rem var(--pill-shadow);
+  transition:
+    transform .2s ease,
+    box-shadow .25s ease,
+    background .2s ease,
+    border-color .2s ease,
+    color .2s ease;
   cursor: pointer;
 }
 
 .pill strong{
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--pill-title);
+  transition: color .2s ease;
 }
 
 .pill span{
   font-size: 0.95rem;
-  color: #64748b;
-  font-weight: 400;
+  color: var(--pill-text);
+  font-weight: 500;
+  transition: color .2s ease;
 }
 
 .pill:hover{
-  background:#f8fafc;
-  border-color: rgba(2,6,23,0.14);
+  background: linear-gradient(180deg, #fff, var(--pill-soft));
+  border-color: color-mix(in srgb, var(--pill-accent-1) 26%, rgba(2,6,23,0.12));
   transform: translateY(-0.125rem);
-  box-shadow: 0 1.25rem 2.75rem rgba(2,6,23,0.08);
+  box-shadow:
+    0 1.25rem 2.75rem rgba(2,6,23,0.08),
+    0 0 0 0.0625rem color-mix(in srgb, var(--pill-accent-1) 10%, transparent);
 }
 
 .pill.is-active{
-  background: #374151;
-  border-color: rgba(2,6,23,0.18);
+  background: linear-gradient(135deg, var(--pill-accent-1), var(--pill-accent-2));
+  border-color: transparent;
+  color: #fff;
+  box-shadow:
+    0 1rem 2rem color-mix(in srgb, var(--pill-accent-1) 26%, transparent);
+}
+
+.pill.is-active strong{
   color: #fff;
 }
 
-.pill.is-active span{ color: rgba(255,255,255,0.85); }
+.pill.is-active span{
+  color: rgba(255,255,255,0.88);
+}
+
+/* всі всесвіти — залишаємо майже як було */
+.pill[data-universe="Всі всесвіти"]{
+  --pill-accent-1: #374151;
+  --pill-accent-2: #1f2937;
+  --pill-soft: rgba(55,65,81,0.08);
+  --pill-title: #0f172a;
+  --pill-text: #64748b;
+}
+
+/* Marvel — червоно-бордовий */
+.pill[data-universe="Marvel"]{
+  --pill-accent-1: #b91c1c;
+  --pill-accent-2: #7f1d1d;
+  --pill-soft: rgba(185,28,28,0.08);
+}
+
+/* Star Wars — жовто-помаранчевий */
+.pill[data-universe="Star Wars"]{
+  --pill-accent-1: #f59e0b;
+  --pill-accent-2: #f97316;
+  --pill-soft: rgba(245,158,11,0.10);
+}
+
+/* DC — темно-синій */
+.pill[data-universe="DC"]{
+  --pill-accent-1: #1d4ed8;
+  --pill-accent-2: #1e3a8a;
+  --pill-soft: rgba(29,78,216,0.08);
+}
+
+/* Аніме — рожевий */
+.pill[data-universe="Аніме"]{
+  --pill-accent-1: #ec4899;
+  --pill-accent-2: #db2777;
+  --pill-soft: rgba(236,72,153,0.08);
+}
+
+/* Ігри — неоновий зелений */
+.pill[data-universe="Ігри"]{
+  --pill-accent-1: #22c55e;   /* яскравий зелений */
+  --pill-accent-2: #16a34a;   /* темніший для градієнта */
+  --pill-soft: rgba(34,197,94,0.12);
+}
+
+/* Інше — фіолетовий */
+.pill[data-universe="Інше"]{
+  --pill-accent-1: #7c3aed;
+  --pill-accent-2: #6d28d9;
+  --pill-soft: rgba(124,58,237,0.08);
+}
 
 /* layout */
 .shop-main{
@@ -307,7 +386,7 @@ body{
 }
 
 .filter-item.is-active{
-  background: linear-gradient(90deg,#6d5dfc,#9b5cff);
+  background: linear-gradient(90deg,#5b4df7,#8b3dff);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(109,93,252,0.22);
 }
@@ -533,16 +612,27 @@ body{
   border-radius: 1rem;
   padding: 0.9rem 1.15rem;
   cursor: pointer;
+
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(90deg,#6d5dfc,#9b5cff);
-  box-shadow: 0 1rem 2rem rgba(109,93,252,0.22);
-  transition: transform .2s ease, box-shadow .25s ease;
+
+  background: linear-gradient(90deg,#5b4df7,#8b3dff);
+
+  box-shadow:
+    0 0.9rem 1.8rem rgba(91,77,247,0.28),
+    0 0.25rem 0.5rem rgba(91,77,247,0.12);
+
+  transition: transform .2s ease, box-shadow .25s ease, filter .2s ease;
 }
 
 .buy-btn:hover{
   transform: translateY(-0.125rem);
-  box-shadow: 0 1.25rem 2.5rem rgba(109,93,252,0.26);
+
+  box-shadow:
+    0 1.2rem 2.4rem rgba(91,77,247,0.34),
+    0 0.35rem 0.8rem rgba(91,77,247,0.18);
+
+  filter: saturate(1.05);
 }
 
 /* empty */
@@ -795,7 +885,7 @@ body{
 
 .pmodal__add{
   height: 3.25rem;
-  width: 100%;                  /* щоб займала всю ширину */
+  width: 100%;
   border: none;
   border-radius: 1rem;
 
@@ -811,21 +901,35 @@ body{
   justify-content: center;
   gap: .6rem;
 
-  transition: all .2s ease;
+  box-shadow:
+    0 0.7rem 1.4rem rgba(2,6,23,.22),
+    0 0.2rem 0.4rem rgba(2,6,23,.12);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .2s ease;
 }
 
-/* hover більш “живий” */
+/* hover */
 .pmodal__add:hover{
   background: #000;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 1.1rem 2.2rem rgba(2,6,23,.30),
+    0 0.4rem 0.8rem rgba(2,6,23,.18);
 }
 
 /* активний стан */
 .pmodal__add:active{
-  transform: translateY(0);
-  background: #1e293b;
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 0.6rem 1.2rem rgba(2,6,23,.25);
 }
 
+/* іконка */
 .pmodal__add svg{
   width: 1.25rem;
   height: 1.25rem;
@@ -834,6 +938,12 @@ body{
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+
+  transition: transform .25s ease;
+}
+
+.pmodal__add:hover svg{
+  transform: translateX(4px);
 }
 
 .pmodal__iconBtn{
