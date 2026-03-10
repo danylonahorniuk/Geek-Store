@@ -1,0 +1,282 @@
+/* =========================================
+   DARK THEME OVERRIDES — HOME PAGE
+   ДОДАЙ У САМ КІНЕЦЬ CSS
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* загальні тексти */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .universe-picker__title,
+body.dark .universe-item__name,
+body.dark .ts-info h3,
+body.dark .na-info h3,
+body.dark .qb-info h3,
+body.dark .featured-collections h2,
+body.dark .feature-card h3{
+  color: #f8fafc;
+}
+
+body.dark p,
+body.dark .section-header p,
+body.dark .brand-story p,
+body.dark .universe-item__desc,
+body.dark .qb-info p,
+body.dark .featured-collections .fc-subtitle,
+body.dark .feature-card p{
+  color: #cbd5e1;
+}
+
+/* brand story */
+body.dark .brand-story{
+  background:
+    radial-gradient(900px 420px at 15% 20%, rgba(79,70,229,.18), transparent 65%),
+    radial-gradient(760px 380px at 85% 70%, rgba(168,85,247,.16), transparent 65%),
+    radial-gradient(620px 340px at 50% 110%, rgba(236,72,153,.12), transparent 65%),
+    linear-gradient(180deg,#0b1020 0%,#11182b 55%,#0b1020 100%);
+}
+
+body.dark .brand-story::before{
+  background-image:
+    radial-gradient(circle, rgba(129,140,248,.14) 1px, transparent 1px);
+  opacity: .25;
+}
+
+body.dark .brand-story::after{
+  background:
+    radial-gradient(700px 260px at 50% 0%, rgba(255,255,255,.04), transparent 70%);
+}
+
+body.dark .brand-badge{
+  background: linear-gradient(to right, rgba(99,102,241,.18), rgba(168,85,247,.18));
+  color: #c4b5fd;
+}
+
+/* universes */
+body.dark .universes{
+  background:
+    radial-gradient(1000px 420px at 20% -140px, rgba(56,189,248,.10), transparent 60%),
+    radial-gradient(820px 380px at 95% -80px, rgba(167,139,250,.10), transparent 58%),
+    radial-gradient(760px 380px at 70% 115%, rgba(34,197,94,.08), transparent 55%),
+    radial-gradient(760px 380px at 10% 120%, rgba(251,146,60,.07), transparent 55%),
+    #0b1020;
+}
+
+body.dark .universe-picker{
+  background: #11182b;
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 18px 45px rgba(0,0,0,.28);
+}
+
+body.dark .universe-picker__head{
+  border-bottom-color: rgba(255,255,255,.08);
+}
+
+body.dark .universes-toggle{
+  background: #182033;
+  color: #f8fafc;
+  border-color: rgba(255,255,255,.10);
+}
+
+body.dark .universes-toggle:hover{
+  background: #202a40;
+  border-color: rgba(255,255,255,.16);
+}
+
+body.dark .universe-item{
+  background: #182033;
+  border-color: rgba(255,255,255,.08);
+}
+
+body.dark .universe-item:hover{
+  background: #1d2740;
+  border-color: rgba(129,140,248,.28);
+  box-shadow:
+    0 0 0 1px rgba(129,140,248,.18),
+    0 12px 28px rgba(0,0,0,.22),
+    0 0 18px rgba(129,140,248,.12);
+}
+
+body.dark .universe-item.is-active{
+  background: linear-gradient(180deg, #1a2338, #131c2e);
+  border-color: rgba(129,140,248,.30);
+}
+
+body.dark .universe-item__meta{
+  color: #c4b5fd;
+  background: rgba(129,140,248,.12);
+  border-color: rgba(129,140,248,.18);
+}
+
+/* top sales + new arrivals */
+body.dark .top-sales,
+body.dark .new-arrivals{
+  background: #0b1020;
+}
+
+body.dark .top-sales::before,
+body.dark .new-arrivals::before{
+  background: rgba(255,255,255,.06);
+}
+
+body.dark .ts-card,
+body.dark .na-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  border-color: rgba(255,255,255,.10);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.02);
+}
+
+body.dark .ts-card:hover,
+body.dark .na-card:hover{
+  border-color: rgba(129,140,248,.30);
+  box-shadow:
+    0 20px 44px rgba(0,0,0,.34),
+    0 0 0 1px rgba(129,140,248,.10),
+    0 0 24px rgba(99,102,241,.10);
+}
+
+body.dark .ts-image,
+body.dark .na-image{
+  background: #1b2438;
+}
+
+body.dark .ts-info h3,
+body.dark .na-info h3,
+body.dark .ts-info strong,
+body.dark .na-info strong{
+  color: #f8fafc;
+}
+
+body.dark .ts-quick,
+body.dark .na-quick{
+  background: linear-gradient(90deg,#6366f1,#9333ea);
+  color: #fff;
+}
+
+/* arrows */
+body.dark .ts-arrow,
+body.dark .na-arrow{
+  background: rgba(17,24,39,.86);
+  border-color: rgba(255,255,255,.08);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.22),
+    0 2px 6px rgba(0,0,0,.16);
+}
+
+body.dark .ts-arrow svg,
+body.dark .na-arrow svg{
+  stroke: #f8fafc;
+}
+
+body.dark .ts-arrow:hover,
+body.dark .na-arrow:hover{
+  background: rgba(30,41,59,.96);
+}
+
+/* modal */
+body.dark .qb-content{
+  background: #11182b;
+  color: #f8fafc;
+  box-shadow: 0 40px 100px rgba(0,0,0,.5);
+}
+
+body.dark .qb-close{
+  background: rgba(17,24,39,.85);
+}
+
+body.dark .qb-close svg{
+  stroke: #f8fafc;
+}
+
+body.dark .qb-qty-label{
+  color: #cbd5e1;
+}
+
+body.dark .qty-btn{
+  background: #182033;
+  border-color: rgba(255,255,255,.08);
+  color: #f8fafc;
+}
+
+body.dark .qty-value,
+body.dark .qb-price{
+  color: #f8fafc;
+}
+
+/* features */
+body.dark .features{
+  background: #0b1020;
+}
+
+body.dark .feature-card{
+  background: linear-gradient(to bottom right, #11182b, #182033);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.18),
+    0 0 0 1px rgba(255,255,255,.02);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease,
+    background .3s ease;
+}
+
+body.dark .feature-card:hover{
+  transform: translateY(-6px);
+  background: linear-gradient(to bottom right, #16203a, #1b2744);
+  border-color: rgba(129,140,248,.22);
+  box-shadow:
+    0 22px 44px rgba(0,0,0,.30),
+    0 0 0 1px rgba(129,140,248,.10),
+    0 0 28px rgba(99,102,241,.08);
+}
+
+/* featured collections */
+body.dark .featured-collections{
+  background: #0f172a;
+}
+
+body.dark .featured-collections .fc-badge{
+  background: #182033;
+  color: #c4b5fd;
+}
+
+/* geek family */
+body.dark .geek-family{
+  background: #0b1020;
+}
+
+/* subscribe */
+body.dark .subscribe input{
+  background: #182033;
+  color: #f8fafc;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+body.dark .subscribe input::placeholder{
+  color: rgba(203,213,225,.72);
+}
+
+/* toast */
+body.dark .toast{
+  background: #11182b;
+  color: #f8fafc;
+  box-shadow:
+    0 1.5rem 3rem rgba(0,0,0,0.28),
+    0 0 0 1px rgba(255,255,255,0.06);
+}
+
+body.dark .toast__icon{
+  background: rgba(124,58,237,0.14);
+}
+
+body.dark .toast__link{
+  color: #c4b5fd;
+}

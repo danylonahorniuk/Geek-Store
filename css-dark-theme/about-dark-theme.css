@@ -1,0 +1,428 @@
+/* =========================================
+   DARK THEME OVERRIDES — ABOUT PAGE
+   ДОДАЙ У САМ КІНЕЦЬ CSS
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* загальні тексти */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .story-content h2,
+body.dark .timeline-card h3,
+body.dark .values-header h2,
+body.dark .value-card h3,
+body.dark .ach-header h2,
+body.dark .ach-text h3,
+body.dark .team-header h2,
+body.dark .team-card h3,
+body.dark .about-outro__inner h2,
+body.dark .about-outro__quote{
+  color: #f8fafc;
+}
+
+body.dark p,
+body.dark .hero-about p,
+body.dark .story-content p,
+body.dark .story-caption,
+body.dark .timeline-header p,
+body.dark .timeline-card p,
+body.dark .values-header p,
+body.dark .value-card p,
+body.dark .ach-header p,
+body.dark .ach-text p,
+body.dark .team-header p,
+body.dark .team-card p,
+body.dark .about-outro__inner p,
+body.dark .about-outro__author{
+  color: #cbd5e1;
+}
+
+/* ================= HERO ABOUT ================= */
+
+body.dark .hero{
+  background: #0b1020;
+}
+
+body.dark .hero-about{
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(99,102,241,0.28), transparent 65%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.18), transparent 60%),
+    linear-gradient(180deg, #0f172a 0%, #11182b 100%);
+}
+
+body.dark .hero-about::before{
+  background: radial-gradient(circle, rgba(124,58,237,0.18), transparent 65%);
+}
+
+body.dark .hero-about::after{
+  background: radial-gradient(circle, rgba(79,70,229,0.14), transparent 65%);
+}
+
+body.dark .hero-grain{
+  opacity: .09;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.14) 1px, transparent 0);
+}
+
+body.dark .hero-about h1{
+  color: #f8fafc;
+}
+
+/* accent лишаємо градієнтним */
+body.dark .hero-about .accent{
+  background: linear-gradient(90deg, #818cf8 0%, #a78bfa 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================= STORY ================= */
+
+body.dark .story-section{
+  background: #0b1020;
+}
+
+body.dark .story-badge{
+  background: rgba(124,58,237,.16);
+  color: #c4b5fd;
+  box-shadow: inset 0 0 0 1px rgba(167,139,250,.12);
+}
+
+body.dark .story-content h2{
+  color: #f8fafc;
+}
+
+body.dark .story-highlight{
+  color: #f8fafc;
+}
+
+body.dark .story-image{
+  box-shadow:
+    0 2rem 4rem rgba(0,0,0,.32),
+    0 0 0 1px rgba(255,255,255,.04);
+}
+
+body.dark .story-caption{
+  color: #94a3b8;
+}
+
+/* ================= CARDS (gray / card) ================= */
+
+body.dark .gray{
+  background: #0f172a;
+}
+
+body.dark .card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.2rem rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .card h3{
+  color: #f8fafc;
+}
+
+body.dark .card p{
+  color: #cbd5e1;
+}
+
+body.dark .card li{
+  color: #f8fafc;
+}
+
+/* ================= TIMELINE ================= */
+
+body.dark .timeline-section{
+  background:
+    radial-gradient(circle at 18% 22%, rgba(99,102,241,.10), transparent 46%),
+    radial-gradient(circle at 82% 68%, rgba(236,72,153,.08), transparent 44%),
+    radial-gradient(circle at 50% 110%, rgba(124,58,237,.08), transparent 55%),
+    linear-gradient(180deg, #0b1020 0%, #11182b 55%, #0b1020 100%);
+}
+
+body.dark .timeline-section::before{
+  opacity: .05;
+  background-image:
+    radial-gradient(rgba(255,255,255,.8) 1px, transparent 1px);
+}
+
+body.dark .timeline-section::after{
+  background:
+    radial-gradient(circle at 25% 35%, rgba(99,102,241,.14), transparent 42%),
+    radial-gradient(circle at 75% 60%, rgba(236,72,153,.12), transparent 45%);
+}
+
+body.dark .indigo-badge{
+  background: rgba(124,58,237,.16);
+  color: #c4b5fd;
+}
+
+body.dark .timeline-header h2{
+  color: #f8fafc;
+}
+
+body.dark .timeline-header p{
+  color: #cbd5e1;
+}
+
+body.dark .timeline::before{
+  box-shadow:
+    0 0 0 0.0625rem rgba(129,140,248,0.16),
+    0 0 2.1875rem rgba(124,58,237,0.26);
+}
+
+body.dark .timeline-item::before{
+  box-shadow:
+    0 0 0 0.0625rem rgba(129,140,248,0.12),
+    0 0 1.125rem rgba(124,58,237,0.18);
+}
+
+body.dark .timeline-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 1.125rem 2.8125rem rgba(0,0,0,0.24),
+    0 0 0 0.0625rem rgba(255,255,255,0.05);
+}
+
+body.dark .timeline-item:hover .timeline-card{
+  box-shadow:
+    0 2.8125rem 6.875rem rgba(0,0,0,0.30),
+    0 1.125rem 2.5rem rgba(0,0,0,0.18),
+    0 0 0 0.0625rem rgba(129,140,248,0.18);
+}
+
+body.dark .timeline-item.is-active .timeline-card{
+  box-shadow:
+    0 2.8125rem 6.875rem rgba(0,0,0,0.28),
+    0 1.125rem 2.5rem rgba(0,0,0,0.16),
+    0 0 0 0.0625rem rgba(129,140,248,0.22),
+    0 0 0 0.5rem rgba(124,58,237,0.05);
+}
+
+body.dark .timeline-card h3{
+  color: #f8fafc;
+}
+
+body.dark .timeline-item:hover .timeline-card h3,
+body.dark .timeline-item.is-active .timeline-card h3{
+  color: #ffffff;
+}
+
+body.dark .timeline-card p,
+body.dark .timeline-item.is-active .timeline-card p{
+  color: #cbd5e1;
+}
+
+body.dark .dot{
+  border-color: #11182b;
+  box-shadow:
+    0 0.875rem 1.875rem rgba(124,58,237,0.25),
+    0 0 0 0.625rem rgba(124,58,237,0.08);
+}
+
+body.dark .timeline-item.is-active .dot{
+  box-shadow:
+    0 1.125rem 2.25rem rgba(124,58,237,0.28),
+    0 0 0 1rem rgba(124,58,237,0.10),
+    0 0 32px rgba(99,102,241,.18);
+}
+
+/* shine менший у dark */
+body.dark .timeline-card::after{
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255,255,255,.20) 45%,
+    transparent 55%
+  );
+}
+
+/* ================= VALUES ================= */
+
+body.dark .values-section{
+  background: #0f172a;
+}
+
+body.dark .values-header h2{
+  color: #f8fafc;
+}
+
+body.dark .values-header p{
+  color: #cbd5e1;
+}
+
+body.dark .value-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.75rem 1.5rem rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .value-card:hover{
+  box-shadow:
+    0 2rem 4rem rgba(0, 0, 0, 0.22),
+    0 1rem 2rem rgba(0, 0, 0, 0.14),
+    0 0 0 1px rgba(129, 140, 248, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+body.dark .value-card h3{
+  color: #f8fafc;
+}
+
+body.dark .value-card p{
+  color: #cbd5e1;
+}
+
+/* ================= ACHIEVEMENTS ================= */
+
+body.dark .ach-section{
+  background: #0b1020;
+}
+
+body.dark .ach-header h2{
+  color: #f8fafc;
+}
+
+body.dark .ach-header p{
+  color: #cbd5e1;
+}
+
+body.dark .ach-card{
+  background: linear-gradient(180deg, #1b1730 0%, #161427 100%);
+  box-shadow:
+    0 1rem 2.5rem rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(167,139,250,0.06);
+}
+
+body.dark .ach-card:hover{
+  box-shadow:
+    0 2rem 4rem rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(109, 40, 217, 0.16);
+}
+
+body.dark .ach-text h3{
+  color: #f8fafc;
+}
+
+body.dark .ach-text p{
+  color: #cbd5e1;
+}
+
+/* ================= TEAM ================= */
+
+body.dark .team-section{
+  background: #0f172a;
+}
+
+body.dark .team-header h2{
+  color: #f8fafc;
+}
+
+body.dark .team-header p{
+  color: #cbd5e1;
+}
+
+body.dark .team-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 1rem 2.5rem rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .team-card:hover{
+  box-shadow:
+    0 2rem 4rem rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(129,140,248,0.10);
+}
+
+body.dark .team-card h3{
+  color: #f8fafc;
+}
+
+body.dark .team-card:hover h3{
+  color: #a5b4fc;
+}
+
+body.dark .team-role{
+  color: #a78bfa;
+}
+
+body.dark .team-card p{
+  color: #cbd5e1;
+}
+
+/* ================= STATS ================= */
+/* секція вже темна, лишаємо майже як є */
+
+body.dark .stats{
+  background: #0a1020;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+body.dark .stat-label{
+  color: rgba(255,255,255,0.72);
+}
+
+/* ================= ABOUT OUTRO ================= */
+
+body.dark .about-outro{
+  background: linear-gradient(180deg, #0b1020 0%, #11182b 48%, #0b1020 100%);
+}
+
+body.dark .about-outro::before{
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(129,140,248,.18),
+    rgba(236,72,153,.14),
+    transparent
+  );
+}
+
+body.dark .about-outro__bg{
+  background:
+    radial-gradient(circle at 18% 30%, rgba(99,102,241,.16), transparent 42%),
+    radial-gradient(circle at 82% 70%, rgba(236,72,153,.14), transparent 44%),
+    radial-gradient(circle at 50% 115%, rgba(124,58,237,.12), transparent 55%);
+}
+
+body.dark .about-outro::after{
+  opacity: .05;
+  background-image: radial-gradient(rgba(255,255,255,.8) 1px, transparent 1px);
+}
+
+body.dark .about-outro__inner h2{
+  color: #f8fafc;
+}
+
+body.dark .about-outro__inner p{
+  color: #cbd5e1;
+}
+
+body.dark .about-outro__quote{
+  color: #f8fafc;
+  background:
+    linear-gradient(90deg,
+      rgba(99,102,241,.16),
+      rgba(124,58,237,.14),
+      rgba(236,72,153,.14)
+    )
+    0 100% / 100% 0.42rem no-repeat;
+}
+
+body.dark .about-outro__quote::after,
+body.dark .about-outro__qmark{
+  color: #a78bfa;
+  opacity: .18;
+}
+
+body.dark .about-outro__author{
+  color: #94a3b8;
+}

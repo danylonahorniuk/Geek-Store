@@ -1,0 +1,140 @@
+/* =========================================
+   DARK THEME OVERRIDES — HEADER / FOOTER
+   ДОДАЙ У САМ КІНЕЦЬ CSS
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* ===== Header ===== */
+
+body.dark .header{
+  background:
+    linear-gradient(180deg, rgba(17,24,39,.96), rgba(17,24,39,.92));
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.22),
+    inset 0 -1px 0 rgba(255,255,255,.03);
+  backdrop-filter: blur(12px);
+}
+
+body.dark .logo-badge{
+  background: linear-gradient(90deg, rgba(99,102,241,.16), rgba(168,85,247,.16));
+  color: #c4b5fd;
+  box-shadow: inset 0 0 0 1px rgba(129,140,248,.12);
+}
+
+/* nav */
+body.dark .nav-link{
+  color: #cbd5e1;
+}
+
+body.dark .nav-link:hover{
+  background: rgba(255,255,255,.06);
+  color: #fff;
+}
+
+body.dark .nav-link.active{
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  box-shadow:
+    0 10px 24px rgba(99,102,241,.28),
+    0 0 0 1px rgba(255,255,255,.05) inset;
+}
+
+/* action buttons */
+body.dark .cart,
+body.dark .theme-toggle,
+body.dark .account{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  color: #f8fafc;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.20),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .cart:hover,
+body.dark .theme-toggle:hover,
+body.dark .account:hover{
+  background: linear-gradient(180deg, #202a40 0%, #162033 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 28px rgba(0,0,0,.28),
+    0 0 0 1px rgba(129,140,248,.10),
+    0 0 18px rgba(99,102,241,.08);
+}
+
+/* cart badge ring */
+body.dark .cart-badge{
+  box-shadow:
+    0 0.25rem 0.75rem rgba(239,68,68,0.35),
+    0 0 0 0.125rem #111827;
+}
+
+/* black/white icon swaps already є в тебе, лишаємо */
+body.dark .cart-icon--black,
+body.dark .account-icon--black{
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+body.dark .cart-icon--white,
+body.dark .account-icon--white{
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.dark .theme-icon--moon{
+  opacity: 0;
+  transform: scale(0.7) rotate(20deg);
+}
+
+body.dark .theme-icon--sun{
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
+
+/* ===== Footer ===== */
+
+body.dark .footer{
+  background:
+    radial-gradient(900px 340px at 15% 0%, rgba(99,102,241,.10), transparent 60%),
+    radial-gradient(800px 320px at 85% 0%, rgba(168,85,247,.08), transparent 60%),
+    #0b1020;
+  color: #cbd5e1;
+}
+
+body.dark .footer-company .footer-logo,
+body.dark .footer-section h3{
+  color: #f8fafc;
+}
+
+body.dark .footer-company .footer-text,
+body.dark .footer-section a,
+body.dark .footer-bottom{
+  color: #cbd5e1;
+}
+
+body.dark .footer-section a:hover{
+  color: #fff;
+}
+
+body.dark .social-icon{
+  background: #182033;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.20),
+    0 0 0 1px rgba(255,255,255,.04);
+}
+
+body.dark .social-icon:hover{
+  background: #202a40;
+  box-shadow:
+    0 12px 24px rgba(0,0,0,.28),
+    0 0 0 1px rgba(129,140,248,.10);
+}
+
+body.dark .footer-bottom{
+  border-top: 1px solid rgba(255,255,255,.08);
+}

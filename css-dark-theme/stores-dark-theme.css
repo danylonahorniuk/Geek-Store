@@ -1,0 +1,210 @@
+/* =========================================
+   DARK THEME OVERRIDES — STORES PAGE
+   ДОДАЙ У САМ КІНЕЦЬ CSS
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* загальні тексти */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .store-content h2,
+body.dark .why-left h2,
+body.dark .why-item h3,
+body.dark .stores-cta h2{
+  color: #f8fafc;
+}
+
+body.dark p,
+body.dark .stores-hero-v2 p,
+body.dark .store-desc,
+body.dark .store-info li,
+body.dark .why-left p,
+body.dark .why-item p,
+body.dark .stores-cta p{
+  color: #cbd5e1;
+}
+
+/* ================= HERO ================= */
+
+body.dark .stores-hero-v2{
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(99,102,241,0.28), transparent 65%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.18), transparent 60%),
+    linear-gradient(180deg, #0f172a 0%, #11182b 100%);
+}
+
+body.dark .stores-hero-v2::before{
+  background: radial-gradient(circle, rgba(124,58,237,0.18), transparent 65%);
+}
+
+body.dark .stores-hero-v2::after{
+  background: radial-gradient(circle, rgba(79,70,229,0.14), transparent 65%);
+}
+
+body.dark .stores-hero-v2 .hero-grain{
+  opacity: .09;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.14) 1px, transparent 0);
+}
+
+body.dark .stores-hero-v2 h1{
+  color: #f8fafc;
+}
+
+body.dark .stores-hero-v2 .accent{
+  background: linear-gradient(90deg, #818cf8 0%, #a78bfa 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================= STORES ================= */
+
+body.dark .stores-section{
+  background: #0b1020;
+}
+
+body.dark .store-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.75rem 1.5rem rgba(0,0,0,0.20),
+    0 0.25rem 0.5rem rgba(0,0,0,0.12),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .store-card:hover{
+  box-shadow:
+    0 3rem 6rem rgba(0,0,0,0.30),
+    0 1.5rem 3rem rgba(0,0,0,0.18),
+    0 0 0 1px rgba(129,140,248,0.10);
+}
+
+body.dark .store-desc{
+  color: #cbd5e1;
+}
+
+body.dark .store-info li{
+  color: #cbd5e1;
+}
+
+body.dark .store-icon{
+  background: rgba(124,58,237,0.14);
+  color: #c4b5fd;
+  box-shadow: inset 0 0 0 1px rgba(167,139,250,0.08);
+}
+
+body.dark .store-btn{
+  background: linear-gradient(180deg, #202938 0%, #161d2b 100%);
+  color: #f8fafc;
+  border-color: rgba(255,255,255,0.06);
+}
+
+body.dark .store-btn:hover{
+  background: linear-gradient(180deg, #273247 0%, #1a2233 100%);
+  border-color: rgba(124,58,237,0.28);
+  box-shadow:
+    0 1.25rem 2.5rem rgba(0,0,0,0.24),
+    0 0 0 0.0625rem rgba(124,58,237,0.18);
+}
+
+body.dark .store-btn:focus-visible{
+  box-shadow:
+    0 0 0 0.25rem rgba(124,58,237,0.22),
+    0 1.25rem 2.5rem rgba(0,0,0,0.22);
+}
+
+/* ================= WHY EXPERIENCE ================= */
+
+body.dark .why-experience{
+  background: #0f172a;
+}
+
+body.dark .why-left h2{
+  color: #f8fafc;
+}
+
+body.dark .why-left p{
+  color: #cbd5e1;
+}
+
+body.dark .why-item h3{
+  color: #f8fafc;
+}
+
+body.dark .why-item p{
+  color: #cbd5e1;
+}
+
+/* ================= CTA ================= */
+
+body.dark .stores-cta{
+  background:
+    radial-gradient(900px 340px at 15% 0%, rgba(99,102,241,.10), transparent 60%),
+    radial-gradient(800px 320px at 85% 0%, rgba(168,85,247,.08), transparent 60%),
+    #0b1020;
+  color: #fff;
+}
+
+body.dark .stores-cta p{
+  color: rgba(226,232,240,.82);
+}
+
+body.dark .cta-btn{
+  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+  color: #111827;
+  border-color: rgba(255,255,255,0.10);
+  box-shadow:
+    0 1rem 2rem rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+}
+
+body.dark .cta-btn:hover{
+  background: #ffffff;
+  box-shadow:
+    0 1.75rem 3.5rem rgba(0,0,0,0.38),
+    0 0.5rem 1rem rgba(0,0,0,0.20);
+}
+
+body.dark .cta-btn:focus-visible{
+  box-shadow:
+    0 0 0 0.25rem rgba(255,255,255,0.16),
+    0 1.75rem 3.5rem rgba(0,0,0,0.32);
+}
+
+/* ================= STORE CARD HOVER IMPROVED (DARK) ================= */
+
+body.dark .store-card{
+  border: 1px solid rgba(255,255,255,.05);
+
+  transition:
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+/* hover — сильніша глибина */
+body.dark .store-card:hover{
+
+  border-color: rgba(129,140,248,.22);
+
+  box-shadow:
+    0 28px 60px rgba(0,0,0,.55),
+    0 14px 30px rgba(0,0,0,.35),
+    0 0 0 1px rgba(129,140,248,.18),
+    0 0 40px rgba(124,58,237,.18);
+}
+
+/* іконка трохи підсвічується */
+
+body.dark .store-card:hover .store-icon{
+  background: rgba(124,58,237,.20);
+
+  box-shadow:
+    0 10px 22px rgba(124,58,237,.35),
+    inset 0 0 0 1px rgba(167,139,250,.16);
+}
