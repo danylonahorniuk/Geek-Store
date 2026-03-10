@@ -1,0 +1,445 @@
+/* =========================================
+   DARK THEME OVERRIDES — SHOP / CATALOG PAGE
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* ================= HERO ================= */
+
+body.dark .shop-hero{
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(99,102,241,0.28), transparent 65%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.18), transparent 60%),
+    linear-gradient(180deg, #0f172a 0%, #11182b 100%);
+}
+
+body.dark .shop-hero::before{
+  background: radial-gradient(circle, rgba(124,58,237,0.18), transparent 65%);
+}
+
+body.dark .shop-hero::after{
+  background: radial-gradient(circle, rgba(79,70,229,0.14), transparent 65%);
+}
+
+body.dark .shop-hero .hero-grain{
+  opacity: .09;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.14) 1px, transparent 0);
+}
+
+body.dark .shop-hero__title{
+  color: #f8fafc;
+}
+
+body.dark .shop-hero .accent{
+  background: linear-gradient(90deg, #818cf8 0%, #a78bfa 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.dark .shop-hero__desc{
+  color: #cbd5e1;
+}
+
+body.dark .shop-search{
+  background: rgba(17,24,39,.72);
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 1.25rem 3rem rgba(0,0,0,.24);
+}
+
+body.dark .shop-search__icon svg{
+  stroke: #94a3b8;
+}
+
+body.dark .shop-search__input{
+  color: #f8fafc;
+}
+
+body.dark .shop-search__input::placeholder{
+  color: #94a3b8;
+}
+
+/* ================= UNIVERSE PILLS ================= */
+
+body.dark .universe-pills{
+  background: #0b1020;
+  border-bottom-color: rgba(255,255,255,.06);
+}
+
+body.dark .universe-pills__title{
+  color: #f8fafc;
+}
+
+body.dark .pill{
+  --pill-bg: #141c2b;
+  --pill-border: rgba(255,255,255,.07);
+  --pill-shadow: rgba(0,0,0,.18);
+  --pill-title: #f8fafc;
+  --pill-text: #94a3b8;
+
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  box-shadow: 0 0.75rem 1.75rem rgba(0,0,0,.18);
+}
+
+body.dark .pill strong{
+  color: var(--pill-title);
+}
+
+body.dark .pill span{
+  color: var(--pill-text);
+}
+
+/* hover — тепер знову різний для кожного всесвіту */
+body.dark .pill:hover{
+  background: linear-gradient(
+    180deg,
+    #182133 0%,
+    color-mix(in srgb, var(--pill-accent-1) 14%, #182133) 100%
+  );
+  border-color: color-mix(in srgb, var(--pill-accent-1) 34%, rgba(255,255,255,.08));
+  transform: translateY(-0.125rem);
+  box-shadow:
+    0 1rem 2.2rem rgba(0,0,0,.24),
+    0 0 0 1px color-mix(in srgb, var(--pill-accent-1) 12%, transparent);
+}
+
+/* active — кольоровий, як і має бути */
+body.dark .pill.is-active{
+  background: linear-gradient(135deg, var(--pill-accent-1), var(--pill-accent-2));
+  border-color: transparent;
+  color: #fff;
+  box-shadow:
+    0 1rem 2rem color-mix(in srgb, var(--pill-accent-1) 28%, transparent),
+    0 0 0 1px rgba(255,255,255,.04) inset;
+}
+
+body.dark .pill.is-active strong{
+  color: #fff;
+}
+
+body.dark .pill.is-active span{
+  color: rgba(255,255,255,.88);
+}
+
+/* ================= MAIN ================= */
+
+body.dark .shop-main{
+  background: #0b1020;
+}
+
+/* ================= SIDEBAR ================= */
+
+body.dark .filters{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .filters__head h3{
+  color: #f8fafc;
+}
+
+body.dark .filters__icon{
+  color: #a78bfa;
+}
+
+body.dark .filters__label{
+  color: #94a3b8;
+}
+
+body.dark .filter-item{
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+body.dark .filter-item:hover{
+  background: #162033;
+  box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.18);
+}
+
+body.dark .filter-item.is-active{
+  background: linear-gradient(90deg,#5b4df7,#8b3dff);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 1rem 2rem rgba(91,77,247,.28);
+}
+
+body.dark .filters__divider{
+  background: rgba(255,255,255,.08);
+}
+
+/* help */
+body.dark .help-card{
+  background: rgba(79,70,229,.10);
+  border-color: rgba(109,93,252,.18);
+}
+
+body.dark .help-card h4{
+  color: #f8fafc;
+}
+
+body.dark .help-card p{
+  color: #cbd5e1;
+}
+
+body.dark .help-card__btn{
+  box-shadow: 0 1rem 2rem rgba(79,70,229,.26);
+}
+
+body.dark .help-card__btn:hover{
+  box-shadow: 0 1.25rem 2.5rem rgba(79,70,229,.32);
+}
+
+/* ================= RESULTS TOP ================= */
+
+body.dark .results-top{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .results-top__count{
+  color: #e2e8f0;
+}
+
+body.dark .results-top__count strong{
+  color: #a78bfa;
+}
+
+body.dark .view-btn{
+  background: #202938;
+}
+
+body.dark .view-btn svg{
+  stroke: #f8fafc;
+}
+
+body.dark .view-btn:hover{
+  background: #283246;
+}
+
+body.dark .view-btn.is-active{
+  background: linear-gradient(90deg,#6d5dfc,#9b5cff);
+  box-shadow: 0 1rem 2rem rgba(109,93,252,.28);
+}
+
+/* ================= PRODUCT CARDS ================= */
+
+body.dark .product-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,.22),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .product-card:hover{
+  box-shadow:
+    0 1.25rem 3rem rgba(0,0,0,.30),
+    0 0 0 1px rgba(129,140,248,.10);
+}
+
+body.dark .product-media{
+  background: #202938;
+}
+
+body.dark .product-pill{
+  background: #7c3aed;
+  color: #fff;
+}
+
+body.dark .product-meta{
+  color: #a78bfa;
+}
+
+body.dark .product-title{
+  color: #f8fafc;
+}
+
+body.dark .product-price{
+  color: #f8fafc;
+}
+
+body.dark .buy-btn{
+  box-shadow:
+    0 0.9rem 1.8rem rgba(91,77,247,.34),
+    0 0.25rem 0.5rem rgba(91,77,247,.16);
+}
+
+body.dark .buy-btn:hover{
+  box-shadow:
+    0 1.2rem 2.4rem rgba(91,77,247,.40),
+    0 0.35rem 0.8rem rgba(91,77,247,.22);
+}
+
+/* ================= EMPTY ================= */
+
+body.dark .empty-state{
+  background: #0f172a;
+  border-color: rgba(255,255,255,.06);
+  color: #cbd5e1;
+}
+
+body.dark .empty-state strong{
+  color: #f8fafc;
+}
+
+body.dark .reset-btn{
+  background: #202938;
+  color: #f8fafc;
+}
+
+/* ================= PRODUCT MODAL ================= */
+
+body.dark .pmodal__overlay{
+  background: rgba(2,6,23,.72);
+}
+
+body.dark .pmodal__dialog{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,255,255,.05);
+}
+
+body.dark .pmodal__close{
+  background: rgba(24,32,51,.88);
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.18),
+    0 1px 2px rgba(0,0,0,.12);
+}
+
+body.dark .pmodal__close:hover{
+  background: #202938;
+}
+
+body.dark .pmodal__close svg{
+  stroke: #f8fafc;
+}
+
+body.dark .pmodal__close:hover svg{
+  stroke: #fff;
+}
+
+body.dark .pmodal__media{
+  background: #202938;
+}
+
+body.dark .pmodal__pill{
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,.08);
+  color: #e2e8f0;
+  box-shadow: none;
+}
+
+body.dark .pmodal__pill:hover{
+  background: #162033;
+  border-color: rgba(255,255,255,.10);
+}
+
+body.dark .pmodal__pill.is-accent{
+  border-color: rgba(109,93,252,.22);
+  background: rgba(109,93,252,.14);
+  color: #c4b5fd;
+}
+
+body.dark .pmodal__title{
+  color: #f8fafc;
+}
+
+body.dark .pmodal__ratingText{
+  color: #94a3b8;
+}
+
+body.dark .pmodal__price{
+  color: #f8fafc;
+}
+
+body.dark .pmodal__stock{
+  background: rgba(34,197,94,.14);
+  color: #86efac;
+}
+
+body.dark .pmodal__add{
+  background: linear-gradient(135deg, #5b4df7 0%, #7c3aed 55%, #9333ea 100%);
+  color: #fff;
+
+  box-shadow:
+    0 1rem 2.2rem rgba(91,77,247,.32),
+    0 0.35rem 0.8rem rgba(91,77,247,.18);
+}
+
+body.dark .pmodal__add:hover{
+  background: linear-gradient(135deg, #6658ff 0%, #8b3dff 55%, #a145f7 100%);
+  box-shadow:
+    0 1.35rem 2.8rem rgba(91,77,247,.40),
+    0 0.45rem 1rem rgba(91,77,247,.22);
+}
+
+body.dark .pmodal__add:active{
+  box-shadow:
+    0 0.75rem 1.4rem rgba(91,77,247,.28);
+}
+
+body.dark .pmodal__add svg{
+  stroke: #fff;
+}
+
+body.dark .pmodal__iconBtn{
+  border-color: rgba(255,255,255,.10);
+  background: #182033;
+}
+
+body.dark .pmodal__iconBtn svg{
+  stroke: #f8fafc;
+}
+
+body.dark .pmodal__divider{
+  background: rgba(255,255,255,.08);
+}
+
+body.dark .pmodal__h{
+  color: #f8fafc;
+}
+
+body.dark .pmodal__desc{
+  color: #cbd5e1;
+}
+
+body.dark .pmodal__specs{
+  color: #cbd5e1;
+}
+
+body.dark .pmodal__benefits{
+  background: #0f172a;
+  border-color: rgba(255,255,255,.06);
+}
+
+/* ================= TOAST ================= */
+
+body.dark .toast{
+  background: #11182b;
+  color: #f8fafc;
+  box-shadow:
+    0 1.25rem 2.5rem rgba(0,0,0,.32),
+    0 0 0 0.0625rem rgba(255,255,255,.05);
+}
+
+body.dark .toast__icon{
+  background: rgba(255,255,255,.08);
+}
+
+body.dark .toast__icon svg{
+  stroke: #4ade80;
+}
+
+body.dark .toast__link{
+  color: #c4b5fd;
+}
