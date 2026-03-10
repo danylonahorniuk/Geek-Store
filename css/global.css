@@ -98,7 +98,7 @@
 }
 
 .nav-link.active {
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  background: linear-gradient(90deg,#5b4df7,#8b3dff);
   color: white;
   font-weight: 500;
 }

@@ -36,7 +36,7 @@ body.dark .nav-link:hover{
 }
 
 body.dark .nav-link.active{
-  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  background: linear-gradient(90deg,#5b4df7,#8b3dff);
   color: #fff;
   box-shadow:
     0 10px 24px rgba(99,102,241,.28),

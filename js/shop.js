@@ -866,6 +866,16 @@ const PRODUCTS = [
     image: "../assets/top-sales-home/figure-mando.jpg",
     tags: ["mandalorian", "star wars", "sw"]
   },
+  {
+    id: "p86",
+    title: "LEGO Icons Володар перснів: шолом Саурона ",
+    price: 3699,
+    universe: "Інше",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/LEGO-шолом-Саурона.jpg",
+    tags: ["lord of the rings "]
+  },
 ];
 
 // ======= UI refs =======
