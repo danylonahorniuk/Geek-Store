@@ -1,0 +1,296 @@
+/* =========================================
+   DARK THEME OVERRIDES — CONTACT PAGE
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* загальні тексти */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .contact-info h2,
+body.dark .contact-form h2,
+body.dark .chat-box h3,
+body.dark .contact-faq h2,
+body.dark .modal-box h3{
+  color: #f8fafc;
+}
+
+body.dark p,
+body.dark .hero-about p,
+body.dark .info-item a,
+body.dark .info-item p,
+body.dark .chat-box p,
+body.dark .faq-sub,
+body.dark .contact-faq details p,
+body.dark .modal-box p{
+  color: #cbd5e1;
+}
+
+/* ================= HERO ================= */
+
+body.dark .hero{
+  background: #0b1020;
+}
+
+body.dark .hero-about{
+  background:
+    radial-gradient(1200px 600px at 50% -20%, rgba(99,102,241,0.28), transparent 65%),
+    radial-gradient(900px 520px at 10% 30%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(900px 520px at 90% 40%, rgba(147,51,234,0.18), transparent 60%),
+    linear-gradient(180deg, #0f172a 0%, #11182b 100%);
+}
+
+body.dark .hero-about::before{
+  background: radial-gradient(circle, rgba(124,58,237,0.18), transparent 65%);
+}
+
+body.dark .hero-about::after{
+  background: radial-gradient(circle, rgba(79,70,229,0.14), transparent 65%);
+}
+
+body.dark .hero-grain{
+  opacity: .09;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.14) 1px, transparent 0);
+}
+
+body.dark .hero-about h1{
+  color: #f8fafc;
+}
+
+body.dark .hero-about .accent{
+  background: linear-gradient(90deg, #818cf8 0%, #a78bfa 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+body.dark .contact-section{
+  background: #0b1020;
+}
+
+body.dark .contact-info h2{
+  color: #f8fafc;
+}
+
+body.dark .info-item span{
+  color: #f8fafc;
+}
+
+body.dark .info-item a,
+body.dark .info-item p{
+  color: #cbd5e1;
+}
+
+body.dark .contact-info .icon{
+  background: #182033;
+  color: #a5b4fc;
+  border-color: rgba(129,140,248,0.14);
+  box-shadow:
+    0 0.5rem 1.25rem rgba(0,0,0,0.18),
+    inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+body.dark .contact-info .info-item:hover .icon{
+  background: #1f2940;
+  box-shadow:
+    0 0.75rem 1.75rem rgba(124,58,237,0.22),
+    0 0 0 1px rgba(129,140,248,0.08);
+}
+
+/* ================= CHAT BOX ================= */
+
+body.dark .chat-box{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow:
+    0 1rem 2rem rgba(0,0,0,0.18),
+    0 0 0 1px rgba(255,255,255,0.04);
+}
+
+body.dark .chat-box h3{
+  color: #f8fafc;
+}
+
+body.dark .chat-box p{
+  color: #cbd5e1;
+}
+
+body.dark .chat-box button{
+  background: linear-gradient(180deg, #202938 0%, #161d2b 100%);
+  color: #f8fafc;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark .chat-box button:hover{
+  background: linear-gradient(180deg, #273247 0%, #1a2233 100%);
+  box-shadow:
+    0 1.25rem 2.5rem rgba(0,0,0,0.24),
+    0 0 0 0.0625rem rgba(124,58,237,0.16);
+}
+
+body.dark .chat-box button:focus-visible{
+  box-shadow:
+    0 0 0 0.25rem rgba(124,58,237,0.20),
+    0 1.25rem 2.5rem rgba(0,0,0,0.22);
+}
+
+/* ================= FORM ================= */
+
+body.dark .contact-form{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  border-color: rgba(255,255,255,0.08);
+  box-shadow:
+    0 1.5rem 3rem rgba(0,0,0,0.20),
+    0 0 0 1px rgba(255,255,255,0.04);
+}
+
+body.dark .contact-form h2{
+  color: #f8fafc;
+}
+
+body.dark .field label{
+  color: #cbd5e1;
+}
+
+body.dark .field input,
+body.dark .field select,
+body.dark .field textarea{
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: rgba(255,255,255,0.10);
+}
+
+body.dark .field input::placeholder,
+body.dark .field textarea::placeholder{
+  color: #94a3b8;
+}
+
+body.dark .field input:focus,
+body.dark .field select:focus,
+body.dark .field textarea:focus{
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 0.125rem rgba(167,139,250,0.22);
+}
+
+body.dark .submit-btn{
+  background: linear-gradient(180deg, #202938 0%, #161d2b 100%);
+  color: #f8fafc;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark .submit-btn:hover{
+  background: linear-gradient(180deg, #273247 0%, #1a2233 100%);
+  box-shadow:
+    0 0.75rem 1.75rem rgba(0,0,0,0.22),
+    0 0 0 0.0625rem rgba(124,58,237,0.16);
+}
+
+body.dark .submit-btn:active{
+  box-shadow:
+    0 0.5rem 1.25rem rgba(0,0,0,0.18);
+}
+
+body.dark .submit-btn:focus-visible{
+  box-shadow:
+    0 0 0 0.25rem rgba(167,139,250,0.20),
+    0 1.25rem 2.5rem rgba(0,0,0,0.20);
+}
+
+/* ================= FAQ ================= */
+
+body.dark .contact-faq{
+  background: #0f172a;
+}
+
+body.dark .contact-faq h2{
+  color: #f8fafc;
+}
+
+body.dark .faq-sub{
+  color: #cbd5e1;
+}
+
+body.dark .contact-faq details{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 1.25rem 2.5rem rgba(0,0,0,0.18),
+    0 0 0 0.0625rem rgba(255,255,255,0.05);
+}
+
+body.dark .contact-faq details:hover{
+  box-shadow:
+    0 1.75rem 3.5rem rgba(0,0,0,0.24),
+    0 0 0 0.0625rem rgba(129,140,248,0.10);
+}
+
+body.dark .contact-faq summary{
+  color: #f8fafc;
+}
+
+body.dark .contact-faq summary::before{
+  color: #cbd5e1;
+}
+
+body.dark .contact-faq details p{
+  color: #cbd5e1;
+}
+
+body.dark .contact-faq summary:focus-visible{
+  box-shadow: inset 0 0 0 0.1875rem rgba(129,140,248,0.20);
+}
+
+/* ================= TOASTS ================= */
+
+body.dark .toast{
+  background: #11182b;
+  color: #f8fafc;
+  box-shadow:
+    0 1.5rem 3rem rgba(0,0,0,0.28),
+    0 0 0 0.0625rem rgba(255,255,255,0.06);
+}
+
+body.dark .toast__icon{
+  background: rgba(255,255,255,0.06);
+}
+
+body.dark .toast__content{
+  color: #f8fafc;
+}
+
+/* ================= MODAL ================= */
+
+body.dark .modal-overlay{
+  background: rgba(2,6,23,0.68);
+}
+
+body.dark .modal-box{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 2rem 4rem rgba(0,0,0,0.34),
+    0 0 0 0.0625rem rgba(255,255,255,0.05);
+}
+
+body.dark .modal-box h3{
+  color: #f8fafc;
+}
+
+body.dark .modal-box p{
+  color: #cbd5e1;
+}
+
+body.dark .modal-close{
+  border-color: rgba(255,255,255,0.10);
+  background: #182033;
+  color: #f8fafc;
+}
+
+body.dark .modal-close:hover{
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.20);
+}

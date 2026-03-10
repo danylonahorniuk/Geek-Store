@@ -1,0 +1,350 @@
+/* =========================================
+   DARK THEME OVERRIDES — ACCOUNT PAGE
+========================================= */
+
+body.dark{
+  background: #0b1020;
+  color: #f8fafc;
+}
+
+/* page */
+body.dark .page{
+  background: transparent;
+}
+
+/* ================= SIDEBAR ================= */
+
+body.dark .sidebar{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,0.22),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .profile::after{
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.14),
+    rgba(255,255,255,0.08),
+    transparent
+  );
+}
+
+body.dark .avatar{
+  background: #202a40;
+  box-shadow:
+    inset 0 0 0 1px rgba(129,140,248,0.10),
+    0 0.75rem 1.75rem rgba(0,0,0,0.18);
+}
+
+body.dark .profile h3{
+  color: #f8fafc;
+}
+
+body.dark .profile p{
+  color: #94a3b8;
+}
+
+body.dark .badge{
+  box-shadow: 0 0.75rem 1.5rem rgba(109,93,252,0.24);
+}
+
+/* menu */
+body.dark .menu-item{
+  color: #cbd5e1;
+}
+
+body.dark .menu-item:hover{
+  background: rgba(129,140,248,0.14);
+}
+
+body.dark .menu-item.active{
+  background: linear-gradient(90deg,#6d5dfc,#9b5cff);
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(109,93,252,0.28);
+}
+
+body.dark .logout{
+  color: #f87171;
+}
+
+body.dark .logout-item:hover{
+  background: rgba(239,68,68,0.14);
+}
+
+/* ================= STATS ================= */
+
+body.dark .stat-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,0.22),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .stat-icon{
+  background: #202938;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+body.dark .stat-icon svg{
+  stroke: #cbd5e1;
+}
+
+body.dark .stat-meta strong{
+  color: #f8fafc;
+}
+
+body.dark .stat-meta span{
+  color: #94a3b8;
+}
+
+/* ================= BONUS ================= */
+/* блок і так яскравий, трохи тільки підлаштуємо */
+
+body.dark .bonus{
+  box-shadow: 0 1.25rem 3rem rgba(0,0,0,0.24);
+}
+
+body.dark .bonus::after{
+  background: rgba(255,255,255,0.10);
+}
+
+body.dark .bonus-progress-wrap{
+  background: rgba(255,255,255,0.14);
+}
+
+body.dark .progress{
+  background: rgba(255,255,255,0.24);
+}
+
+body.dark .bonus-btn{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.22);
+}
+
+body.dark .bonus-btn:hover{
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.28);
+}
+
+/* ================= ORDERS ================= */
+
+body.dark .orders{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,0.22),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .orders-header h2{
+  color: #f8fafc;
+}
+
+body.dark .orders-header a{
+  color: #a78bfa;
+}
+
+body.dark .order{
+  background: #0f172a;
+  border-color: rgba(255,255,255,0.06);
+}
+
+body.dark .order:hover{
+  background: #162033;
+  border-color: rgba(129,140,248,0.12);
+  box-shadow: 0 0.625rem 1.5rem rgba(0,0,0,0.18);
+}
+
+body.dark .order strong{
+  color: #f8fafc;
+}
+
+body.dark .order p{
+  color: #94a3b8;
+}
+
+body.dark .price strong{
+  color: #f8fafc;
+}
+
+body.dark .price span{
+  color: #94a3b8;
+}
+
+body.dark .success{
+  background: rgba(34,197,94,0.14);
+  color: #86efac;
+}
+
+body.dark .pending{
+  background: rgba(245,158,11,0.16);
+  color: #fcd34d;
+}
+
+/* ================= QUICK ================= */
+
+body.dark .quick{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,0.22),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .quick h2{
+  color: #f8fafc;
+}
+
+body.dark .quick-item{
+  background: #0f172a;
+  border-color: rgba(255,255,255,0.06);
+  color: #e2e8f0;
+}
+
+body.dark .quick-item:hover{
+  background: #162033;
+  border-color: rgba(129,140,248,0.12);
+  box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,0.18);
+}
+
+/* ================= EMPTY ================= */
+
+body.dark .empty{
+  background: #0f172a;
+  border-color: rgba(255,255,255,0.06);
+  color: #94a3b8;
+}
+
+body.dark .empty strong{
+  color: #f8fafc;
+}
+
+/* ================= SETTINGS ================= */
+
+body.dark .settings-card{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 0.875rem 2.25rem rgba(0,0,0,0.22),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .settings-title,
+body.dark .settings-subtitle{
+  color: #f8fafc;
+}
+
+body.dark .settings-divider{
+  background: rgba(255,255,255,0.08);
+}
+
+body.dark .field-label{
+  color: #cbd5e1;
+}
+
+body.dark .field-input{
+  background: #0f172a;
+  border-color: rgba(255,255,255,0.10);
+  color: #f8fafc;
+}
+
+body.dark .field-input::placeholder{
+  color: #94a3b8;
+}
+
+body.dark .field-input:focus{
+  border-color: rgba(167,139,250,0.55);
+  box-shadow: 0 0 0 0.25rem rgba(109,93,252,0.18);
+}
+
+body.dark .settings-save{
+  box-shadow: 0 1rem 2rem rgba(109,93,252,0.28);
+}
+
+body.dark .settings-save:hover{
+  box-shadow: 0 1.25rem 2.5rem rgba(109,93,252,0.32);
+}
+
+body.dark .settings-save:active{
+  box-shadow: 0 0.9rem 1.8rem rgba(109,93,252,0.24);
+}
+
+/* ================= MODAL ================= */
+
+body.dark .modal-overlay{
+  background: rgba(2,6,23,0.68);
+}
+
+body.dark .modal-dialog{
+  background: linear-gradient(180deg, #182033 0%, #11182b 100%);
+  box-shadow:
+    0 2rem 5rem rgba(0,0,0,0.36),
+    0 0 0 1px rgba(255,255,255,0.05);
+}
+
+body.dark .modal-title{
+  color: #f8fafc;
+}
+
+body.dark .modal-close{
+  background: #202938;
+  color: #f8fafc;
+}
+
+body.dark .modal-close:hover{
+  background: #283246;
+}
+
+/* ================= ORDER ROW (modal) ================= */
+
+body.dark .order-row{
+  border-color: rgba(255,255,255,0.08);
+  background: #0f172a;
+}
+
+body.dark .order-row:hover{
+  background: #162033;
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.20);
+}
+
+body.dark .order-ico{
+  background: #202938;
+  box-shadow: inset 0 0 0 1px rgba(129,140,248,0.08);
+}
+
+body.dark .order-ico svg{
+  stroke: #a5b4fc;
+}
+
+body.dark .order-id{
+  color: #f8fafc;
+}
+
+body.dark .order-date{
+  color: #94a3b8;
+}
+
+body.dark .order-meta{
+  color: #cbd5e1;
+}
+
+body.dark .pill-success{
+  background: rgba(34,197,94,0.14);
+  color: #86efac;
+}
+
+body.dark .pill-warn{
+  background: rgba(245,158,11,0.16);
+  color: #fcd34d;
+}
+
+body.dark .order-summary{
+  border-top-color: rgba(255,255,255,0.08);
+}
+
+body.dark .order-count{
+  color: #94a3b8;
+}
+
+body.dark .order-total{
+  color: #f8fafc;
+}
