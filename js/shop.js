@@ -163,7 +163,7 @@ const PRODUCTS = [
     universe: "Star Wars",
     category: "LEGO",
     badge: "",
-    image: "../assets/cataloge-goods/lego-ahsoka.webp",
+    image: "../assets/cataloge-goods/LEGO-Ahsoka's-Jedi.jpg",
     tags: ["lego", "ahsoka", "star wars", "sw"]
   },
   {
@@ -875,6 +875,16 @@ const PRODUCTS = [
     badge: "",
     image: "../assets/cataloge-goods/LEGO-шолом-Саурона.jpg",
     tags: ["lord of the rings "]
+  },
+  {
+    id: "p87",
+    title: "LEGO Star Wars Зоряний винищувач ARC-170",
+    price: 2799,
+    universe: "Star Wars",
+    category: "LEGO",
+    badge: "",
+    image: "../assets/cataloge-goods/arc-170.jpg",
+    tags: ["lego", "star wars", "sw"]
   },
 ];
 
