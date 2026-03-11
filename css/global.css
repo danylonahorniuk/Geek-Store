@@ -5,6 +5,47 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
+html.theme-transition body,
+html.theme-transition body *,
+html.theme-transition body *::before,
+html.theme-transition body *::after{
+  transition:
+    background-color .18s ease,
+    color .18s ease,
+    border-color .18s ease,
+    fill .18s ease,
+    stroke .18s ease !important;
+}
+
+html,
+body{
+  background: #fff;
+}
+
+html.dark,
+html.dark body{
+  background: #0b1020;
+}
+
+html{
+  background: #fff;
+  color-scheme: light;
+}
+
+html.dark{
+  background: #0b1020;
+  color-scheme: dark;
+}
+
+body{
+  background: #fff;
+}
+
+html.dark body{
+  background: #0b1020;
+}
+
 /* === Header === */
 .header {
   position: sticky;
