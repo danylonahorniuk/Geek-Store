@@ -130,7 +130,7 @@ function showCartToast(message = "Товар додано в кошик") {
 
       <span class="toast__text">${message}</span>
 
-      <a class="toast__link" href="cart.html">Кошик</a>
+      <a class="toast__link" href="html/cart.html">Кошик</a>
     </div>
   `;
 

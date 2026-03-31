@@ -18,6 +18,28 @@ function fmtUAH(n) {
   return new Intl.NumberFormat("uk-UA").format(Math.round(n)) + " ₴";
 }
 
+function resolveCartImage(path) {
+  if (!path) return "";
+
+  // зовнішні або вже підготовлені шляхи не чіпаємо
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("data:") ||
+    path.startsWith("../") ||
+    path.startsWith("./")
+  ) {
+    return path;
+  }
+
+  // якщо картинка прийшла з головної як assets/...
+  if (path.startsWith("assets/")) {
+    return "../" + path;
+  }
+
+  return path;
+}
+
 // ===============================
 // UI refs
 // ===============================
@@ -185,7 +207,7 @@ function renderCart() {
     return `
       <div class="cart-item" data-id="${it.id}">
         <div class="cart-thumb">
-          <img src="${it.image}" alt="${it.title}">
+          <img src="${resolveCartImage(it.image)}" alt="${it.title}">
         </div>
 
         <div class="cart-info">

@@ -30,11 +30,13 @@
   if (!list || !feature || !img || !title || !desc || !count) return;
 
   function buildUniverseLink(universeFilter) {
+    const basePath = "html/shop.html";
+
     if (!universeFilter || universeFilter === "Всі всесвіти") {
-      return "shop.html";
+      return basePath;
     }
 
-    return `shop.html?universe=${encodeURIComponent(universeFilter)}`;
+    return `${basePath}?universe=${encodeURIComponent(universeFilter)}`;
   }
 
   function applyItemNeon(item, accent) {
